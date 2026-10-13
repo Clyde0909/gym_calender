@@ -39,7 +39,7 @@ test("record persists, routine, encrypted photo sharing and restore", async ({
   await page.locator('[data-tab="transfer"]').click();
   await page.locator("#export-password").fill("test-password");
   await page.getByRole("button", { name: "압축 문자열 만들기" }).click();
-  await expect(page.locator("#export-output")).toHaveValue(/^GW1\.E\./);
+  await expect(page.locator("#export-output")).toHaveValue(/^GW2\.E\./);
   const code = await page.locator("#export-output").inputValue();
   await page.locator("#import-input").fill(code);
   await page.locator("#import-password").fill("bad");
@@ -83,8 +83,20 @@ test("library search, editable scheduled routine, sessions, units and 1RM", asyn
   await page.goto("/");
   await page.getByRole("button", { name: "운동 가이드", exact: false }).click();
   await page.locator("#guide-search").fill("ㅂㅊㅍㄹㅅ");
-  await expect(page.locator(".guide-card")).toHaveCount(1);
-  await page.getByRole("button", { name: "선택 날짜 운동에 추가" }).click();
+  await expect(
+    page
+      .locator(".guide-card")
+      .filter({
+        has: page.getByRole("heading", { name: "벤치 프레스", exact: true }),
+      }),
+  ).toHaveCount(1);
+  await page
+    .locator(".guide-card")
+    .filter({
+      has: page.getByRole("heading", { name: "벤치 프레스", exact: true }),
+    })
+    .getByRole("button", { name: "선택 날짜 운동에 추가" })
+    .click();
   await page.getByRole("button", { name: "나의 루틴", exact: false }).click();
   await page.getByRole("button", { name: "＋ 새 루틴" }).click();
   await page.locator("#edit-name").fill("하체 A");

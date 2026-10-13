@@ -118,14 +118,14 @@ test("native share uses an active tap and permission rejection has a useful fall
   await page.locator('[data-action="share-day"]').click();
   await expect(page.locator("#share-dialog")).toBeVisible();
   await expect(page.locator(".share-message")).toContainText("파일 다운로드");
-  await expect(page.locator(".share-code")).toHaveValue(/^GW1\.P\./);
+  await expect(page.locator(".share-code")).toHaveValue(/^GW2\.P\./);
   await expect(page.locator('[data-share="download"]')).toBeEnabled();
   await page.locator('[data-share="close"]').click();
   await page.evaluate(() => (window.rejectShare = false));
   await page.locator('[data-tab="transfer"]').click();
   await page.locator("#export-password").fill("share-secret");
   await page.locator('[data-action="export"]').click();
-  await expect(page.locator("#export-output")).toHaveValue(/^GW1\.E\./);
+  await expect(page.locator("#export-output")).toHaveValue(/^GW2\.E\./);
   await page.locator('[data-action="native-share"]').click();
   await expect
     .poll(() => page.evaluate(() => window.shareCalls.length))

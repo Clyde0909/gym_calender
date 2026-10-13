@@ -58,15 +58,13 @@ try {
     .fill("오프라인 스쿼트");
   await page.getByRole("button", { name: "＋ 추가", exact: true }).click();
   await page.getByRole("heading", { name: "01오프라인 스쿼트" }).waitFor();
-  await page
-    .locator("#photo")
-    .setInputFiles({
-      name: "offline.heic",
-      mimeType: "image/heic",
-      buffer: readFileSync(
-        new URL("./fixtures/workout-10bit.heic", import.meta.url),
-      ),
-    });
+  await page.locator("#photo").setInputFiles({
+    name: "offline.heic",
+    mimeType: "image/heic",
+    buffer: readFileSync(
+      new URL("./fixtures/workout-10bit.heic", import.meta.url),
+    ),
+  });
   await page.locator(".photo-wrap img").waitFor();
   await page.reload();
   await page.getByRole("heading", { name: "01오프라인 스쿼트" }).waitFor();
@@ -74,7 +72,7 @@ try {
   await page.locator("#export-password").fill("offline-test");
   await page.getByRole("button", { name: "압축 문자열 만들기" }).click();
   await page.waitForFunction(() =>
-    document.querySelector("#export-output")?.value.startsWith("GW1.E."),
+    document.querySelector("#export-output")?.value.startsWith("GW2.E."),
   );
   assert.deepEqual(errors, []);
   console.log(

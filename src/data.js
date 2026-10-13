@@ -1,20 +1,7 @@
+import { library } from "./library.js";
+import { weekStart } from "./planning.js";
 import { t as tr } from "./i18n.js";
-export const exercises = [
-  "벤치 프레스",
-  "스쿼트",
-  "데드리프트",
-  "랫 풀다운",
-  "시티드 로우",
-  "숄더 프레스",
-  "레그 프레스",
-  "레그 컬",
-  "덤벨 컬",
-  "트라이셉스 푸시다운",
-  "풀업",
-  "푸시업",
-  "런닝",
-  "플랭크",
-];
+export const exercises = library.map((e) => e.name);
 export const newState = () => ({ version: 1, sessions: [], routines: [] });
 export function validateState(state) {
   if (
@@ -51,11 +38,44 @@ export function validateState(state) {
     )
       throw Error(tr("설정 값이 올바르지 않습니다."));
   }
+  if (state.weekPlans !== undefined) {
+    if (!Array.isArray(state.weekPlans) || state.weekPlans.length > 1040)
+      throw Error(tr("weekInvalid"));
+    const weeks = new Set(),
+      planIds = new Set();
+    for (const plan of state.weekPlans) {
+      if (
+        !plan ||
+        typeof plan.id !== "string" ||
+        !plan.id ||
+        plan.id.length > 100 ||
+        planIds.has(plan.id) ||
+        typeof plan.name !== "string" ||
+        !plan.name.trim() ||
+        plan.name.length > 100 ||
+        !/^\d{4}-\d{2}-\d{2}$/.test(plan.weekStart) ||
+        weekStart(plan.weekStart) !== plan.weekStart ||
+        weeks.has(plan.weekStart) ||
+        !plan.days ||
+        typeof plan.days !== "object" ||
+        Array.isArray(plan.days) ||
+        Object.keys(plan.days).some((k) => !/^[0-6]$/.test(k))
+      )
+        throw Error(tr("weekInvalid"));
+      weeks.add(plan.weekStart);
+      planIds.add(plan.id);
+      for (let i = 0; i < 7; i++) {
+        if (!Array.isArray(plan.days[i])) throw Error(tr("weekInvalid"));
+        validateExercises(plan.days[i]);
+      }
+    }
+  }
   const dates = new Set();
   for (const s of state.sessions) {
     if (
       !s ||
       !/^\d{4}-\d{2}-\d{2}$/.test(s.date) ||
+      !Number.isFinite(new Date(s.date + "T12:00:00Z").getTime()) ||
       new Date(s.date + "T12:00:00Z").toISOString().slice(0, 10) !== s.date ||
       dates.has(s.date)
     )

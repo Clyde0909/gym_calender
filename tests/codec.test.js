@@ -82,7 +82,12 @@ import {
 } from "../src/library.js";
 test("initial consonants, equipment and body filters", () => {
   assert.equal(searchExercises("ㅂㅊㅍㄹㅅ")[0].name, "벤치 프레스");
-  assert.equal(searchExercises("", "가슴", "바벨").length, 1);
+  assert.ok(searchExercises("", "가슴", "바벨").length >= 2);
+  assert.ok(
+    searchExercises("", "가슴", "바벨").every(
+      (e) => e.body === "가슴" && e.equipment === "바벨",
+    ),
+  );
   assert.equal(
     searchExercises("스쿼트", "", "케틀벨")[0].name,
     "고블릿 스쿼트",

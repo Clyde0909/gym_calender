@@ -1,3 +1,4 @@
+import { encode91, decode91 } from "./base91.js";
 import { t as tr } from "./i18n.js";
 import { gzip } from "fflate";
 const MAX = 24 * 1024 * 1024,
@@ -65,7 +66,10 @@ async function key(password, salt) {
     ["encrypt", "decrypt"],
   );
 }
-export async function encode(payload, password = "") {
+export async function encode(payload, password = "", options = {}) {
+  const compact = options.encoding !== "compatible";
+  const version = compact ? "GW2" : "GW1";
+  const represent = compact ? encode91 : b64;
   const raw = enc.encode(JSON.stringify(payload));
   if (raw.length > MAX)
     throw Error(tr("데이터가 너무 큽니다. 날짜별로 나누어 공유하세요."));
@@ -74,12 +78,12 @@ export async function encode(payload, password = "") {
       error ? reject(error) : resolve(data),
     ),
   );
-  if (!password) return "GW1.P." + b64(compressed);
+  if (!password) return version + ".P." + represent(compressed);
   const salt = crypto.getRandomValues(new Uint8Array(16)),
     iv = crypto.getRandomValues(new Uint8Array(12));
   const encrypted = new Uint8Array(
     await crypto.subtle.encrypt(
-      { name: "AES-GCM", iv, additionalData: enc.encode("GW1.E") },
+      { name: "AES-GCM", iv, additionalData: enc.encode(version + ".E") },
       await key(password, salt),
       compressed,
     ),
@@ -88,18 +92,21 @@ export async function encode(payload, password = "") {
   result.set(salt);
   result.set(iv, 16);
   result.set(encrypted, 28);
-  return "GW1.E." + b64(result);
+  return version + ".E." + represent(result);
 }
 export async function decode(text, password = "") {
-  const parts = text.trim().split(".");
-  if (
-    parts.length !== 3 ||
-    parts[0] !== "GW1" ||
-    !["P", "E"].includes(parts[1])
-  )
-    throw Error(tr("지원하지 않는 공유 문자열입니다."));
-  let bytes = unb64(parts[2]);
-  if (parts[1] === "E") {
+  const match = /^(GW[12])\.(P|E)\.([\s\S]+)$/.exec(text.trim());
+  if (!match) throw Error(tr("지원하지 않는 공유 문자열입니다."));
+  const [, version, mode, body] = match;
+  if (body.length > MAX * 2)
+    throw Error(tr("데이터 크기 제한을 초과했습니다."));
+  let bytes;
+  try {
+    bytes = version === "GW2" ? decode91(body) : unb64(body);
+  } catch {
+    throw Error(tr("공유 문자열이 올바르지 않습니다."));
+  }
+  if (mode === "E") {
     if (!password) throw Error(tr("해독 비밀번호를 입력하세요."));
     if (bytes.length < 44) throw Error(tr("암호화 데이터가 손상되었습니다."));
     try {
@@ -108,7 +115,7 @@ export async function decode(text, password = "") {
           {
             name: "AES-GCM",
             iv: bytes.slice(16, 28),
-            additionalData: enc.encode("GW1.E"),
+            additionalData: enc.encode(version + ".E"),
           },
           await key(password, bytes.slice(0, 16)),
           bytes.slice(28),

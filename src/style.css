@@ -1453,3 +1453,115 @@ footer {
     font-size: 13px;
   }
 }
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+.program-card {
+  background: #f8faf4;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  padding: 22px;
+}
+.program-card h2 {
+  margin: 12px 0;
+}
+.program-card p {
+  font-size: 11px;
+  color: #7c8972;
+  line-height: 1.9;
+}
+.program-card details {
+  font-size: 11px;
+  color: #526c40;
+  margin-top: 16px;
+}
+.program-card summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+.program-day {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+.program-day p {
+  margin: 5px 0;
+}
+.notice a {
+  font-size: 11px;
+  color: #486832;
+  line-height: 2;
+}
+.guide-filters > label {
+  flex: 1;
+  font-size: 11px;
+  color: #728264;
+}
+.week-planner,
+.week-plan {
+  margin-bottom: 24px;
+}
+.week-planner .row > label {
+  flex: 1;
+  font-size: 11px;
+  color: #7e8d71;
+}
+.week-planner label input {
+  margin-top: 8px;
+}
+.week-plan-days {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 10px;
+}
+.week-plan-days article {
+  background: #f5f8ee;
+  border-radius: 10px;
+  padding: 13px;
+  min-width: 0;
+}
+.week-plan-days b {
+  font-size: 12px;
+}
+.week-plan-days small {
+  display: block;
+  font-size: 9px;
+  color: #8b997e;
+  margin-top: 4px;
+}
+.week-plan-days p {
+  font-size: 10px;
+  line-height: 1.9;
+  color: #778a65;
+  overflow-wrap: anywhere;
+}
+.week-plan-days .row {
+  flex-wrap: wrap;
+}
+.week-plan-days button {
+  padding: 3px;
+  font-size: 9px;
+}
+@media (max-width: 1200px) {
+  .week-plan-days {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+@media (max-width: 850px) {
+  .program-grid {
+    grid-template-columns: 1fr;
+  }
+  .week-plan-days {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .week-planner .row {
+    flex-wrap: wrap;
+  }
+  .week-planner .row > label {
+    min-width: 140px;
+  }
+  .guide-filters > label {
+    flex-basis: 100%;
+  }
+}

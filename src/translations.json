@@ -1479,5 +1479,510 @@
     "en": "When rest ends, tap to start the next set.",
     "ko": "휴식이 끝나면 터치하여 다음 세트를 시작하세요.",
     "ja": "休憩が終わったらタップして次のセットを開始してください。"
+  },
+  "덤벨 벤치 프레스": {
+    "en": "Dumbbell bench press",
+    "ja": "ダンベルベンチプレス"
+  },
+  "디클라인 벤치 프레스": {
+    "en": "Decline bench press",
+    "ja": "デクラインベンチプレス"
+  },
+  "덤벨 플라이": {
+    "en": "Dumbbell fly",
+    "ja": "ダンベルフライ"
+  },
+  "케이블 플라이": {
+    "en": "Cable fly",
+    "ja": "ケーブルフライ"
+  },
+  "딥스": {
+    "en": "Dip",
+    "ja": "ディップス"
+  },
+  "원암 덤벨 로우": {
+    "en": "One-arm dumbbell row",
+    "ja": "ワンハンドダンベルロウ"
+  },
+  "체스트 서포티드 로우": {
+    "en": "Chest-supported row",
+    "ja": "チェストサポートロウ"
+  },
+  "티바 로우": {
+    "en": "T-bar row",
+    "ja": "Tバーロウ"
+  },
+  "스트레이트 암 풀다운": {
+    "en": "Straight-arm pulldown",
+    "ja": "ストレートアームプルダウン"
+  },
+  "어시스트 풀업": {
+    "en": "Assisted pull-up",
+    "ja": "アシストプルアップ"
+  },
+  "인버티드 로우": {
+    "en": "Inverted row",
+    "ja": "インバーテッドロウ"
+  },
+  "페이스 풀": {
+    "en": "Face pull",
+    "ja": "フェイスプル"
+  },
+  "프론트 스쿼트": {
+    "en": "Front squat",
+    "ja": "フロントスクワット"
+  },
+  "루마니안 데드리프트": {
+    "en": "Romanian deadlift",
+    "ja": "ルーマニアンデッドリフト"
+  },
+  "스모 데드리프트": {
+    "en": "Sumo deadlift",
+    "ja": "スモウデッドリフト"
+  },
+  "불가리안 스플릿 스쿼트": {
+    "en": "Bulgarian split squat",
+    "ja": "ブルガリアンスクワット"
+  },
+  "레그 익스텐션": {
+    "en": "Leg extension",
+    "ja": "レッグエクステンション"
+  },
+  "스탠딩 카프 레이즈": {
+    "en": "Standing calf raise",
+    "ja": "スタンディングカーフレイズ"
+  },
+  "시티드 카프 레이즈": {
+    "en": "Seated calf raise",
+    "ja": "シーテッドカーフレイズ"
+  },
+  "힙 쓰러스트": {
+    "en": "Hip thrust",
+    "ja": "ヒップスラスト"
+  },
+  "글루트 브리지": {
+    "en": "Glute bridge",
+    "ja": "グルートブリッジ"
+  },
+  "스텝 업": {
+    "en": "Step-up",
+    "ja": "ステップアップ"
+  },
+  "밀리터리 프레스": {
+    "en": "Military press",
+    "ja": "ミリタリープレス"
+  },
+  "아놀드 프레스": {
+    "en": "Arnold press",
+    "ja": "アーノルドプレス"
+  },
+  "리어 델트 플라이": {
+    "en": "Rear delt fly",
+    "ja": "リアデルトフライ"
+  },
+  "머신 숄더 프레스": {
+    "en": "Machine shoulder press",
+    "ja": "マシンショルダープレス"
+  },
+  "프론트 레이즈": {
+    "en": "Front raise",
+    "ja": "フロントレイズ"
+  },
+  "바벨 컬": {
+    "en": "Barbell curl",
+    "ja": "バーベルカール"
+  },
+  "해머 컬": {
+    "en": "Hammer curl",
+    "ja": "ハンマーカール"
+  },
+  "프리처 컬": {
+    "en": "Preacher curl",
+    "ja": "プリーチャーカール"
+  },
+  "인클라인 덤벨 컬": {
+    "en": "Incline dumbbell curl",
+    "ja": "インクラインダンベルカール"
+  },
+  "오버헤드 트라이셉스 익스텐션": {
+    "en": "Overhead triceps extension",
+    "ja": "オーバーヘッドトライセプスエクステンション"
+  },
+  "스컬 크러셔": {
+    "en": "Skull crusher",
+    "ja": "スカルクラッシャー"
+  },
+  "클로즈 그립 벤치 프레스": {
+    "en": "Close-grip bench press",
+    "ja": "クローズグリップベンチプレス"
+  },
+  "크런치": {
+    "en": "Crunch",
+    "ja": "クランチ"
+  },
+  "레그 레이즈": {
+    "en": "Leg raise",
+    "ja": "レッグレイズ"
+  },
+  "케이블 크런치": {
+    "en": "Cable crunch",
+    "ja": "ケーブルクランチ"
+  },
+  "러시안 트위스트": {
+    "en": "Russian twist",
+    "ja": "ロシアンツイスト"
+  },
+  "실내 자전거": {
+    "en": "Stationary bike",
+    "ja": "エアロバイク"
+  },
+  "로잉 머신": {
+    "en": "Rowing machine",
+    "ja": "ローイングマシン"
+  },
+  "pressGuide": {
+    "en": "Keep your shoulders stable and lower the weight under control; use a comfortable range.",
+    "ko": "어깨를 안정시키고 무게를 천천히 내리며 무리하지 않는 범위로 밀어 올립니다.",
+    "ja": "肩を安定させ、無理のない範囲で重りをゆっくり下ろして押し上げます。"
+  },
+  "flyGuide": {
+    "en": "Keep a soft elbow bend and avoid stretching the shoulders beyond a comfortable range.",
+    "ko": "팔꿈치를 살짝 굽히고 어깨를 과도하게 벌리지 않는 범위에서 가슴을 모읍니다.",
+    "ja": "肘を軽く曲げ、肩を広げすぎない範囲で胸の前に腕を寄せます。"
+  },
+  "dipGuide": {
+    "en": "Lower with control; stop before the shoulders feel strained. Use assistance as needed.",
+    "ko": "반동 없이 내려가고 어깨가 불편하기 전에 멈춥니다. 필요하면 보조 기구를 사용합니다.",
+    "ja": "反動を抑え、肩に無理がかかる前に止めます。必要なら補助器具を使います。"
+  },
+  "rowGuide": {
+    "en": "Brace the torso and pull your elbows back without swinging.",
+    "ko": "몸통을 고정하고 반동 없이 팔꿈치를 뒤로 당깁니다.",
+    "ja": "体幹を固定し、反動を使わずに肘を後ろへ引きます。"
+  },
+  "pullGuide": {
+    "en": "Keep your chest lifted and pull without shrugging your shoulders.",
+    "ko": "가슴을 세우고 어깨를 으쓱하지 않으며 당깁니다.",
+    "ja": "胸を張り、肩をすくめずに引きます。"
+  },
+  "rearGuide": {
+    "en": "Use a light weight and move slowly with your shoulders relaxed.",
+    "ko": "가벼운 중량으로 어깨를 과하게 들지 않고 천천히 움직입니다.",
+    "ja": "軽い重量で肩を上げすぎず、ゆっくり動かします。"
+  },
+  "squatGuide": {
+    "en": "Brace your torso and let the knees follow the direction of your toes.",
+    "ko": "복부에 힘을 주고 무릎과 발끝 방향을 맞춰 내려갑니다.",
+    "ja": "腹部を締め、膝をつま先の方向に合わせて下ろします。"
+  },
+  "hingeGuide": {
+    "en": "Keep a neutral spine and hinge from the hips with the weight close to your legs.",
+    "ko": "허리를 중립으로 유지하고 무게를 다리 가까이 둔 채 엉덩이를 뒤로 접습니다.",
+    "ja": "腰を中立に保ち、重りを脚の近くにして股関節から体を倒します。"
+  },
+  "splitGuide": {
+    "en": "Keep your balance and press through the working foot without pushing off the other leg.",
+    "ko": "균형을 잡고 반대 다리의 반동 없이 주로 사용하는 발로 밀어 올립니다.",
+    "ja": "バランスを保ち、反対の脚の反動を使わずに動作します。"
+  },
+  "legMachineGuide": {
+    "en": "Adjust the pads to your body and avoid locking the knee at the end.",
+    "ko": "패드를 체형에 맞게 조절하고 동작 끝에서 무릎을 과하게 잠그지 않습니다.",
+    "ja": "パッドを体に合わせ、動作の終わりで膝をロックしすぎないようにします。"
+  },
+  "calfGuide": {
+    "en": "Raise and lower the heels slowly through a comfortable range.",
+    "ko": "발꿈치를 천천히 올리고 내리며 편안한 범위에서 반복합니다.",
+    "ja": "無理のない範囲でかかとをゆっくり上げ下げします。"
+  },
+  "hipGuide": {
+    "en": "Brace your abdomen and extend the hips without arching the lower back.",
+    "ko": "복부를 고정하고 허리를 꺾지 않으며 엉덩이를 들어 올립니다.",
+    "ja": "腹部を固定し、腰を反らさずに臀部を持ち上げます。"
+  },
+  "shoulderGuide": {
+    "en": "Brace your torso and press overhead without excessively arching your back.",
+    "ko": "몸통을 고정하고 허리를 과도하게 꺾지 않으며 머리 위로 밀어 올립니다.",
+    "ja": "体幹を固定し、腰を反らしすぎずに頭上へ押し上げます。"
+  },
+  "raiseGuide": {
+    "en": "Use a light weight and lift slowly no higher than shoulder level.",
+    "ko": "가벼운 중량으로 어깨 높이까지만 천천히 올립니다.",
+    "ja": "軽い重量で肩の高さまでゆっくり上げます。"
+  },
+  "curlGuide": {
+    "en": "Keep the elbows stable and avoid using the torso to lift the weight.",
+    "ko": "팔꿈치를 고정하고 상체 반동으로 무게를 올리지 않습니다.",
+    "ja": "肘を固定し、上体の反動で重りを上げないようにします。"
+  },
+  "tricepsGuide": {
+    "en": "Keep the upper arms stable and extend the elbows under control.",
+    "ko": "상완을 고정하고 팔꿈치를 천천히 폅니다.",
+    "ja": "上腕を固定し、肘をゆっくり伸ばします。"
+  },
+  "coreGuide": {
+    "en": "Move slowly, breathe steadily and stop before the lower back loses position.",
+    "ko": "천천히 호흡하며 허리 자세가 무너지기 전에 동작을 멈춥니다.",
+    "ja": "ゆっくり呼吸し、腰の姿勢が崩れる前に動作を止めます。"
+  },
+  "cardioGuide": {
+    "en": "Begin at an easy pace. Log your time and distance in the workout notes.",
+    "ko": "편안한 속도로 시작하고 시간과 거리는 운동 메모에 기록합니다.",
+    "ja": "楽なペースで始め、時間と距離はワークアウトメモに記録してください。"
+  },
+  "programsTitle": {
+    "en": "Recommended workouts",
+    "ko": "추천 워크아웃",
+    "ja": "おすすめワークアウト"
+  },
+  "programIntro": {
+    "en": "Choose a starter template, review the sets, then create a dated weekly plan.",
+    "ko": "추천 구성을 골라 세트를 확인하고 날짜가 있는 주간 계획을 만드세요.",
+    "ja": "構成を選び、セットを確認して日付付きの週間計画を作成しましょう。"
+  },
+  "programSourceNote": {
+    "en": "Original starter templates informed by public exercise references and common training splits. They are not official coaching programs.",
+    "ko": "공개 운동 자료와 보편적인 분할 구성을 참고한 자체 입문 예시입니다. 공식 코칭 프로그램의 복제본은 아닙니다.",
+    "ja": "公開運動資料と一般的な分割法を参考にした独自の入門例です。公式コーチングプログラムの複製ではありません。"
+  },
+  "programFrequency": {
+    "en": "Training days per week",
+    "ko": "주간 운동 횟수",
+    "ja": "週の運動回数"
+  },
+  "programAll": {
+    "en": "All",
+    "ko": "전체",
+    "ja": "すべて"
+  },
+  "beginner": {
+    "en": "Beginner",
+    "ko": "입문",
+    "ja": "初級"
+  },
+  "intermediate": {
+    "en": "Intermediate",
+    "ko": "중급",
+    "ja": "中級"
+  },
+  "advanced": {
+    "en": "Advanced",
+    "ko": "상급",
+    "ja": "上級"
+  },
+  "programLevel": {
+    "en": "Experience level",
+    "ko": "난이도",
+    "ja": "レベル"
+  },
+  "programSources": {
+    "en": "Online references",
+    "ko": "온라인 참고 자료",
+    "ja": "オンライン参考資料"
+  },
+  "programCreate": {
+    "en": "Create this weekly plan",
+    "ko": "이 구성으로 주간 계획 생성",
+    "ja": "この構成で週間計画を作成"
+  },
+  "programDetails": {
+    "en": "View sets",
+    "ko": "세트 구성 보기",
+    "ja": "セット構成を見る"
+  },
+  "programFull2": {
+    "en": "Full body · 2 days",
+    "ko": "전신 · 주 2회",
+    "ja": "全身 · 週2回"
+  },
+  "programFull3": {
+    "en": "Full body A/B · 3 days",
+    "ko": "전신 A/B · 주 3회",
+    "ja": "全身A/B · 週3回"
+  },
+  "programUpperLower": {
+    "en": "Upper / lower · 4 days",
+    "ko": "상체 / 하체 · 주 4회",
+    "ja": "上半身 / 下半身 · 週4回"
+  },
+  "programPPL3": {
+    "en": "Push / pull / legs · 3 days",
+    "ko": "밀기 / 당기기 / 하체 · 주 3회",
+    "ja": "プッシュ / プル / 脚 · 週3回"
+  },
+  "programPPL6": {
+    "en": "Push / pull / legs · 6 days",
+    "ko": "밀기 / 당기기 / 하체 · 주 6회",
+    "ja": "プッシュ / プル / 脚 · 週6回"
+  },
+  "programBody": {
+    "en": "Bodyweight basics · 3 days",
+    "ko": "맨몸 기초 · 주 3회",
+    "ja": "自重基礎 · 週3回"
+  },
+  "programFullDescription": {
+    "en": "Alternate foundational squat, hinge, press and pull movements with recovery days.",
+    "ko": "스쿼트·힌지·밀기·당기기 기본 움직임을 쉬는 날과 함께 번갈아 구성합니다.",
+    "ja": "スクワット・ヒンジ・プレス・プルを休息日と交互に構成します。"
+  },
+  "programUpperDescription": {
+    "en": "Separate upper and lower body sessions with rest between blocks.",
+    "ko": "상체와 하체를 나누고 중간에 휴식일을 둡니다.",
+    "ja": "上半身と下半身を分け、間に休息日を入れます。"
+  },
+  "programPPLDescription": {
+    "en": "Train pushing, pulling and legs on separate days.",
+    "ko": "밀기·당기기·하체를 각각 다른 날에 운동합니다.",
+    "ja": "押す動作・引く動作・脚を別の日に鍛えます。"
+  },
+  "programAdvancedDescription": {
+    "en": "A higher-frequency split for experienced trainees who can manage recovery.",
+    "ko": "회복을 관리할 수 있는 숙련자를 위한 높은 빈도의 분할 예시입니다.",
+    "ja": "回復を管理できる経験者向けの高頻度分割例です。"
+  },
+  "programBodyDescription": {
+    "en": "A simple bodyweight-focused week. Inverted rows need a stable bar; adjust assistance as needed.",
+    "ko": "맨몸 중심의 기초 구성입니다. 인버티드 로우는 안정적인 바가 필요하며 보조 강도를 조절하세요.",
+    "ja": "自重中心の基礎構成です。ロウには安定したバーが必要です。補助を調整してください。"
+  },
+  "programWeights": {
+    "en": "Weights start at 0 kg. Set suitable loads before starting; do not treat the template as a weight prescription.",
+    "ko": "중량은 0kg로 시작합니다. 운동 전에 맞는 무게를 설정하세요. 중량 처방이 아닙니다.",
+    "ja": "重量は0kgで開始します。開始前に適切な重量を設定してください。重量の処方ではありません。"
+  },
+  "programNoResults": {
+    "en": "No matching templates.",
+    "ko": "조건에 맞는 구성이 없습니다.",
+    "ja": "条件に合う構成がありません。"
+  },
+  "weekTitle": {
+    "en": "Dated weekly set lists",
+    "ko": "주간 세트 목록",
+    "ja": "週間セットリスト"
+  },
+  "weekStart": {
+    "en": "Week containing this date",
+    "ko": "이 날짜가 포함된 주",
+    "ja": "この日付を含む週"
+  },
+  "weekName": {
+    "en": "Plan name",
+    "ko": "계획 이름",
+    "ja": "計画名"
+  },
+  "weekCreate": {
+    "en": "Create weekly list",
+    "ko": "주간 목록 생성",
+    "ja": "週間リストを作成"
+  },
+  "weekCustom": {
+    "en": "Custom weekly plan",
+    "ko": "나만의 주간 계획",
+    "ja": "マイ週間計画"
+  },
+  "weekHint": {
+    "en": "Assign saved routines to each day. Weekly lists take precedence over recurring schedules.",
+    "ko": "요일마다 저장한 루틴을 선택하세요. 주간 목록은 반복 요일 계획보다 우선합니다.",
+    "ja": "各曜日に保存済みルーティンを割り当てます。週間リストは繰り返し予定より優先されます。"
+  },
+  "weekSaved": {
+    "en": "Weekly plan saved. Empty dates now show its sets automatically.",
+    "ko": "주간 계획을 저장했습니다. 기록이 없는 날짜는 세트 목록이 바로 표시됩니다.",
+    "ja": "週間計画を保存しました。未記録の日付にはセットが自動表示されます。"
+  },
+  "weekReplace": {
+    "en": "Replace the plan for this week? Existing workout records remain unchanged.",
+    "ko": "이 주의 계획을 교체할까요? 기존 운동 기록은 유지됩니다.",
+    "ja": "この週の計画を置き換えますか？既存の運動記録は変わりません。"
+  },
+  "weekDelete": {
+    "en": "Delete this weekly plan? Existing workout records remain unchanged.",
+    "ko": "이 주간 계획을 삭제할까요? 기존 운동 기록은 유지됩니다.",
+    "ja": "この週間計画を削除しますか？既存の記録は変わりません。"
+  },
+  "weekEmpty": {
+    "en": "Select at least one training day.",
+    "ko": "하루 이상 운동 루틴을 선택하세요.",
+    "ja": "少なくとも1日のルーティンを選択してください。"
+  },
+  "weekInvalid": {
+    "en": "Invalid weekly plan.",
+    "ko": "주간 계획이 올바르지 않습니다.",
+    "ja": "週間計画が正しくありません。"
+  },
+  "weekDayEdit": {
+    "en": "Edit daily set list",
+    "ko": "요일 세트 목록 편집",
+    "ja": "曜日のセットを編集"
+  },
+  "weekAutoLoaded": {
+    "en": "Sets loaded automatically from your weekly plan.",
+    "ko": "주간 계획의 세트를 자동으로 불러왔습니다.",
+    "ja": "週間計画のセットを自動で読み込みました。"
+  },
+  "weekExisting": {
+    "en": "Your existing workout record is preserved.",
+    "ko": "이 날짜의 기존 운동 기록을 유지합니다.",
+    "ja": "この日付の既存の記録を維持します。"
+  },
+  "weekLoad": {
+    "en": "Load this day's plan",
+    "ko": "이 날 계획 불러오기",
+    "ja": "この日の計画を読み込む"
+  },
+  "weekLoadConfirm": {
+    "en": "Replace the exercises on this date with the plan? Notes and the photo stay, but completed sets will be replaced.",
+    "ko": "이 날짜의 운동을 계획으로 바꿀까요? 메모·사진은 유지되지만 완료 세트는 교체됩니다.",
+    "ja": "この日の種目を計画で置き換えますか？メモ・写真は維持されますが完了セットは置き換えられます。"
+  },
+  "weekViewDay": {
+    "en": "Open workout",
+    "ko": "운동 열기",
+    "ja": "ワークアウトを開く"
+  },
+  "weekImport": {
+    "en": "Weekly plans: {count}. Plans on {conflicts} matching weeks will be replaced.",
+    "ko": "주간 계획 {count}개 · 같은 주의 계획 {conflicts}개를 교체합니다.",
+    "ja": "週間計画{count}件 · 同じ週の計画{conflicts}件を置き換えます。"
+  },
+  "encodingLabel": {
+    "en": "Share string format",
+    "ko": "공유 문자열 형식",
+    "ja": "共有文字列の形式"
+  },
+  "encodingCompact": {
+    "en": "Shorter · includes symbols (Base91)",
+    "ko": "짧은 형식 · 특수문자 포함 (Base91)",
+    "ja": "短い形式 · 記号を含む (Base91)"
+  },
+  "encodingCompatible": {
+    "en": "Compatible · letters/numbers/-/_ (Base64)",
+    "ko": "호환 형식 · 영숫자/-/_ (Base64)",
+    "ja": "互換形式 · 英数字/-/_ (Base64)"
+  },
+  "encodingHint": {
+    "en": "Symbols shorten the representation by about 8%. Keep the entire string intact; use a file for photos.",
+    "ko": "특수문자 형식은 표현 길이를 약 8% 줄입니다. 문자를 그대로 전달하고 사진은 파일 공유를 권장합니다.",
+    "ja": "記号形式は文字数を約8%削減します。文字列をそのまま渡し、写真はファイル共有を推奨します。"
+  },
+  "sharePaste": {
+    "en": "Paste a string starting with GW1. or GW2.",
+    "ko": "GW1. 또는 GW2.로 시작하는 문자열을 붙여넣으세요.",
+    "ja": "GW1. またはGW2.で始まる文字列を貼り付けてください。"
+  },
+  "programBasicReference": {
+    "en": "r/Fitness beginner · adapted 3×5",
+    "ko": "r/Fitness 입문 구성 참고 · 3×5",
+    "ja": "r/Fitness入門参考 · 3×5"
+  },
+  "programBasicNote": {
+    "en": "Uses the publicly described A/B exercise pattern with fixed 3×5 targets. The original uses a final AMRAP set, alternating weeks and progression rules; those are not automated here. Read the original and adjust your plan.",
+    "ko": "공개 A/B 운동 구성을 고정 3×5 계획으로 참고했습니다. 원형의 마지막 AMRAP 세트·주차 교대·증량 규칙은 자동화하지 않았습니다. 원문을 보고 계획을 조절하세요.",
+    "ja": "公開A/B構成を固定3×5で参考にしています。原型の最終AMRAP・週交替・増量ルールは自動化していません。原文を確認し計画を調整してください。"
+  },
+  "programOriginal": {
+    "en": "Read original program",
+    "ko": "추천 프로그램 원문 보기",
+    "ja": "原文プログラムを見る"
   }
 }

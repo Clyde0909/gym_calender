@@ -1,3 +1,4 @@
+import extraExercises from "./extra-exercises.json" with { type: "json" };
 import { t, messages } from "./i18n.js";
 export const library = [
   [
@@ -115,7 +116,9 @@ export const library = [
     "머신",
     "대화 가능한 속도로 시작하고 충분한 준비 운동과 정리 운동을 합니다.",
   ],
-].map(([name, body, equipment, guide]) => ({ name, body, equipment, guide }));
+]
+  .map(([name, body, equipment, guide]) => ({ name, body, equipment, guide }))
+  .concat(extraExercises);
 const consonants = [
   "ㄱ",
   "ㄲ",

@@ -69,8 +69,20 @@ test("language switching persists and does not translate user data or lose recor
   );
   await page.locator('[data-tab="guide"]').click();
   await page.locator("#guide-search").fill("ベンチプレス");
-  await expect(page.locator(".guide-card")).toHaveCount(1);
-  await page.locator('[data-action="guide-add"]').click();
+  await expect(
+    page
+      .locator(".guide-card")
+      .filter({
+        has: page.getByRole("heading", { name: "ベンチプレス", exact: true }),
+      }),
+  ).toHaveCount(1);
+  await page
+    .locator(".guide-card")
+    .filter({
+      has: page.getByRole("heading", { name: "ベンチプレス", exact: true }),
+    })
+    .locator('[data-action="guide-add"]')
+    .click();
   await page.locator('[data-tab="calendar"]').click();
   await expect(page.locator(".exercise-head")).toContainText([
     "사용자 운동 이름",
