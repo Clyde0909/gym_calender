@@ -39,7 +39,7 @@ test("record persists, routine, encrypted photo sharing and restore", async ({
   await page.locator('[data-tab="transfer"]').click();
   await page.locator("#export-password").fill("test-password");
   await page.getByRole("button", { name: "압축 문자열 만들기" }).click();
-  await expect(page.locator("#export-output")).toHaveValue(/^GW2\.E\./);
+  await expect(page.locator("#export-output")).toHaveValue(/^GW3\.E\./);
   const code = await page.locator("#export-output").inputValue();
   await page.locator("#import-input").fill(code);
   await page.locator("#import-password").fill("bad");

@@ -115,3 +115,83 @@ test("settings and times validation", () => {
     }),
   );
 });
+
+import LZString from "lz-string";
+import { compress, decompress } from "../src/lz.js";
+import { encode91, decode91 } from "../src/base91.js";
+import { gzipSync } from "node:zlib";
+test("new exports use interoperable LZ-String bytes in both representations", async () => {
+  for (const encoding of ["compact", "compatible"]) {
+    const code = await encode(payload, "", { encoding });
+    const bytes =
+      encoding === "compact"
+        ? decode91(code.slice(6))
+        : new Uint8Array(Buffer.from(code.slice(6), "base64url"));
+    assert.equal(
+      LZString.decompressFromUint8Array(bytes),
+      JSON.stringify(payload),
+    );
+  }
+});
+test("legacy gzip GW1/GW2 plain and encrypted shares remain readable", async () => {
+  const compressed = gzipSync(JSON.stringify(payload));
+  for (const version of ["GW1", "GW2"]) {
+    const represent =
+      version === "GW1"
+        ? (bytes) => Buffer.from(bytes).toString("base64url")
+        : encode91;
+    assert.deepEqual(
+      await decode(`${version}.P.${represent(compressed)}`),
+      payload,
+    );
+    const salt = crypto.getRandomValues(new Uint8Array(16)),
+      iv = crypto.getRandomValues(new Uint8Array(12));
+    const base = await crypto.subtle.importKey(
+      "raw",
+      new TextEncoder().encode("legacy"),
+      "PBKDF2",
+      false,
+      ["deriveKey"],
+    );
+    const key = await crypto.subtle.deriveKey(
+      { name: "PBKDF2", salt, iterations: 310000, hash: "SHA-256" },
+      base,
+      { name: "AES-GCM", length: 256 },
+      false,
+      ["encrypt"],
+    );
+    const encrypted = new Uint8Array(
+      await crypto.subtle.encrypt(
+        {
+          name: "AES-GCM",
+          iv,
+          additionalData: new TextEncoder().encode(version + ".E"),
+        },
+        key,
+        compressed,
+      ),
+    );
+    const bytes = new Uint8Array(28 + encrypted.length);
+    bytes.set(salt);
+    bytes.set(iv, 16);
+    bytes.set(encrypted, 28);
+    assert.deepEqual(
+      await decode(`${version}.E.${represent(bytes)}`, "legacy"),
+      payload,
+    );
+  }
+});
+test("bounded LZ decoding handles Unicode, truncation and expansion limits", () => {
+  for (const text of [
+    "",
+    "한글 日本語 💪",
+    "abcd".repeat(10000),
+    String.fromCharCode(...Array.from({ length: 4096 }, (_, i) => i)),
+  ]) {
+    assert.equal(decompress(compress(text), 100000), text);
+  }
+  assert.throws(() => decompress(compress("a".repeat(100000)), 1000));
+  assert.throws(() =>
+    decompress(compress("a".repeat(10000)).slice(0, 2), 100000),
+  );
+});

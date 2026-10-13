@@ -1,9 +1,28 @@
 import { encode91, decode91 } from "./base91.js";
 import { t as tr } from "./i18n.js";
-import { gzip } from "fflate";
+import { compress, decompress } from "./lz.js";
 const MAX = 24 * 1024 * 1024,
   enc = new TextEncoder(),
   dec = new TextDecoder("utf-8", { fatal: true });
+// Keep photo and backup compression off the UI thread. Node tests use the
+// same implementation directly; Vite bundles and precaches this local worker.
+async function lz(action, value) {
+  if (typeof Worker === "undefined")
+    return action === "compress" ? compress(value) : decompress(value, MAX);
+  const worker = new Worker(new URL("./lz-worker.js", import.meta.url), {
+    type: "module",
+  });
+  try {
+    return await new Promise((resolve, reject) => {
+      worker.onmessage = ({ data }) =>
+        data.error ? reject(Error("Invalid LZ data")) : resolve(data.result);
+      worker.onerror = () => reject(Error("LZ worker failed"));
+      worker.postMessage({ action, value, limit: MAX });
+    });
+  } finally {
+    worker.terminate();
+  }
+}
 function b64(bytes) {
   let s = "";
   for (let i = 0; i < bytes.length; i += 8192)
@@ -68,17 +87,20 @@ async function key(password, salt) {
 }
 export async function encode(payload, password = "", options = {}) {
   const compact = options.encoding !== "compatible";
-  const version = compact ? "GW2" : "GW1";
+  const version = compact ? "GW3" : "GW4";
   const represent = compact ? encode91 : b64;
-  const raw = enc.encode(JSON.stringify(payload));
+  const json = JSON.stringify(payload);
+  const raw = enc.encode(json);
   if (raw.length > MAX)
     throw Error(tr("데이터가 너무 큽니다. 날짜별로 나누어 공유하세요."));
-  const compressed = await new Promise((resolve, reject) =>
-    gzip(raw, { level: 9 }, (error, data) =>
-      error ? reject(error) : resolve(data),
-    ),
-  );
-  if (!password) return version + ".P." + represent(compressed);
+  const compressed = await lz("compress", json);
+  if (!password) return finish("P", compressed);
+  function finish(mode, bytes) {
+    const body = represent(bytes);
+    if (body.length > MAX * 2)
+      throw Error(tr("데이터가 너무 큽니다. 날짜별로 나누어 공유하세요."));
+    return version + "." + mode + "." + body;
+  }
   const salt = crypto.getRandomValues(new Uint8Array(16)),
     iv = crypto.getRandomValues(new Uint8Array(12));
   const encrypted = new Uint8Array(
@@ -92,17 +114,18 @@ export async function encode(payload, password = "", options = {}) {
   result.set(salt);
   result.set(iv, 16);
   result.set(encrypted, 28);
-  return version + ".E." + represent(result);
+  return finish("E", result);
 }
 export async function decode(text, password = "") {
-  const match = /^(GW[12])\.(P|E)\.([\s\S]+)$/.exec(text.trim());
+  const match = /^(GW[1234])\.(P|E)\.([\s\S]+)$/.exec(text.trim());
   if (!match) throw Error(tr("지원하지 않는 공유 문자열입니다."));
   const [, version, mode, body] = match;
   if (body.length > MAX * 2)
     throw Error(tr("데이터 크기 제한을 초과했습니다."));
   let bytes;
   try {
-    bytes = version === "GW2" ? decode91(body) : unb64(body);
+    bytes =
+      version === "GW2" || version === "GW3" ? decode91(body) : unb64(body);
   } catch {
     throw Error(tr("공유 문자열이 올바르지 않습니다."));
   }
@@ -126,9 +149,13 @@ export async function decode(text, password = "") {
     }
   }
   try {
-    return JSON.parse(
-      dec.decode(await transform(bytes, new DecompressionStream("gzip"))),
-    );
+    const json =
+      version === "GW3" || version === "GW4"
+        ? await lz("decompress", bytes)
+        : dec.decode(await transform(bytes, new DecompressionStream("gzip")));
+    if (enc.encode(json).length > MAX)
+      throw Error("Decoded data exceeds limit");
+    return JSON.parse(json);
   } catch {
     throw Error(tr("공유 데이터가 손상되었거나 크기 제한을 초과했습니다."));
   }

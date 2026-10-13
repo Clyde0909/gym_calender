@@ -72,7 +72,7 @@ try {
   await page.locator("#export-password").fill("offline-test");
   await page.getByRole("button", { name: "압축 문자열 만들기" }).click();
   await page.waitForFunction(() =>
-    document.querySelector("#export-output")?.value.startsWith("GW2.E."),
+    document.querySelector("#export-output")?.value.startsWith("GW3.E."),
   );
   assert.deepEqual(errors, []);
   console.log(

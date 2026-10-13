@@ -34,7 +34,7 @@ test("both share formats and encryption roundtrip with punctuation inside the bo
   for (const encoding of ["compact", "compatible"])
     for (const pw of ["", "password"]) {
       const code = await encode(data, pw, { encoding });
-      assert.equal(code.slice(0, 3), encoding === "compact" ? "GW2" : "GW1");
+      assert.equal(code.slice(0, 3), encoding === "compact" ? "GW3" : "GW4");
       assert.deepEqual(await decode(code, pw), data);
       if (pw) await assert.rejects(() => decode(code, "wrong"));
     }

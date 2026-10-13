@@ -35,11 +35,11 @@ test("recommended weekly list auto-loads, edits, persists real records and is ba
   await page.locator('[data-tab="transfer"]').click();
   await page.locator("#export-kind").selectOption("backup");
   await page.locator('[data-action="export"]').click();
-  await expect(page.locator("#export-output")).toHaveValue(/^GW2\.P\./);
+  await expect(page.locator("#export-output")).toHaveValue(/^GW3\.P\./);
   const compact = await page.locator("#export-output").inputValue();
   await page.locator("#export-encoding").selectOption("compatible");
   await page.locator('[data-action="export"]').click();
-  await expect(page.locator("#export-output")).toHaveValue(/^GW1\.P\./);
+  await expect(page.locator("#export-output")).toHaveValue(/^GW4\.P\./);
   const old = await page.locator("#export-output").inputValue();
   expect(compact.length).toBeLessThan(old.length);
   await page.locator("#import-input").fill(compact);
@@ -113,7 +113,7 @@ test("large photo compact encrypted export restores safely with symbol-rich text
   await page.locator('[data-tab="transfer"]').click();
   await page.locator("#export-password").fill("large-photo");
   await page.locator('[data-action="export"]').click();
-  await expect(page.locator("#export-output")).toHaveValue(/^GW2\.E\./);
+  await expect(page.locator("#export-output")).toHaveValue(/^GW3\.E\./);
   const code = await page.locator("#export-output").inputValue();
   expect(code.length).toBeGreaterThan(10000);
   await page.locator("#import-input").fill(code);
