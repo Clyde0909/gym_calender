@@ -36,7 +36,7 @@ test("record persists, routine, encrypted photo sharing and restore", async ({
   await page.reload();
   await expect(page.locator("#note")).toHaveValue("좋은 운동!");
   await expect(page.locator(".photo-wrap img")).toBeVisible();
-  await page.getByRole("button", { name: "공유 ↗", exact: true }).click();
+  await page.locator('[data-tab="transfer"]').click();
   await page.locator("#export-password").fill("test-password");
   await page.getByRole("button", { name: "압축 문자열 만들기" }).click();
   await expect(page.locator("#export-output")).toHaveValue(/^GW1\.E\./);
@@ -108,6 +108,11 @@ test("library search, editable scheduled routine, sessions, units and 1RM", asyn
     .getByRole("button", { name: "운동에 추가 ↗", exact: true })
     .click();
   await page.getByRole("button", { name: "▶ 운동 시작", exact: true }).click();
+  if (page.viewportSize().width <= 850) {
+    await expect(page.locator(".focus-overlay")).toBeVisible();
+    await page.locator('[data-action="focus-exit"]').click();
+    await expect(page.locator(".focus-overlay")).toHaveCount(0);
+  }
   await page.getByRole("button", { name: "■ 운동 종료", exact: true }).click();
   await expect(page.locator(".session-controls")).toContainText("운동 시간");
   await page.getByRole("button", { name: "개인 설정", exact: false }).click();

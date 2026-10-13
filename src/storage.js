@@ -1,4 +1,5 @@
 import { t as tr } from "./i18n.js";
+import { decodePhoto } from "./images.js";
 import { validateState, newState } from "./data.js";
 const request = (req) =>
   new Promise((resolve, reject) => {
@@ -31,11 +32,9 @@ export async function save(state) {
   });
 }
 export async function photoData(file) {
-  if (!["image/jpeg", "image/png", "image/webp"].includes(file.type))
-    throw Error(tr("JPG, PNG, WebP 사진을 선택하세요."));
   if (file.size > 25 * 1024 * 1024)
     throw Error(tr("25MB 이하의 사진을 선택하세요."));
-  const bitmap = await createImageBitmap(file);
+  const bitmap = await decodePhoto(file);
   const scale = Math.min(1, 1280 / Math.max(bitmap.width, bitmap.height));
   const canvas = document.createElement("canvas");
   canvas.width = Math.max(1, Math.round(bitmap.width * scale));

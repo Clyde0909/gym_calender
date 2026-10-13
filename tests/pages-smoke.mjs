@@ -1,4 +1,5 @@
 import { createServer } from "node:http";
+import { readFileSync } from "node:fs";
 import { readFile } from "node:fs/promises";
 import { resolve, extname, sep } from "node:path";
 import assert from "node:assert/strict";
@@ -57,6 +58,16 @@ try {
     .fill("오프라인 스쿼트");
   await page.getByRole("button", { name: "＋ 추가", exact: true }).click();
   await page.getByRole("heading", { name: "01오프라인 스쿼트" }).waitFor();
+  await page
+    .locator("#photo")
+    .setInputFiles({
+      name: "offline.heic",
+      mimeType: "image/heic",
+      buffer: readFileSync(
+        new URL("./fixtures/workout-10bit.heic", import.meta.url),
+      ),
+    });
+  await page.locator(".photo-wrap img").waitFor();
   await page.reload();
   await page.getByRole("heading", { name: "01오프라인 스쿼트" }).waitFor();
   await page.getByRole("button", { name: "공유 ↗", exact: true }).click();
@@ -67,7 +78,7 @@ try {
   );
   assert.deepEqual(errors, []);
   console.log(
-    "PASS: GitHub Pages subpath, offline reload, persistent recording and encrypted sharing.",
+    "PASS: GitHub Pages subpath, offline HEIC decoding, persistent recording and encrypted sharing.",
   );
 } finally {
   await browser?.close();

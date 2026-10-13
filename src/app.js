@@ -1,3 +1,6 @@
+import { nextPending, remainingRest, focusProgress } from "./focus.js";
+import { primeAlerts, alertRest, keepScreenAwake } from "./alerts.js";
+import { createSessionShareCache, shareData } from "./sharing.js";
 import {
   t as tr,
   language,
@@ -119,6 +122,7 @@ function shell(content) {
     )}</select><span class="today-pill">${today.replaceAll("-", ".")} <b>${tr("오늘")}</b></span></div></header>${content}<footer>${tr("GYM LOG · 당신의 기록은 이 브라우저에만 저장됩니다.")}</footer></main><div class="timer" ${remaining ? "" : "hidden"}><span id="timer-value">${remaining}${tr("초 휴식")}</span><button data-action="stop-timer" aria-label="${tr("타이머 종료")}">×</button></div>`;
 }
 function render() {
+  document.body.classList.toggle("focus-active", !!focusState);
   document.documentElement.lang = language();
   document.title = `GYM LOG · ${tr("운동 기록")}`;
   document.querySelector('meta[name="description"]').content =
@@ -136,6 +140,11 @@ function render() {
               ? stats()
               : transfer(),
   );
+  if (focusState) {
+    app.insertAdjacentHTML("beforeend", focusView());
+    app.querySelectorAll("aside,main").forEach((el) => (el.inert = true));
+  }
+  sessionShares.prepare(session()).catch(() => {});
 }
 function calendar() {
   const active = state.sessions.filter((s) => completed(s) > 0),
@@ -164,7 +173,7 @@ function calendar() {
     },
   ).join(
     "",
-  )}</div><div class="legend"><i class="workout-dot"></i> ${tr("완료")} <i class="pending-dot"></i> ${tr("기록")} <i class="planned-dot"></i> ${tr("예정")} <span>${tr("▧ 사진")}</span></div><div class="motivation"><span>${tr("CONSISTENCY IS EVERYTHING")}</span><h3>${tr("작은 기록이 만드는")}<br>${tr("큰 변화.")}</h3><p>${tr("오늘의 한 세트부터 시작해 보세요.")}</p><div class="barbell">━━▰━▰━━</div></div></section><section class="panel session-panel"><div class="panel-title"><div><div class="eyebrow">${tr("DAILY WORKOUT")}</div><h2>${dateLabel(selected)}</h2></div><button class="text-button" data-action="share-day">${tr("공유 ↗")}</button></div><div class="session-stats"><span><b>${s?.exercises.length || 0}</b> ${tr("운동")}</span><span><b>${s ? completed(s) : 0}</b> ${tr("완료 세트")}</span><span><b>${fmt(displayWeight(s ? volume(s) : 0))}</b> ${unit()}</span><button class="text-button" data-action="timer">◷ ${state.settings.restSeconds}${tr("초 휴식")}</button></div>${sessionControls(s)}<div class="exercise-list">${s?.exercises.map((e, i) => exerciseCard(e, i)).join("") || `<div class="empty"><div class="empty-icon">＋</div><h3>${tr("오늘의 운동을 기록하세요")}</h3><p>${tr("운동을 추가하거나 저장한 루틴으로 시작하세요.")}</p></div>`}</div><div class="add-box"><label for="exercise-name">${tr("운동 추가")}</label><div class="row"><input id="exercise-name" list="exercise-options" placeholder="${tr("운동 검색 또는 직접 입력")}" maxlength="100" value="${esc(newExercise)}"><datalist id="exercise-options">${exercises.map((e) => `<option value="${esc(exerciseLabel(e))}">`).join("")}</datalist><button class="primary" data-action="add-exercise">${tr("＋ 추가")}</button></div><div class="row"><select id="routine-select" aria-label="${tr("루틴 선택")}"><option value="">${tr("저장한 루틴 선택")}</option>${state.routines.map((r) => `<option value="${esc(r.id)}">${esc(r.name)}</option>`).join("")}</select><button class="secondary" data-action="apply-routine">${tr("불러오기")}</button></div></div><label class="field-label" for="note">${tr("오늘의 메모")}</label><textarea id="note" maxlength="10000" placeholder="${tr("컨디션, 운동 느낌, 다음 목표를 남겨보세요.")}">${esc(s?.note || "")}</textarea><div class="photo-head"><label class="field-label">${tr("운동 사진")} <small>${tr("하루 1장")}</small></label><label class="text-button upload">${s?.photo ? tr("사진 교체") : tr("＋ 사진 추가")}<input id="photo" type="file" accept="image/jpeg,image/png,image/webp" hidden></label></div>${s?.photo ? `<div class="photo-wrap"><img src="${s.photo}" alt="${selected} ${tr("운동 사진")}"><button class="photo-delete" data-action="remove-photo">${tr("사진 삭제")}</button></div>` : `<p class="hint">${tr("사진은 자동으로 크기 조정·압축되어 기기에 저장됩니다.")}</p>`}<div class="session-bottom"><button class="secondary" data-action="save-routine">${tr("현재 운동을 루틴으로 저장")}</button><button class="danger-text" data-action="delete-day">${tr("기록 삭제")}</button></div></section></div>`;
+  )}</div><div class="legend"><i class="workout-dot"></i> ${tr("완료")} <i class="pending-dot"></i> ${tr("기록")} <i class="planned-dot"></i> ${tr("예정")} <span>${tr("▧ 사진")}</span></div><div class="motivation"><span>${tr("CONSISTENCY IS EVERYTHING")}</span><h3>${tr("작은 기록이 만드는")}<br>${tr("큰 변화.")}</h3><p>${tr("오늘의 한 세트부터 시작해 보세요.")}</p><div class="barbell">━━▰━▰━━</div></div></section><section class="panel session-panel"><div class="panel-title"><div><div class="eyebrow">${tr("DAILY WORKOUT")}</div><h2>${dateLabel(selected)}</h2></div><button class="text-button" data-action="share-day">${tr("공유 ↗")}</button></div><div class="session-stats"><span><b>${s?.exercises.length || 0}</b> ${tr("운동")}</span><span><b>${s ? completed(s) : 0}</b> ${tr("완료 세트")}</span><span><b>${fmt(displayWeight(s ? volume(s) : 0))}</b> ${unit()}</span><button class="text-button" data-action="timer">◷ ${state.settings.restSeconds}${tr("초 휴식")}</button></div>${sessionControls(s)}<div class="exercise-list">${s?.exercises.map((e, i) => exerciseCard(e, i)).join("") || `<div class="empty"><div class="empty-icon">＋</div><h3>${tr("오늘의 운동을 기록하세요")}</h3><p>${tr("운동을 추가하거나 저장한 루틴으로 시작하세요.")}</p></div>`}</div><div class="add-box"><label for="exercise-name">${tr("운동 추가")}</label><div class="row"><input id="exercise-name" list="exercise-options" placeholder="${tr("운동 검색 또는 직접 입력")}" maxlength="100" value="${esc(newExercise)}"><datalist id="exercise-options">${exercises.map((e) => `<option value="${esc(exerciseLabel(e))}">`).join("")}</datalist><button class="primary" data-action="add-exercise">${tr("＋ 추가")}</button></div><div class="row"><select id="routine-select" aria-label="${tr("루틴 선택")}"><option value="">${tr("저장한 루틴 선택")}</option>${state.routines.map((r) => `<option value="${esc(r.id)}">${esc(r.name)}</option>`).join("")}</select><button class="secondary" data-action="apply-routine">${tr("불러오기")}</button></div></div><label class="field-label" for="note">${tr("오늘의 메모")}</label><textarea id="note" maxlength="10000" placeholder="${tr("컨디션, 운동 느낌, 다음 목표를 남겨보세요.")}">${esc(s?.note || "")}</textarea><div class="photo-head"><label class="field-label">${tr("운동 사진")} <small>${tr("하루 1장")}</small></label><label class="text-button upload">${s?.photo ? tr("사진 교체") : tr("＋ 사진 추가")}<input id="photo" type="file" accept="image/*,.heic,.heif" hidden></label></div>${s?.photo ? `<div class="photo-wrap"><img src="${s.photo}" alt="${selected} ${tr("운동 사진")}"><button class="photo-delete" data-action="remove-photo">${tr("사진 삭제")}</button></div>` : `<p class="hint">${tr("사진은 자동으로 크기 조정·압축되어 기기에 저장됩니다.")}</p>`}<div class="session-bottom"><button class="secondary" data-action="save-routine">${tr("현재 운동을 루틴으로 저장")}</button><button class="danger-text" data-action="delete-day">${tr("기록 삭제")}</button></div></section></div>`;
 }
 function exerciseCard(e, i) {
   return `<article class="exercise-card"><div class="exercise-head"><h3><span>${String(i + 1).padStart(2, "0")}</span>${esc(exerciseLabel(e.name))}</h3><button class="icon" data-action="remove-exercise" data-i="${i}" aria-label="${esc(exerciseLabel(e.name))} ${tr("삭제")}">×</button></div><div class="set-head"><span>SET</span><span>${tr("무게 (")}${unit()})</span><span>${tr("횟수")}</span><span>${tr("완료")}</span><span></span></div>${e.sets.map((s, j) => `<div class="set-row ${s.done ? "done" : ""}"><span>${j + 1}</span><input aria-label="${esc(exerciseLabel(e.name))} ${j + 1}${tr("세트 무게")}" type="number" min="0" max="10000" step="0.5" value="${displayWeight(s.weight)}" data-i="${i}" data-j="${j}" data-field="weight"><input aria-label="${esc(exerciseLabel(e.name))} ${j + 1}${tr("세트 횟수")}" type="number" min="0" max="100000" step="1" value="${s.reps}" data-i="${i}" data-j="${j}" data-field="reps"><button class="check ${s.done ? "checked" : ""}" data-action="toggle-set" data-i="${i}" data-j="${j}" aria-label="${j + 1}${tr("세트 완료")}" aria-pressed="${s.done}">✓</button><button class="remove-set" data-action="remove-set" data-i="${i}" data-j="${j}" aria-label="${j + 1}${tr("세트 삭제")}">×</button></div>`).join("")}<div class="exercise-tools"><button class="text-button" data-action="previous" data-i="${i}">${tr("↶ 이전 기록")}</button><button class="text-button" data-action="recommend" data-i="${i}">${tr("중량 추천")}</button><button class="text-button" data-action="template" data-i="${i}">5 × 5</button><button class="text-button" data-action="move-up" data-i="${i}">${tr("↑ 순서")}</button></div><button class="add-set" data-action="add-set" data-i="${i}">${tr("＋ 세트 추가")}</button></article>`;
@@ -241,12 +250,14 @@ app.addEventListener("change", async (e) => {
       );
     }
     if (t.id === "note") await mutate(() => (ensure().note = t.value), false);
-    if (t.id === "photo" && t.files[0]) {
+    if (["photo", "focus-photo"].includes(t.id) && t.files[0]) {
       toast(tr("사진을 압축하고 있습니다."));
-      const photoDate = selected;
+      const photoDate = t.id === "focus-photo" ? focusState.date : selected;
       const photo = await photoData(t.files[0]);
       await mutate(() => (ensure(photoDate).photo = photo));
-      toast(tr("사진을 저장했습니다."));
+      toast(
+        tr(t.id === "focus-photo" ? "focusPhotoSaved" : "사진을 저장했습니다."),
+      );
     }
     if (t.dataset.setting) {
       await mutate(() => {
@@ -290,6 +301,55 @@ app.addEventListener("change", async (e) => {
 app.addEventListener("click", async (event) => {
   const b = event.target.closest("button");
   if (!b) return;
+  const direct = b.dataset.action;
+  if (direct === "native-share") {
+    try {
+      sharePrepared({ text: output(), date: selected });
+    } catch (error) {
+      toast(error.message);
+    }
+    return;
+  }
+  if (direct === "share-day" && mobileUI()) {
+    shareDay();
+    return;
+  }
+  if (direct === "focus-photo-picker") {
+    app.querySelector("#focus-photo")?.click();
+    return;
+  }
+  if (direct === "focus-notify") {
+    primeAlerts();
+    requestFocusNotifications();
+    return;
+  }
+  if (direct === "focus-tap") {
+    primeAlerts();
+    await advanceFocus();
+    return;
+  }
+  if (["focus-exit", "focus-dismiss"].includes(direct)) {
+    if (!focusBusy) leaveFocus();
+    return;
+  }
+  if (direct === "focus-skip-rest" && focusState?.phase === "rest") {
+    focusState.phase = "ready";
+    saveFocus();
+    render();
+    return;
+  }
+  if (["start-session", "focus-resume", "timer", "toggle-set"].includes(direct))
+    primeAlerts();
+  if (
+    ["start-session", "focus-resume"].includes(direct) &&
+    mobileUI() &&
+    nextPending(session()) &&
+    (!session()?.endedAt || direct === "focus-resume") &&
+    document.documentElement.requestFullscreen
+  ) {
+    focusFullscreen = true;
+    document.documentElement.requestFullscreen().catch(() => {});
+  }
   await queue;
   if (b.dataset.tab) {
     tab = b.dataset.tab;
@@ -469,19 +529,6 @@ app.addEventListener("click", async (event) => {
       link.click();
       setTimeout(() => URL.revokeObjectURL(url), 1000);
     }
-    if (a === "native-share") {
-      const file = new File([output()], `gym-log-${today}.gymlog`, {
-        type: "text/plain",
-      });
-      if (navigator.canShare?.({ files: [file] }))
-        await navigator.share({ files: [file], title: tr("운동 기록") });
-      else
-        throw Error(
-          tr(
-            "이 브라우저는 파일 공유를 지원하지 않습니다. 다운로드 후 전달하세요.",
-          ),
-        );
-    }
     if (a === "inspect-import") {
       imported = null;
       document.querySelector("#import-preview").textContent = tr("확인 중…");
@@ -546,10 +593,312 @@ function output() {
   if (!value) throw Error(tr("먼저 공유 문자열을 생성하세요."));
   return value;
 }
+function mobileUI() {
+  return matchMedia("(max-width: 850px)").matches;
+}
+const sessionShares = createSessionShareCache();
+let focusState = null,
+  focusBusy = false,
+  focusTicker = null,
+  focusFullscreen = false,
+  lastFocusTap = -Infinity;
+function focusSession() {
+  return state.sessions.find((s) => s.date === focusState?.date);
+}
+function saveFocus() {
+  try {
+    if (focusState)
+      sessionStorage.setItem("gym-focus", JSON.stringify(focusState));
+    else sessionStorage.removeItem("gym-focus");
+  } catch {}
+}
+function restoreFocus() {
+  try {
+    const saved = JSON.parse(sessionStorage.getItem("gym-focus") || "null");
+    if (!saved || !["running", "rest", "ready", "done"].includes(saved.phase))
+      return;
+    const s = state.sessions.find((s) => s.date === saved.date);
+    if (!s) return;
+    const next = nextPending(s);
+    if (saved.phase === "done" && !next) {
+      focusState = { date: s.date, phase: "done", cursor: null };
+    } else if (next && !s.endedAt) {
+      const same = saved.cursor?.i === next.i && saved.cursor?.j === next.j;
+      focusState = {
+        date: s.date,
+        phase: same ? saved.phase : "ready",
+        cursor: next,
+        deadline: Number.isFinite(saved.deadline) ? saved.deadline : Date.now(),
+      };
+      if (focusState.phase === "done") focusState.phase = "ready";
+    } else return;
+    selected = s.date;
+    if (focusState.phase !== "done") startFocusTicker();
+    keepScreenAwake(focusState.phase !== "done");
+  } catch {}
+}
+function startFocusTicker() {
+  clearInterval(focusTicker);
+  focusTicker = setInterval(tickFocus, 250);
+}
+function tickFocus() {
+  if (focusState?.phase !== "rest") return;
+  const remaining = remainingRest(focusState.deadline);
+  const label = document.querySelector("#focus-countdown");
+  if (label) label.textContent = String(remaining);
+  if (remaining === 0) {
+    focusState.phase = "ready";
+    saveFocus();
+    render();
+    alertRest(tr("focusRestComplete"), tr("focusRestBody"));
+  }
+}
+function enterFocus() {
+  clearInterval(timer);
+  remaining = 0;
+  const s = session(),
+    cursor = nextPending(s);
+  if (!cursor) {
+    toast(tr("focusNoPending"));
+    return;
+  }
+  focusState = { date: s.date, phase: "running", cursor };
+  lastFocusTap = -Infinity;
+  saveFocus();
+  startFocusTicker();
+  keepScreenAwake(true);
+  render();
+}
+function leaveFocus() {
+  focusState = null;
+  saveFocus();
+  clearInterval(focusTicker);
+  keepScreenAwake(false);
+  if (focusFullscreen && document.fullscreenElement)
+    document.exitFullscreen?.().catch(() => {});
+  focusFullscreen = false;
+  render();
+}
+function focusView() {
+  if (!focusState) return "";
+  const s = focusSession();
+  if (!s) return "";
+  const progress = focusProgress(s),
+    phase = focusState.phase;
+  const header = `<div class="focus-header"><span>${tr("focusTitle")}</span><div><button data-action="focus-notify" class="focus-small">${tr("focusNotify")}</button><button data-action="focus-exit" class="focus-small" aria-label="${tr("focusExit")}">×</button></div></div>`;
+  if (phase === "done")
+    return `<section class="focus-overlay focus-finished" role="dialog" aria-modal="true" aria-label="${tr("focusTitle")}">${header}<div class="focus-finish"><div class="finish-check">✓</div><h1>${tr("focusFinishTitle")}</h1><p>${tr("sessionDuration", { minutes: Math.max(0, Math.round(((s.endedAt || Date.now()) - (s.startedAt || Date.now())) / 60000)), sets: progress.done })}</p><strong>${fmt(displayWeight(volume(s)))} ${unit()}</strong><h2>${tr(s.photo ? "focusPhotoReplace" : "focusFinishPhoto")}</h2>${s.photo ? `<img class="focus-saved-photo" src="${s.photo}" alt="${tr("운동 사진")}">` : ""}<button class="focus-photo-button" data-action="focus-photo-picker">${tr(s.photo ? "사진 교체" : "focusAddPhoto")}</button><input id="focus-photo" type="file" accept="image/*,.heic,.heif" hidden><button class="focus-small" data-action="focus-dismiss">${tr(s.photo ? "focusClose" : "focusLater")}</button><button class="focus-small" data-action="share-day">${tr("공유 ↗")}</button></div></section>`;
+  const { i, j } = focusState.cursor,
+    e = s.exercises[i],
+    set = e.sets[j],
+    resting = phase === "rest";
+  return `<section class="focus-overlay phase-${phase}" role="dialog" aria-modal="true" aria-label="${tr("focusTitle")}">${header}<div class="focus-progress"><span>${tr("focusExercise", { current: i + 1, total: s.exercises.length })}</span><span>${progress.done} / ${progress.total}</span></div><button class="focus-touch" data-action="focus-tap" ${resting || focusBusy ? "disabled" : ""}><div class="focus-eyebrow">${resting ? tr("focusRest") : phase === "ready" ? tr(j === 0 ? "focusNextExercise" : "focusReady") : tr("DAILY WORKOUT")}</div>${resting ? `<div id="focus-countdown" class="focus-countdown" role="timer">${remainingRest(focusState.deadline)}</div><div class="focus-up-next">${tr(j === 0 ? "focusNextExercise" : "focusNextSet")}</div>` : ""}<h1>${esc(exerciseLabel(e.name))}</h1><div class="focus-values"><strong>${displayWeight(set.weight)}<small>${unit()}</small></strong><span>×</span><strong>${set.reps}<small>${tr("focusReps")}</small></strong></div><p class="focus-set-number">${tr("focusSet", { current: j + 1, total: e.sets.length })}</p><div class="focus-tap-hint" ${resting ? 'aria-live="polite"' : ""}>${resting ? tr("focusRestWaiting") : tr(phase === "running" ? "focusFinishSet" : "focusStartSet")}</div></button><div class="focus-bottom">${resting ? `<button class="focus-small" data-action="focus-skip-rest">${tr("focusSkipRest")}</button>` : `<span>${tr("focusExitHint")}</span>`}</div></section>`;
+}
+async function advanceFocus() {
+  if (
+    focusBusy ||
+    !focusState ||
+    ["rest", "done"].includes(focusState.phase) ||
+    Date.now() - lastFocusTap < 350
+  )
+    return;
+  lastFocusTap = Date.now();
+  if (focusState.phase === "ready") {
+    focusState.phase = "running";
+    saveFocus();
+    render();
+    return;
+  }
+  focusBusy = true;
+  try {
+    const date = focusState.date,
+      { i, j } = focusState.cursor;
+    await mutate(() => {
+      const s = ensure(date);
+      s.exercises[i].sets[j].done = true;
+      if (!nextPending(s)) s.endedAt = Date.now();
+    }, false);
+    const cursor = nextPending(focusSession());
+    if (!cursor) {
+      focusState.phase = "done";
+      focusState.cursor = null;
+      keepScreenAwake(false);
+      clearInterval(focusTicker);
+    } else {
+      focusState.cursor = cursor;
+      focusState.phase = state.settings.autoRest ? "rest" : "ready";
+      focusState.deadline = Date.now() + state.settings.restSeconds * 1000;
+    }
+    saveFocus();
+  } catch (error) {
+    toast(error.message);
+  } finally {
+    focusBusy = false;
+    render();
+  }
+}
+function requestFocusNotifications() {
+  if (!("Notification" in window)) {
+    toast(tr("focusNotifyUnavailable"));
+    return;
+  }
+  try {
+    Notification.requestPermission()
+      .then((permission) =>
+        toast(
+          tr(
+            permission === "granted"
+              ? "focusNotifyGranted"
+              : "focusNotifyDenied",
+          ),
+        ),
+      )
+      .catch(() => toast(tr("focusNotifyUnavailable")));
+  } catch {
+    toast(tr("focusNotifyUnavailable"));
+  }
+}
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "visible") {
+    tickFocus();
+    if (focusState && focusState.phase !== "done") keepScreenAwake(true);
+  }
+});
+function downloadShared(data) {
+  const url = URL.createObjectURL(
+    new Blob([data.text], { type: "text/plain" }),
+  );
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = `gym-log-${data.date}.txt`;
+  link.click();
+  setTimeout(() => URL.revokeObjectURL(url), 15000);
+}
+function openShareDialog(data, message) {
+  document.querySelector("#share-dialog")?.remove();
+  const dialog = document.createElement("dialog");
+  dialog.id = "share-dialog";
+  dialog.className = "share-dialog";
+  dialog.innerHTML = `<div class="panel-title"><h2>${tr("shareFallback")}</h2><button data-share="close" class="icon" aria-label="${tr("shareClose")}">×</button></div><p class="hint share-message"></p><button data-share="native" class="primary full" disabled>${tr("shareTap")}</button><div class="row share-fallback-actions"><button data-share="download" class="secondary" disabled>${tr("파일 다운로드")}</button><button data-share="copy" class="secondary" disabled>${tr("문자열 복사")}</button></div><textarea class="share-code" readonly aria-label="${tr("공유 문자열")}"></textarea><button data-share="advanced" class="text-button">${tr("shareAdvanced")}</button>`;
+  document.body.append(dialog);
+  dialog.showModal();
+  let current = data;
+  function update(value) {
+    if (!dialog.isConnected) return;
+    current = value;
+    dialog.querySelector(".share-code").value = value.text;
+    dialog.querySelector(".share-message").textContent =
+      message || tr("shareReady");
+    dialog
+      .querySelectorAll("button[data-share]")
+      .forEach((b) => (b.disabled = false));
+  }
+  dialog.querySelector(".share-message").textContent =
+    message || tr("sharePreparing");
+  if (data) update(data);
+  dialog.addEventListener("close", () => dialog.remove());
+  dialog.addEventListener("click", (event) => {
+    const action = event.target.closest("[data-share]")?.dataset.share;
+    if (!action) return;
+    if (action === "close") {
+      dialog.close();
+      return;
+    }
+    if (action === "advanced") {
+      dialog.close();
+      if (focusState) leaveFocus();
+      tab = "transfer";
+      render();
+      return;
+    }
+    if (!current) return;
+    if (action === "download") downloadShared(current);
+    if (action === "copy") {
+      const textarea = dialog.querySelector(".share-code");
+      try {
+        navigator.clipboard
+          .writeText(current.text)
+          .then(() => toast(tr("복사했습니다.")))
+          .catch(() => {
+            textarea.focus();
+            textarea.select();
+            toast(tr("복사 권한이 없습니다. 선택된 문자열을 직접 복사하세요."));
+          });
+      } catch {
+        textarea.focus();
+        textarea.select();
+        toast(tr("복사 권한이 없습니다. 선택된 문자열을 직접 복사하세요."));
+      }
+    }
+    if (action === "native") {
+      const button = event.target.closest("button");
+      button.disabled = true;
+      sharePrepared(current, dialog).finally(() => {
+        if (button.isConnected) button.disabled = false;
+      });
+    }
+  });
+  return {
+    update,
+    error(error) {
+      if (!dialog.isConnected) return;
+      dialog.querySelector(".share-message").textContent = error.message;
+    },
+  };
+}
+function sharePrepared(data, dialog) {
+  try {
+    // Called synchronously from the tap: do not await storage, compression or crypto here.
+    const sharing = shareData(data.text, data.date, tr("운동 기록"));
+    if (!sharing) {
+      if (dialog)
+        dialog.querySelector(".share-message").textContent =
+          tr("shareUnavailable");
+      else openShareDialog(data, tr("shareUnavailable"));
+      return Promise.resolve();
+    }
+    return Promise.resolve(sharing)
+      .then(() => dialog?.close())
+      .catch((error) => {
+        if (error.name === "AbortError") return;
+        if (dialog)
+          dialog.querySelector(".share-message").textContent =
+            tr("shareBlocked");
+        else openShareDialog(data, tr("shareBlocked"));
+      });
+  } catch {
+    if (dialog)
+      dialog.querySelector(".share-message").textContent = tr("shareBlocked");
+    else openShareDialog(data, tr("shareBlocked"));
+    return Promise.resolve();
+  }
+}
+function shareDay() {
+  const s = session();
+  if (!s) {
+    toast(tr("선택한 날짜의 기록이 없습니다."));
+    return;
+  }
+  const ready = sessionShares.ready(s);
+  if (ready) {
+    sharePrepared(ready);
+    return;
+  }
+  const dialog = openShareDialog(null);
+  sessionShares
+    .prepare(s)
+    .then((data) => {
+      if (data) dialog.update(data);
+    })
+    .catch((error) => dialog.error(error));
+}
+
 try {
   state = await load();
   state.settings = { ...defaultSettings(), ...state.settings };
+  restoreFocus();
   render();
+  tickFocus();
 } catch (err) {
   app.innerHTML = `<main><h1>${tr("저장소를 열 수 없습니다")}</h1><p>${esc(err.message)}</p><p>${tr("브라우저의 저장소 권한과 개인 정보 보호 설정을 확인하세요. 기존 데이터를 보호하기 위해 초기화하지 않았습니다.")}</p></main>`;
 }
@@ -566,6 +915,7 @@ function startTimer() {
     if (!remaining) {
       clearInterval(timer);
       render();
+      alertRest(tr("focusRestComplete"), tr("focusRestBody"));
       toast(tr("휴식 끝! 다음 세트를 시작하세요."));
     }
   }, 500);
@@ -573,7 +923,7 @@ function startTimer() {
 function sessionControls(s) {
   const day = new Date(selected + "T12:00:00").getDay(),
     planned = state.routines.find((r) => r.id === state.settings.schedule[day]);
-  return `<div class="session-controls"><div class="row"><button class="${s?.startedAt && !s?.endedAt ? "secondary" : "primary"}" data-action="${s?.startedAt && !s?.endedAt ? "end-session" : "start-session"}">${s?.startedAt && !s?.endedAt ? tr("■ 운동 종료") : tr("▶ 운동 시작")}</button><span class="hint">${s?.startedAt ? (s.endedAt ? tr("sessionDuration", { minutes: Math.round((s.endedAt - s.startedAt) / 60000), sets: completed(s) }) : tr("운동 진행 중 · 시작 ") + new Date(s.startedAt).toLocaleTimeString(locale(), { hour: "2-digit", minute: "2-digit" })) : tr("시작과 종료 시간을 기록하세요.")}</span></div>${planned ? `<p class="hint">${tr("예정된 루틴:")} ${esc(planned.name)} <button class="text-button" data-action="planned-routine" data-id="${esc(planned.id)}">${tr("운동에 추가 ↗")}</button></p>` : ""}</div>`;
+  return `<div class="session-controls"><div class="row"><button class="${s?.startedAt && !s?.endedAt ? "secondary" : "primary"}" data-action="${s?.startedAt && !s?.endedAt ? "end-session" : "start-session"}">${s?.startedAt && !s?.endedAt ? tr("■ 운동 종료") : tr("▶ 운동 시작")}</button>${mobileUI() && s?.startedAt && !s?.endedAt ? `<button class="secondary" data-action="focus-resume">${tr("focusResume")}</button>` : ""}<span class="hint">${s?.startedAt ? (s.endedAt ? tr("sessionDuration", { minutes: Math.round((s.endedAt - s.startedAt) / 60000), sets: completed(s) }) : tr("운동 진행 중 · 시작 ") + new Date(s.startedAt).toLocaleTimeString(locale(), { hour: "2-digit", minute: "2-digit" })) : tr("시작과 종료 시간을 기록하세요.")}</span></div>${planned ? `<p class="hint">${tr("예정된 루틴:")} ${esc(planned.name)} <button class="text-button" data-action="planned-routine" data-id="${esc(planned.id)}">${tr("운동에 추가 ↗")}</button></p>` : ""}</div>`;
 }
 function settings() {
   return `<section class="panel settings-panel"><h2>${tr("내 운동 환경")}</h2><p class="hint">${tr("회원가입 없이 이 브라우저에 설정을 저장합니다. 전체 백업에 설정이 포함됩니다.")}</p><label class="field-label" for="unit">${tr("중량 단위")}</label><select id="unit" data-setting="unit">${["kg", "lbs"].map((u) => `<option ${unit() === u ? "selected" : ""}>${u}</option>`).join("")}</select><label class="field-label" for="goal">${tr("운동 목표")}</label><select id="goal" data-setting="goal">${["근비대", tr("근력 향상"), tr("체지방 감량"), tr("건강 유지")].map((g) => `<option value="${g}" ${state.settings.goal === g ? "selected" : ""}>${tr(g)}</option>`).join("")}</select><label class="field-label" for="weekly-days">${tr("주간 목표 운동일")}</label><input id="weekly-days" data-setting="weeklyDays" type="number" min="1" max="7" value="${state.settings.weeklyDays}"><label class="field-label" for="rest-seconds">${tr("기본 휴식 시간 (초)")}</label><input id="rest-seconds" data-setting="restSeconds" type="number" min="10" max="600" value="${state.settings.restSeconds}"><label class="checkbox-label"><input type="checkbox" data-setting="autoRest" ${state.settings.autoRest ? "checked" : ""}> ${tr("세트 완료 시 휴식 타이머 자동 시작")}</label><p class="hint">${tr("무게는 내부적으로 kg 단위로 보관하며 화면에서만 변환합니다.")}</p></section>`;
@@ -646,7 +996,18 @@ function strengthStats() {
   }</section>`;
 }
 async function extraAction(a, b, i, j) {
+  if (a === "focus-resume") enterFocus();
   if (a === "start-session") {
+    if (mobileUI() && !nextPending(session())) {
+      toast(
+        tr(
+          session()?.exercises.some((e) => e.sets.length)
+            ? "focusNoPending"
+            : "focusNoSets",
+        ),
+      );
+      return;
+    }
     if (
       session()?.startedAt &&
       session()?.endedAt &&
@@ -657,6 +1018,7 @@ async function extraAction(a, b, i, j) {
       ensure().startedAt = Date.now();
       ensure().endedAt = null;
     });
+    if (mobileUI()) enterFocus();
   }
   if (a === "end-session") {
     await mutate(() => (ensure().endedAt = Date.now()));
