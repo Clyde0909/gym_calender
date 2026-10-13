@@ -1,0 +1,1278 @@
+{
+  "나의 꾸준함이 쌓이는 곳": {
+    "en": "Where consistency grows",
+    "ja": "継続が力になる場所"
+  },
+  "내 기기에 안전하게 저장": {
+    "en": "Stored on this device",
+    "ja": "この端末に保存"
+  },
+  "계정 없이, 나만의 운동 기록.": {
+    "en": "Your training journal, without an account.",
+    "ja": "アカウント不要のトレーニング記録。"
+  },
+  "주기적으로 백업을 내보내세요.": {
+    "en": "Export a backup regularly.",
+    "ja": "定期的にバックアップしてください。"
+  },
+  "오늘": {
+    "en": "Today",
+    "ja": "今日"
+  },
+  "GYM LOG · 당신의 기록은 이 브라우저에만 저장됩니다.": {
+    "en": "GYM LOG · Your records stay in this browser.",
+    "ja": "GYM LOG · 記録はこのブラウザに保存されます。"
+  },
+  "초 휴식": {
+    "en": "s rest",
+    "ja": "秒休憩"
+  },
+  "타이머 종료": {
+    "en": "Stop timer",
+    "ja": "タイマーを停止"
+  },
+  "운동 캘린더": {
+    "en": "Workout calendar",
+    "ja": "ワークアウトカレンダー"
+  },
+  "나의 루틴": {
+    "en": "My routines",
+    "ja": "マイルーティン"
+  },
+  "운동 가이드": {
+    "en": "Exercise guide",
+    "ja": "エクササイズガイド"
+  },
+  "기록 분석": {
+    "en": "Progress",
+    "ja": "記録分析"
+  },
+  "백업 & 공유": {
+    "en": "Backup & share",
+    "ja": "バックアップと共有"
+  },
+  "개인 설정": {
+    "en": "Preferences",
+    "ja": "設定"
+  },
+  "누적 운동": {
+    "en": "Total workouts",
+    "ja": "累計ワークアウト"
+  },
+  "일": {
+    "en": " days",
+    "ja": "日"
+  },
+  "이번 달 운동": {
+    "en": "This month",
+    "ja": "今月のワークアウト"
+  },
+  "누적 볼륨": {
+    "en": "Total volume",
+    "ja": "累計ボリューム"
+  },
+  "어제보다 강한 오늘.": {
+    "en": "Stronger than yesterday.",
+    "ja": "昨日より強い今日。"
+  },
+  "이전 달": {
+    "en": "Previous month",
+    "ja": "前の月"
+  },
+  "다음 달": {
+    "en": "Next month",
+    "ja": "次の月"
+  },
+  "완료": {
+    "en": "Done",
+    "ja": "完了"
+  },
+  "기록": {
+    "en": "Recorded",
+    "ja": "記録"
+  },
+  "예정": {
+    "en": "Planned",
+    "ja": "予定"
+  },
+  "▧ 사진": {
+    "en": "▧ Photo",
+    "ja": "▧ 写真"
+  },
+  "작은 기록이 만드는": {
+    "en": "Small steps.",
+    "ja": "小さな記録がつくる"
+  },
+  "큰 변화.": {
+    "en": "Big changes.",
+    "ja": "大きな変化。"
+  },
+  "공유 ↗": {
+    "en": "Share ↗",
+    "ja": "共有 ↗"
+  },
+  "운동": {
+    "en": "Exercises",
+    "ja": "種目"
+  },
+  "완료 세트": {
+    "en": "Completed sets",
+    "ja": "完了セット"
+  },
+  "운동 추가": {
+    "en": "Add exercise",
+    "ja": "種目を追加"
+  },
+  "운동 검색 또는 직접 입력": {
+    "en": "Search or enter an exercise",
+    "ja": "種目を検索または入力"
+  },
+  "＋ 추가": {
+    "en": "＋ Add",
+    "ja": "＋ 追加"
+  },
+  "루틴 선택": {
+    "en": "Choose routine",
+    "ja": "ルーティンを選択"
+  },
+  "저장한 루틴 선택": {
+    "en": "Select a saved routine",
+    "ja": "保存済みルーティンを選択"
+  },
+  "불러오기": {
+    "en": "Load",
+    "ja": "読み込む"
+  },
+  "오늘의 메모": {
+    "en": "Workout notes",
+    "ja": "ワークアウトメモ"
+  },
+  "컨디션, 운동 느낌, 다음 목표를 남겨보세요.": {
+    "en": "How did it feel? Note your next goal.",
+    "ja": "体調や感想、次の目標を記録しましょう。"
+  },
+  "운동 사진": {
+    "en": "Workout photo",
+    "ja": "ワークアウト写真"
+  },
+  "하루 1장": {
+    "en": "One per day",
+    "ja": "1日1枚"
+  },
+  "현재 운동을 루틴으로 저장": {
+    "en": "Save workout as routine",
+    "ja": "ルーティンとして保存"
+  },
+  "기록 삭제": {
+    "en": "Delete record",
+    "ja": "記録を削除"
+  },
+  "운동 완료": {
+    "en": "Workout complete",
+    "ja": "ワークアウト完了"
+  },
+  "미완료 기록": {
+    "en": "Unfinished record",
+    "ja": "未完了の記録"
+  },
+  "예정된 운동": {
+    "en": "Planned workout",
+    "ja": "予定のワークアウト"
+  },
+  "휴식": {
+    "en": "Rest",
+    "ja": "休息"
+  },
+  "오늘의 운동을 기록하세요": {
+    "en": "Log your workout",
+    "ja": "ワークアウトを記録しましょう"
+  },
+  "운동을 추가하거나 저장한 루틴으로 시작하세요.": {
+    "en": "Add an exercise or load a saved routine.",
+    "ja": "種目を追加するかルーティンを読み込みましょう。"
+  },
+  "사진 교체": {
+    "en": "Replace photo",
+    "ja": "写真を変更"
+  },
+  "＋ 사진 추가": {
+    "en": "＋ Add photo",
+    "ja": "＋ 写真を追加"
+  },
+  "사진 삭제": {
+    "en": "Delete photo",
+    "ja": "写真を削除"
+  },
+  "사진은 자동으로 크기 조정·압축되어 기기에 저장됩니다.": {
+    "en": "Photos are resized and compressed before saving.",
+    "ja": "写真はサイズ調整と圧縮後に端末に保存されます。"
+  },
+  "삭제": {
+    "en": "Delete",
+    "ja": "削除"
+  },
+  "무게 (": {
+    "en": "Weight (",
+    "ja": "重量 ("
+  },
+  "횟수": {
+    "en": "Reps",
+    "ja": "回数"
+  },
+  "↶ 이전 기록": {
+    "en": "↶ Previous record",
+    "ja": "↶ 前回の記録"
+  },
+  "중량 추천": {
+    "en": "Suggest weight",
+    "ja": "重量の提案"
+  },
+  "↑ 순서": {
+    "en": "↑ Move up",
+    "ja": "↑ 上へ"
+  },
+  "＋ 세트 추가": {
+    "en": "＋ Add set",
+    "ja": "＋ セットを追加"
+  },
+  "세트 무게": {
+    "en": " set weight",
+    "ja": "セットの重量"
+  },
+  "세트 횟수": {
+    "en": " set reps",
+    "ja": "セットの回数"
+  },
+  "세트 완료": {
+    "en": " set complete",
+    "ja": "セット完了"
+  },
+  "세트 삭제": {
+    "en": " delete set",
+    "ja": "セットを削除"
+  },
+  "＋ 새 루틴": {
+    "en": "＋ New routine",
+    "ja": "＋ 新しいルーティン"
+  },
+  "매번 고르지 않아도 되니까.": {
+    "en": "Build once. Train again.",
+    "ja": "毎回選ばなくても大丈夫。"
+  },
+  "캘린더에서 운동을 구성하고 루틴으로 저장하세요. 세트와 무게를 그대로 불러올 수 있어요.": {
+    "en": "Create routines from your calendar. Reload exercises, sets and weights anytime.",
+    "ja": "カレンダーで種目を構成して保存。セットと重量をいつでも読み込めます。"
+  },
+  "오늘 운동에 추가 ↗": {
+    "en": "Add to today ↗",
+    "ja": "今日の運動に追加 ↗"
+  },
+  "편집": {
+    "en": "Edit",
+    "ja": "編集"
+  },
+  "복제": {
+    "en": "Duplicate",
+    "ja": "複製"
+  },
+  "아직 저장한 루틴이 없습니다": {
+    "en": "No saved routines yet",
+    "ja": "ルーティンがありません"
+  },
+  "운동 캘린더에서 첫 루틴을 만들어 보세요.": {
+    "en": "Create your first routine from the workout calendar.",
+    "ja": "カレンダーで最初のルーティンを作成しましょう。"
+  },
+  "운동 기록하기": {
+    "en": "Log a workout",
+    "ja": "ワークアウトを記録"
+  },
+  "총 운동일": {
+    "en": "Workout days",
+    "ja": "ワークアウト日数"
+  },
+  "완료한 세트": {
+    "en": "Completed sets",
+    "ja": "完了セット数"
+  },
+  "세트": {
+    "en": " sets",
+    "ja": "セット"
+  },
+  "총 볼륨": {
+    "en": "Total volume",
+    "ja": "総ボリューム"
+  },
+  "주간 운동 볼륨": {
+    "en": "Weekly training volume",
+    "ja": "週間トレーニングボリューム"
+  },
+  "완료한 세트의 무게 × 횟수 합계 · 최근 8주": {
+    "en": "Completed sets: weight × reps · Last 8 weeks",
+    "ja": "完了セットの重量 × 回数 · 過去8週間"
+  },
+  "운동 히스토리": {
+    "en": "Workout history",
+    "ja": "ワークアウト履歴"
+  },
+  "세트 완료 버튼을 누르면 분석에 반영됩니다.": {
+    "en": "Mark sets complete to include them in your progress.",
+    "ja": "セットを完了すると分析に反映されます。"
+  },
+  "기록은 내 손에. 공유도 내 방식으로.": {
+    "en": "Your records. Your way to share.",
+    "ja": "記録も共有も、自分の手で。"
+  },
+  "기기 안의 기록을 압축 문자열로 내보내세요. 비밀번호를 설정하면 사진과 운동 기록을 함께 암호화합니다.": {
+    "en": "Export your records as a compressed string. Set a password to encrypt workouts and photos together.",
+    "ja": "記録を圧縮文字列として出力。パスワードを設定すると写真と記録をまとめて暗号化します。"
+  },
+  "내보내기": {
+    "en": "Export",
+    "ja": "エクスポート"
+  },
+  "공유 범위": {
+    "en": "Export scope",
+    "ja": "出力範囲"
+  },
+  "선택한 날짜 (": {
+    "en": "Selected date (",
+    "ja": "選択した日付 ("
+  },
+  ") 운동": {
+    "en": ") workout",
+    "ja": ") のワークアウト"
+  },
+  "전체 백업 (운동 + 사진 + 루틴)": {
+    "en": "Full backup (workouts + photos + routines)",
+    "ja": "全体バックアップ (記録・写真・ルーティン)"
+  },
+  "해독 비밀번호": {
+    "en": "Decryption password",
+    "ja": "復号パスワード"
+  },
+  "선택 사항": {
+    "en": "Optional",
+    "ja": "任意"
+  },
+  "비워두면 암호화 없이 공유": {
+    "en": "Leave blank to share without encryption",
+    "ja": "空欄にすると暗号化せず共有"
+  },
+  "비밀번호는 별도로 전달하세요. 잊어버리면 복구할 수 없습니다.": {
+    "en": "Send the password separately. Forgotten passwords cannot be recovered.",
+    "ja": "パスワードは別途伝えてください。忘れると復元できません。"
+  },
+  "압축 문자열 만들기 ↗": {
+    "en": "Generate compressed string ↗",
+    "ja": "圧縮文字列を作成 ↗"
+  },
+  "공유 문자열": {
+    "en": "Share string",
+    "ja": "共有文字列"
+  },
+  "생성한 문자열이 여기에 표시됩니다.": {
+    "en": "Your generated string will appear here.",
+    "ja": "作成した文字列がここに表示されます。"
+  },
+  "문자열 복사": {
+    "en": "Copy string",
+    "ja": "文字列をコピー"
+  },
+  "파일 다운로드": {
+    "en": "Download file",
+    "ja": "ファイルをダウンロード"
+  },
+  "기기 공유": {
+    "en": "Share file",
+    "ja": "ファイルを共有"
+  },
+  "가져오기": {
+    "en": "Import",
+    "ja": "インポート"
+  },
+  "공유·백업 문자열": {
+    "en": "Share or backup string",
+    "ja": "共有・バックアップ文字列"
+  },
+  "GW1.로 시작하는 문자열을 붙여넣으세요.": {
+    "en": "Paste a string starting with GW1.",
+    "ja": "GW1. で始まる文字列を貼り付けてください。"
+  },
+  "또는 백업 파일 선택": {
+    "en": "Or select a backup file",
+    "ja": "またはバックアップファイルを選択"
+  },
+  "암호화된 공유의 비밀번호": {
+    "en": "Password for encrypted data",
+    "ja": "暗号化データのパスワード"
+  },
+  "내용 확인": {
+    "en": "Review contents",
+    "ja": "内容を確認"
+  },
+  "기기 저장 안내": {
+    "en": "About device storage",
+    "ja": "端末内保存について"
+  },
+  "서버로 기록이나 사진을 전송하지 않습니다. 브라우저 데이터 삭제, 시크릿 모드 종료 또는 기기 분실 시 기록이 사라질 수 있으니 백업 파일을 보관하세요. 사진은 긴 문자열을 만들 수 있어 파일 공유를 권장합니다. 가져올 때 같은 날짜의 기록은 교체되며, 적용 전에 확인할 수 있습니다.": {
+    "en": "Records and photos are not sent to a server. Keep backup files: clearing browser data, ending private browsing or losing your device can erase records. Photos produce long strings; file sharing is recommended. Imports replace records on matching dates after you review them.",
+    "ja": "記録や写真はサーバーに送信しません。ブラウザデータの削除、プライベートモード終了、端末紛失に備えバックアップを保管してください。写真を含む場合はファイル共有を推奨します。同じ日付の記録は確認後に置き換えられます。"
+  },
+  "기록 보관 권한 요청": {
+    "en": "Request persistent storage",
+    "ja": "永続保存の権限を要求"
+  },
+  "입력 범위를 확인하세요.": {
+    "en": "Check the input range.",
+    "ja": "入力範囲を確認してください。"
+  },
+  "사진을 압축하고 있습니다.": {
+    "en": "Compressing photo…",
+    "ja": "写真を圧縮中…"
+  },
+  "사진을 저장했습니다.": {
+    "en": "Photo saved.",
+    "ja": "写真を保存しました。"
+  },
+  "파일이 너무 큽니다.": {
+    "en": "The file is too large.",
+    "ja": "ファイルが大きすぎます。"
+  },
+  "운동 이름을 입력하세요.": {
+    "en": "Enter an exercise name.",
+    "ja": "種目名を入力してください。"
+  },
+  "이 운동과 세트를 삭제할까요?": {
+    "en": "Delete this exercise and its sets?",
+    "ja": "この種目とセットを削除しますか？"
+  },
+  "오늘의 사진을 삭제할까요?": {
+    "en": "Delete the workout photo?",
+    "ja": "ワークアウト写真を削除しますか？"
+  },
+  "의 운동·메모·사진을 모두 삭제할까요?": {
+    "en": ": delete the workout, notes and photo?",
+    "ja": "の運動・メモ・写真をすべて削除しますか？"
+  },
+  "먼저 운동을 추가하세요.": {
+    "en": "Add an exercise first.",
+    "ja": "先に種目を追加してください。"
+  },
+  "루틴 이름 (예: 상체 A)": {
+    "en": "Routine name (e.g. Upper body A)",
+    "ja": "ルーティン名 (例：上半身 A)"
+  },
+  "루틴 이름은 100자 이하로 입력하세요.": {
+    "en": "Use at most 100 characters for the routine name.",
+    "ja": "ルーティン名は100文字以内で入力してください。"
+  },
+  "루틴을 저장했습니다.": {
+    "en": "Routine saved.",
+    "ja": "ルーティンを保存しました。"
+  },
+  "루틴을 선택하세요.": {
+    "en": "Select a routine.",
+    "ja": "ルーティンを選択してください。"
+  },
+  "이 루틴을 삭제할까요?": {
+    "en": "Delete this routine?",
+    "ja": "このルーティンを削除しますか？"
+  },
+  "선택한 날짜의 기록이 없습니다.": {
+    "en": "No record for the selected date.",
+    "ja": "選択した日付の記録がありません。"
+  },
+  "압축 중…": {
+    "en": "Compressing…",
+    "ja": "圧縮中…"
+  },
+  "자 ·": {
+    "en": " characters ·",
+    "ja": "文字 ·"
+  },
+  "· 사진": {
+    "en": "· Photos:",
+    "ja": "· 写真"
+  },
+  "장": {
+    "en": " photos",
+    "ja": "枚"
+  },
+  "비밀번호 암호화됨": {
+    "en": "Password encrypted",
+    "ja": "パスワード暗号化済み"
+  },
+  "암호화 없음": {
+    "en": "Not encrypted",
+    "ja": "暗号化なし"
+  },
+  "복사했습니다.": {
+    "en": "Copied.",
+    "ja": "コピーしました。"
+  },
+  "복사 권한이 없습니다. 선택된 문자열을 직접 복사하세요.": {
+    "en": "Clipboard access denied. Copy the selected string manually.",
+    "ja": "コピー権限がありません。選択した文字列を手動でコピーしてください。"
+  },
+  "운동 기록": {
+    "en": "Workout record",
+    "ja": "ワークアウト記録"
+  },
+  "이 브라우저는 파일 공유를 지원하지 않습니다. 다운로드 후 전달하세요.": {
+    "en": "This browser does not support file sharing. Download and send the file.",
+    "ja": "このブラウザはファイル共有に対応していません。ダウンロード後に送信してください。"
+  },
+  "확인 중…": {
+    "en": "Checking…",
+    "ja": "確認中…"
+  },
+  "지원하지 않는 백업 형식입니다.": {
+    "en": "Unsupported backup format.",
+    "ja": "未対応のバックアップ形式です。"
+  },
+  "세션 공유 형식이 올바르지 않습니다.": {
+    "en": "Invalid workout share format.",
+    "ja": "共有ワークアウトの形式が正しくありません。"
+  },
+  "일 · 사진": {
+    "en": " days · Photos:",
+    "ja": "日 · 写真"
+  },
+  "장 · 루틴": {
+    "en": " photos · Routines:",
+    "ja": "枚 · ルーティン"
+  },
+  "개": {
+    "en": " routines",
+    "ja": "個"
+  },
+  "일의 기존 기록이 교체됩니다.": {
+    "en": " existing date records will be replaced.",
+    "ja": "日分の既存記録を置き換えます。"
+  },
+  "확인하고 가져오기": {
+    "en": "Confirm and import",
+    "ja": "確認してインポート"
+  },
+  "전체 백업": {
+    "en": "Full backup",
+    "ja": "全体バックアップ"
+  },
+  "운동 세션": {
+    "en": "Workout session",
+    "ja": "ワークアウトセッション"
+  },
+  "먼저 내용을 확인하세요.": {
+    "en": "Review the contents first.",
+    "ja": "先に内容を確認してください。"
+  },
+  "기록을 가져왔습니다.": {
+    "en": "Records imported.",
+    "ja": "記録をインポートしました。"
+  },
+  "기록 보관 권한이 허용되었습니다. 백업도 보관하세요.": {
+    "en": "Persistent storage granted. Keep backups too.",
+    "ja": "永続保存が許可されました。バックアップも保管してください。"
+  },
+  "브라우저가 보관 권한을 허용하지 않았습니다. 백업 파일을 보관하세요.": {
+    "en": "Persistent storage was not granted. Keep backup files.",
+    "ja": "永続保存が許可されませんでした。バックアップを保管してください。"
+  },
+  "먼저 공유 문자열을 생성하세요.": {
+    "en": "Generate a share string first.",
+    "ja": "先に共有文字列を作成してください。"
+  },
+  "저장소를 열 수 없습니다": {
+    "en": "Storage unavailable",
+    "ja": "保存領域を開けません"
+  },
+  "브라우저의 저장소 권한과 개인 정보 보호 설정을 확인하세요. 기존 데이터를 보호하기 위해 초기화하지 않았습니다.": {
+    "en": "Check your browser storage permissions and privacy settings. Existing data has not been reset.",
+    "ja": "ブラウザの保存権限とプライバシー設定を確認してください。既存データは初期化していません。"
+  },
+  "휴식 끝! 다음 세트를 시작하세요.": {
+    "en": "Rest finished! Start your next set.",
+    "ja": "休憩終了！次のセットを始めましょう。"
+  },
+  "■ 운동 종료": {
+    "en": "■ Finish workout",
+    "ja": "■ ワークアウト終了"
+  },
+  "▶ 운동 시작": {
+    "en": "▶ Start workout",
+    "ja": "▶ ワークアウト開始"
+  },
+  "운동 시간": {
+    "en": "Duration",
+    "ja": "運動時間"
+  },
+  "분 · 완료": {
+    "en": " min · Completed",
+    "ja": "分 · 完了"
+  },
+  "운동 진행 중 · 시작 ": {
+    "en": "Workout in progress · Started ",
+    "ja": "ワークアウト中 · 開始 "
+  },
+  "시작과 종료 시간을 기록하세요.": {
+    "en": "Record your start and finish times.",
+    "ja": "開始・終了時間を記録しましょう。"
+  },
+  "예정된 루틴:": {
+    "en": "Planned routine:",
+    "ja": "予定のルーティン："
+  },
+  "운동에 추가 ↗": {
+    "en": "Add to workout ↗",
+    "ja": "ワークアウトに追加 ↗"
+  },
+  "내 운동 환경": {
+    "en": "Training preferences",
+    "ja": "トレーニング設定"
+  },
+  "회원가입 없이 이 브라우저에 설정을 저장합니다. 전체 백업에 설정이 포함됩니다.": {
+    "en": "Preferences are stored in this browser and included in full backups.",
+    "ja": "設定はこのブラウザに保存され、全体バックアップに含まれます。"
+  },
+  "중량 단위": {
+    "en": "Weight unit",
+    "ja": "重量単位"
+  },
+  "운동 목표": {
+    "en": "Training goal",
+    "ja": "トレーニング目標"
+  },
+  "주간 목표 운동일": {
+    "en": "Weekly workout day target",
+    "ja": "週間目標日数"
+  },
+  "기본 휴식 시간 (초)": {
+    "en": "Default rest (seconds)",
+    "ja": "基本休憩時間 (秒)"
+  },
+  "세트 완료 시 휴식 타이머 자동 시작": {
+    "en": "Start rest timer after completing a set",
+    "ja": "セット完了時に休憩タイマーを自動開始"
+  },
+  "무게는 내부적으로 kg 단위로 보관하며 화면에서만 변환합니다.": {
+    "en": "Weights are stored in kg and converted for display.",
+    "ja": "重量はkgで保存され、表示時のみ換算します。"
+  },
+  "근비대": {
+    "en": "Hypertrophy",
+    "ja": "筋肥大"
+  },
+  "근력 향상": {
+    "en": "Strength",
+    "ja": "筋力向上"
+  },
+  "체지방 감량": {
+    "en": "Fat loss",
+    "ja": "体脂肪減少"
+  },
+  "건강 유지": {
+    "en": "General fitness",
+    "ja": "健康維持"
+  },
+  "알고, 제대로 움직이기.": {
+    "en": "Learn the movement. Train well.",
+    "ja": "動きを知って、正しく鍛える。"
+  },
+  "이름과 한글 초성으로 검색하고 부위·기구별로 찾아보세요. 가이드는 일반 참고용이며 통증이 있으면 운동을 멈추세요.": {
+    "en": "Search names in English, Korean or Japanese and filter by body part or equipment. Guides are general references; stop if you feel pain.",
+    "ja": "英語・韓国語・日本語の種目名で検索し、部位や器具で絞り込めます。ガイドは一般的な参考情報です。痛みがあれば中止してください。"
+  },
+  "운동 검색 · ㅂㅊㅍㄹㅅ": {
+    "en": "Search exercises · bench press",
+    "ja": "種目を検索 · ベンチプレス"
+  },
+  "부위 필터": {
+    "en": "Body part filter",
+    "ja": "部位フィルター"
+  },
+  "모든 부위": {
+    "en": "All body parts",
+    "ja": "すべての部位"
+  },
+  "기구 필터": {
+    "en": "Equipment filter",
+    "ja": "器具フィルター"
+  },
+  "모든 기구": {
+    "en": "All equipment",
+    "ja": "すべての器具"
+  },
+  "가슴": {
+    "en": "Chest",
+    "ja": "胸"
+  },
+  "등": {
+    "en": "Back",
+    "ja": "背中"
+  },
+  "어깨": {
+    "en": "Shoulders",
+    "ja": "肩"
+  },
+  "하체": {
+    "en": "Legs",
+    "ja": "下半身"
+  },
+  "팔": {
+    "en": "Arms",
+    "ja": "腕"
+  },
+  "코어": {
+    "en": "Core",
+    "ja": "体幹"
+  },
+  "유산소": {
+    "en": "Cardio",
+    "ja": "有酸素"
+  },
+  "바벨": {
+    "en": "Barbell",
+    "ja": "バーベル"
+  },
+  "덤벨": {
+    "en": "Dumbbell",
+    "ja": "ダンベル"
+  },
+  "머신": {
+    "en": "Machine",
+    "ja": "マシン"
+  },
+  "케틀벨": {
+    "en": "Kettlebell",
+    "ja": "ケトルベル"
+  },
+  "맨몸": {
+    "en": "Bodyweight",
+    "ja": "自重"
+  },
+  "운동 아이콘": {
+    "en": "exercise icon",
+    "ja": "エクササイズアイコン"
+  },
+  "선택 날짜 운동에 추가 ＋": {
+    "en": "Add to selected date ＋",
+    "ja": "選択日に追加 ＋"
+  },
+  "검색 결과가 없습니다. 캘린더에서 종목을 직접 입력할 수 있습니다.": {
+    "en": "No results. You can enter a custom exercise in the calendar.",
+    "ja": "結果がありません。カレンダーで種目を直接入力できます。"
+  },
+  "요일별 운동 계획": {
+    "en": "Weekly routine schedule",
+    "ja": "曜日別トレーニング計画"
+  },
+  "요일에 루틴을 배치하세요. 선택한 날짜의 기록 화면에서 예정 루틴을 불러옵니다.": {
+    "en": "Assign routines to weekdays, then load them from the selected date.",
+    "ja": "曜日にルーティンを割り当て、選択した日付から読み込めます。"
+  },
+  "요일 루틴": {
+    "en": " routine",
+    "ja": "曜日のルーティン"
+  },
+  "루틴 편집": {
+    "en": "Edit routine",
+    "ja": "ルーティンを編集"
+  },
+  "취소": {
+    "en": "Cancel",
+    "ja": "キャンセル"
+  },
+  "루틴 이름": {
+    "en": "Routine name",
+    "ja": "ルーティン名"
+  },
+  "추가할 운동 이름": {
+    "en": "Exercise to add",
+    "ja": "追加する種目名"
+  },
+  "＋ 운동 추가": {
+    "en": "＋ Add exercise",
+    "ja": "＋ 種目を追加"
+  },
+  "루틴 저장": {
+    "en": "Save routine",
+    "ja": "ルーティンを保存"
+  },
+  "루틴을 수정해도 기존 날짜의 운동 기록은 유지됩니다.": {
+    "en": "Editing a routine does not change existing workout records.",
+    "ja": "ルーティンを編集しても過去のワークアウト記録は変わりません。"
+  },
+  "루틴 종목": {
+    "en": "Routine exercise",
+    "ja": "ルーティン種目"
+  },
+  "종목 위로 이동": {
+    "en": "Move exercise up",
+    "ja": "種目を上へ移動"
+  },
+  "루틴 종목 삭제": {
+    "en": "Delete routine exercise",
+    "ja": "ルーティン種目を削除"
+  },
+  "루틴": {
+    "en": "Routine",
+    "ja": "ルーティン"
+  },
+  "종목": {
+    "en": " exercise",
+    "ja": "種目"
+  },
+  "회": {
+    "en": " reps",
+    "ja": "回"
+  },
+  "루틴 세트 삭제": {
+    "en": "Delete routine set",
+    "ja": "ルーティンのセットを削除"
+  },
+  "기타": {
+    "en": "Other",
+    "ja": "その他"
+  },
+  "1RM 계산기": {
+    "en": "1RM calculator",
+    "ja": "1RM計算機"
+  },
+  "Epley 공식 · 1~12회 권장 · 추정치이며 실제 최대 중량과 다릅니다.": {
+    "en": "Epley formula · 1–12 reps · An estimate, not your measured maximum.",
+    "ja": "Epley式 · 1～12回推奨 · 実測の最大重量とは異なる推定値です。"
+  },
+  "1RM 무게": {
+    "en": "1RM weight",
+    "ja": "1RM重量"
+  },
+  "1RM 횟수": {
+    "en": "1RM reps",
+    "ja": "1RM回数"
+  },
+  "계산": {
+    "en": "Calculate",
+    "ja": "計算"
+  },
+  "예상 최대 중량을 확인해 보세요.": {
+    "en": "Estimate your maximum weight.",
+    "ja": "推定最大重量を確認しましょう。"
+  },
+  "3대 운동 추정 1RM": {
+    "en": "Big three estimated 1RM",
+    "ja": "主要3種目の推定1RM"
+  },
+  "합계": {
+    "en": "total",
+    "ja": "合計"
+  },
+  "부위별 누적 볼륨": {
+    "en": "Volume by body part",
+    "ja": "部位別累計ボリューム"
+  },
+  "종목별 성장 기록": {
+    "en": "Exercise progress",
+    "ja": "種目別成長記録"
+  },
+  "완료 세트 중 1~12회 기록 기준. 날짜별 가장 높은 추정 1RM을 표시합니다.": {
+    "en": "Completed sets of 1–12 reps. Shows the highest estimated 1RM for each date.",
+    "ja": "1～12回の完了セットから日付ごとの最高推定1RMを表示します。"
+  },
+  "완료 세트가 쌓이면 부위별 볼륨이 표시됩니다.": {
+    "en": "Complete sets to see volume by body part.",
+    "ja": "セットを完了すると部位別ボリュームを表示します。"
+  },
+  "운동 세트를 완료하면 성장 기록이 표시됩니다.": {
+    "en": "Complete sets to see your progress.",
+    "ja": "セットを完了すると成長記録を表示します。"
+  },
+  "기존 운동 시간을 새 시작 시간으로 바꿀까요?": {
+    "en": "Replace the existing workout time with a new start?",
+    "ja": "既存の運動時間を新しい開始時間に変更しますか？"
+  },
+  "운동을 완료했습니다. 수고하셨어요!": {
+    "en": "Workout complete. Well done!",
+    "ja": "ワークアウト完了。お疲れさまでした！"
+  },
+  "선택 날짜에 운동을 추가했습니다.": {
+    "en": "Exercise added to the selected date.",
+    "ja": "選択日に種目を追加しました。"
+  },
+  "이 종목의 이전 완료 기록이 없습니다.": {
+    "en": "No previous completed record for this exercise.",
+    "ja": "この種目の前回の完了記録がありません。"
+  },
+  "직전 세트를": {
+    "en": "Apply the previous sets",
+    "ja": "前回のセットを"
+  },
+  "제안합니다. 적용할까요?": {
+    "en": "as suggested?",
+    "ja": "提案します。適用しますか？"
+  },
+  "2.5kg 증량하여": {
+    "en": "with 2.5 kg added",
+    "ja": "2.5kg増やして"
+  },
+  "같은 중량으로": {
+    "en": "with the same weight",
+    "ja": "同じ重量で"
+  },
+  "이전 기록을 불러왔습니다.": {
+    "en": "Previous record loaded.",
+    "ja": "前回の記録を読み込みました。"
+  },
+  "규칙 기반 중량 제안을 적용했습니다.": {
+    "en": "Weight suggestion applied.",
+    "ja": "重量の提案を適用しました。"
+  },
+  "현재 세트를 5 × 5 템플릿으로 교체할까요?": {
+    "en": "Replace current sets with a 5 × 5 template?",
+    "ja": "現在のセットを5 × 5に置き換えますか？"
+  },
+  "새 루틴": {
+    "en": "New routine",
+    "ja": "新しいルーティン"
+  },
+  " 복사": {
+    "en": " copy",
+    "ja": " コピー"
+  },
+  "루틴에 운동을 추가하세요.": {
+    "en": "Add an exercise to the routine.",
+    "ja": "ルーティンに種目を追加してください。"
+  },
+  "무게와 1~12회 횟수를 입력하세요.": {
+    "en": "Enter a weight and 1–12 reps.",
+    "ja": "重量と1～12回の回数を入力してください。"
+  },
+  "추정 1RM:": {
+    "en": "Estimated 1RM:",
+    "ja": "推定1RM:"
+  },
+  "오프라인 캐시를 준비하지 못했습니다. 온라인에서 계속 사용할 수 있습니다.": {
+    "en": "Offline cache could not be prepared. You can continue online.",
+    "ja": "オフラインキャッシュを準備できませんでした。オンラインで利用できます。"
+  },
+  "저장하지 못했습니다: ": {
+    "en": "Could not save: ",
+    "ja": "保存できませんでした："
+  },
+  "JPG, PNG, WebP 사진을 선택하세요.": {
+    "en": "Select a JPG, PNG or WebP photo.",
+    "ja": "JPG、PNG、WebPの写真を選択してください。"
+  },
+  "25MB 이하의 사진을 선택하세요.": {
+    "en": "Select a photo under 25 MB.",
+    "ja": "25MB以下の写真を選択してください。"
+  },
+  "사진이 너무 복잡합니다. 더 작은 사진을 선택하세요.": {
+    "en": "The photo cannot be compressed enough. Select a smaller photo.",
+    "ja": "写真を十分に圧縮できません。小さい写真を選択してください。"
+  },
+  "공유 문자열이 올바르지 않습니다.": {
+    "en": "Invalid share string.",
+    "ja": "共有文字列が正しくありません。"
+  },
+  "데이터 크기 제한을 초과했습니다.": {
+    "en": "Data size limit exceeded.",
+    "ja": "データサイズの上限を超えました。"
+  },
+  "데이터가 너무 큽니다. 날짜별로 나누어 공유하세요.": {
+    "en": "Data is too large. Share individual days.",
+    "ja": "データが大きすぎます。日付ごとに共有してください。"
+  },
+  "지원하지 않는 공유 문자열입니다.": {
+    "en": "Unsupported share string.",
+    "ja": "未対応の共有文字列です。"
+  },
+  "해독 비밀번호를 입력하세요.": {
+    "en": "Enter the decryption password.",
+    "ja": "復号パスワードを入力してください。"
+  },
+  "암호화 데이터가 손상되었습니다.": {
+    "en": "Encrypted data is damaged.",
+    "ja": "暗号化データが破損しています。"
+  },
+  "비밀번호가 다르거나 데이터가 손상되었습니다.": {
+    "en": "Incorrect password or damaged data.",
+    "ja": "パスワードが違うかデータが破損しています。"
+  },
+  "공유 데이터가 손상되었거나 크기 제한을 초과했습니다.": {
+    "en": "Share data is damaged or exceeds the size limit.",
+    "ja": "共有データが破損しているかサイズ上限を超えています。"
+  },
+  "지원하지 않는 데이터 형식입니다.": {
+    "en": "Unsupported data format.",
+    "ja": "未対応のデータ形式です。"
+  },
+  "설정 값이 올바르지 않습니다.": {
+    "en": "Invalid preferences.",
+    "ja": "設定値が正しくありません。"
+  },
+  "운동 날짜가 잘못되었거나 중복되었습니다.": {
+    "en": "Workout date is invalid or duplicated.",
+    "ja": "ワークアウトの日付が無効または重複しています。"
+  },
+  "운동 기록이 올바르지 않습니다.": {
+    "en": "Invalid workout record.",
+    "ja": "ワークアウト記録が正しくありません。"
+  },
+  "운동 시간이 올바르지 않습니다.": {
+    "en": "Invalid workout time.",
+    "ja": "運動時間が正しくありません。"
+  },
+  "운동 종료 시간이 올바르지 않습니다.": {
+    "en": "Invalid finish time.",
+    "ja": "終了時間が正しくありません。"
+  },
+  "사진 형식이 올바르지 않습니다.": {
+    "en": "Invalid photo format.",
+    "ja": "写真の形式が正しくありません。"
+  },
+  "루틴 형식이 올바르지 않습니다.": {
+    "en": "Invalid routine format.",
+    "ja": "ルーティンの形式が正しくありません。"
+  },
+  "루틴 ID가 올바르지 않습니다.": {
+    "en": "Invalid routine ID.",
+    "ja": "ルーティンIDが正しくありません。"
+  },
+  "운동이 너무 많습니다.": {
+    "en": "Too many exercises.",
+    "ja": "種目数が多すぎます。"
+  },
+  "운동 형식이 올바르지 않습니다.": {
+    "en": "Invalid exercise format.",
+    "ja": "種目の形式が正しくありません。"
+  },
+  "세트 형식이 올바르지 않습니다.": {
+    "en": "Invalid set format.",
+    "ja": "セットの形式が正しくありません。"
+  },
+  "YOUR PERSONAL TRAINING JOURNAL": {
+    "en": "YOUR PERSONAL TRAINING JOURNAL",
+    "ja": "あなたのトレーニング記録",
+    "ko": "나만의 트레이닝 기록"
+  },
+  "SHOW UP. GET STRONGER.": {
+    "en": "SHOW UP. GET STRONGER.",
+    "ja": "続けよう。強くなろう。",
+    "ko": "꾸준하게, 더 강하게."
+  },
+  "ONE MORE REP.": {
+    "en": "ONE MORE REP.",
+    "ja": "もう1回。",
+    "ko": "한 번 더."
+  },
+  "CONSISTENCY IS EVERYTHING": {
+    "en": "CONSISTENCY IS EVERYTHING",
+    "ja": "継続こそ力",
+    "ko": "꾸준함이 만드는 변화"
+  },
+  "DAILY WORKOUT": {
+    "en": "DAILY WORKOUT",
+    "ja": "今日のワークアウト",
+    "ko": "오늘의 운동"
+  },
+  "MY TRAINING ROUTINE": {
+    "en": "MY TRAINING ROUTINE",
+    "ja": "マイトレーニングルーティン",
+    "ko": "나의 트레이닝 루틴"
+  },
+  "Language": {
+    "en": "Language",
+    "ja": "言語",
+    "ko": "언어"
+  },
+  "벤치 프레스": {
+    "en": "Bench press",
+    "ja": "ベンチプレス"
+  },
+  "인클라인 덤벨 프레스": {
+    "en": "Incline dumbbell press",
+    "ja": "インクラインダンベルプレス"
+  },
+  "체스트 프레스": {
+    "en": "Chest press",
+    "ja": "チェストプレス"
+  },
+  "푸시업": {
+    "en": "Push-up",
+    "ja": "プッシュアップ"
+  },
+  "랫 풀다운": {
+    "en": "Lat pulldown",
+    "ja": "ラットプルダウン"
+  },
+  "시티드 로우": {
+    "en": "Seated row",
+    "ja": "シーテッドロウ"
+  },
+  "바벨 로우": {
+    "en": "Barbell row",
+    "ja": "バーベルロウ"
+  },
+  "풀업": {
+    "en": "Pull-up",
+    "ja": "プルアップ"
+  },
+  "스쿼트": {
+    "en": "Squat",
+    "ja": "スクワット"
+  },
+  "데드리프트": {
+    "en": "Deadlift",
+    "ja": "デッドリフト"
+  },
+  "레그 프레스": {
+    "en": "Leg press",
+    "ja": "レッグプレス"
+  },
+  "레그 컬": {
+    "en": "Leg curl",
+    "ja": "レッグカール"
+  },
+  "런지": {
+    "en": "Lunge",
+    "ja": "ランジ"
+  },
+  "고블릿 스쿼트": {
+    "en": "Goblet squat",
+    "ja": "ゴブレットスクワット"
+  },
+  "숄더 프레스": {
+    "en": "Shoulder press",
+    "ja": "ショルダープレス"
+  },
+  "사이드 레터럴 레이즈": {
+    "en": "Lateral raise",
+    "ja": "サイドレイズ"
+  },
+  "덤벨 컬": {
+    "en": "Dumbbell curl",
+    "ja": "ダンベルカール"
+  },
+  "트라이셉스 푸시다운": {
+    "en": "Triceps pushdown",
+    "ja": "トライセプスプッシュダウン"
+  },
+  "플랭크": {
+    "en": "Plank",
+    "ja": "プランク"
+  },
+  "런닝": {
+    "en": "Running",
+    "ja": "ランニング"
+  },
+  "견갑을 고정하고 발을 바닥에 붙인 뒤 바를 가슴 쪽으로 천천히 내립니다.": {
+    "en": "Keep your shoulder blades stable and feet planted. Lower the bar slowly toward your chest.",
+    "ja": "肩甲骨を安定させ、足を床につけてバーを胸に向かってゆっくり下ろします。"
+  },
+  "벤치를 30도 정도로 조절하고 팔꿈치를 과하게 벌리지 않습니다.": {
+    "en": "Set the bench to about 30 degrees. Avoid flaring your elbows excessively.",
+    "ja": "ベンチを約30度に調整し、肘を広げすぎないようにします。"
+  },
+  "손잡이를 가슴 높이에 맞추고 등을 등받이에 고정합니다.": {
+    "en": "Adjust the handles to chest height and keep your back against the pad.",
+    "ja": "ハンドルを胸の高さに合わせ、背中を背もたれに固定します。"
+  },
+  "몸을 일직선으로 유지하고 팔꿈치를 몸에서 45도 정도로 벌립니다.": {
+    "en": "Keep your body straight and elbows about 45 degrees from your torso.",
+    "ja": "体を一直線に保ち、肘は体から約45度の角度にします。"
+  },
+  "가슴을 들어 올리고 팔꿈치를 몸통 쪽으로 당깁니다. 목 뒤로 내리지 않습니다.": {
+    "en": "Lift your chest and draw your elbows toward your torso. Do not pull behind your neck.",
+    "ja": "胸を張り、肘を胴体に向けて引きます。首の後ろには下ろさないでください。"
+  },
+  "허리를 중립으로 유지하며 팔꿈치를 뒤로 당깁니다.": {
+    "en": "Keep your spine neutral and pull your elbows back.",
+    "ja": "腰を中立に保ち、肘を後ろに引きます。"
+  },
+  "엉덩이를 뒤로 접고 허리를 중립으로 고정한 채 바를 복부 쪽으로 당깁니다.": {
+    "en": "Hinge at the hips, keep a neutral spine and pull the bar toward your abdomen.",
+    "ja": "股関節から体を倒し、腰を中立に保ちながらバーを腹部へ引きます。"
+  },
+  "반동을 줄이고 어깨를 내리며 턱이 바 높이에 오도록 당깁니다.": {
+    "en": "Avoid swinging, depress your shoulders and pull until your chin reaches the bar.",
+    "ja": "反動を抑え、肩を下げて顎がバーの高さに来るまで引き上げます。"
+  },
+  "무릎을 발끝 방향으로 보내고 발바닥 전체로 바닥을 누릅니다.": {
+    "en": "Track your knees over your toes and press through your whole foot.",
+    "ja": "膝をつま先の方向へ動かし、足裏全体で床を押します。"
+  },
+  "바를 몸 가까이 두고 허리를 중립으로 유지하며 엉덩이와 무릎을 함께 폅니다.": {
+    "en": "Keep the bar close, maintain a neutral spine and extend your hips and knees together.",
+    "ja": "バーを体の近くに保ち、腰を中立にして股関節と膝を同時に伸ばします。"
+  },
+  "허리가 뜨지 않는 범위로 내려가며 무릎을 완전히 잠그지 않습니다.": {
+    "en": "Lower only as far as your back stays supported. Do not lock your knees.",
+    "ja": "腰が浮かない範囲で下ろし、膝を完全にロックしないようにします。"
+  },
+  "골반을 패드에 붙이고 천천히 무릎을 굽힙니다.": {
+    "en": "Keep your pelvis against the pad and bend your knees slowly.",
+    "ja": "骨盤をパッドにつけ、膝をゆっくり曲げます。"
+  },
+  "앞발 전체에 체중을 싣고 상체를 세운 채 무릎을 굽힙니다.": {
+    "en": "Keep weight through your front foot and bend your knees with your torso upright.",
+    "ja": "前足全体に体重を乗せ、上体を起こしたまま膝を曲げます。"
+  },
+  "무게를 가슴 앞에 붙이고 무릎과 발끝 방향을 맞춥니다.": {
+    "en": "Hold the weight at your chest and align your knees with your toes.",
+    "ja": "重りを胸の前に持ち、膝とつま先の方向を合わせます。"
+  },
+  "몸통을 고정하고 허리를 과하게 꺾지 않으며 머리 위로 밀어 올립니다.": {
+    "en": "Brace your torso and press overhead without excessively arching your back.",
+    "ja": "体幹を固定し、腰を反らしすぎず頭上へ押し上げます。"
+  },
+  "가벼운 무게로 팔꿈치를 살짝 굽혀 어깨 높이까지만 올립니다.": {
+    "en": "Use a light weight, bend elbows slightly and raise only to shoulder height.",
+    "ja": "軽い重量で肘を少し曲げ、肩の高さまで上げます。"
+  },
+  "팔꿈치를 몸통에 고정하고 반동 없이 팔을 굽힙니다.": {
+    "en": "Keep elbows by your torso and curl without swinging.",
+    "ja": "肘を胴体に固定し、反動を使わずに腕を曲げます。"
+  },
+  "팔꿈치를 고정한 채 전완만 움직여 손잡이를 아래로 누릅니다.": {
+    "en": "Keep elbows fixed and move your forearms to press the handle down.",
+    "ja": "肘を固定し、前腕だけを動かしてハンドルを下へ押します。"
+  },
+  "복부와 엉덩이에 힘을 주고 머리부터 발까지 일직선을 유지합니다.": {
+    "en": "Brace your abs and glutes and keep a straight line from head to feet.",
+    "ja": "腹部と臀部に力を入れ、頭から足まで一直線に保ちます。"
+  },
+  "대화 가능한 속도로 시작하고 충분한 준비 운동과 정리 운동을 합니다.": {
+    "en": "Start at a pace that allows conversation. Warm up and cool down thoroughly.",
+    "ja": "会話できる速度で始め、十分なウォームアップとクールダウンを行います。"
+  },
+  "오늘의 한 세트부터 시작해 보세요.": {
+    "en": "Start with one set today.",
+    "ja": "今日の1セットから始めましょう。"
+  },
+  "exportSummary": {
+    "en": "{count} characters · {encryption} · {photos} photos",
+    "ko": "{count}자 · {encryption} · 사진 {photos}장",
+    "ja": "{count}文字 · {encryption} · 写真{photos}枚"
+  },
+  "importCounts": {
+    "en": "Workout days: {days} · Photos: {photos} · Routines: {routines}",
+    "ko": "운동 {days}일 · 사진 {photos}장 · 루틴 {routines}개",
+    "ja": "運動{days}日 · 写真{photos}枚 · ルーティン{routines}個"
+  },
+  "importConflicts": {
+    "en": "Records on {count} existing dates will be replaced.",
+    "ko": "{count}일의 기존 기록이 교체됩니다.",
+    "ja": "{count}日分の既存記録を置き換えます。"
+  },
+  "sessionDuration": {
+    "en": "Duration: {minutes} min · Completed sets: {sets}",
+    "ko": "운동 시간 {minutes}분 · 완료 {sets}세트",
+    "ja": "運動時間{minutes}分 · 完了{sets}セット"
+  },
+  "metaDescription": {
+    "ko": "기기에 저장하는 나만의 운동 캘린더. 루틴, 세트 기록, 암호화 공유.",
+    "en": "Your device-local workout journal. Routines, sets and encrypted sharing.",
+    "ja": "端末に保存するワークアウト記録。ルーティン、セット記録、暗号化共有。"
+  }
+}
