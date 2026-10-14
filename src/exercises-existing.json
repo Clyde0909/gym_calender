@@ -1,0 +1,1562 @@
+[
+  {
+    "name": "벤치 프레스",
+    "body": "가슴",
+    "equipment": "바벨",
+    "labels": { "en": "Bench press", "ja": "ベンチプレス" },
+    "guide": {
+      "ko": {
+        "setup": "눈이 바 아래에 오도록 눕고 어깨뼈를 모아 아래로 고정한 뒤 발을 바닥에 붙입니다. 랙 높이를 맞추고 안전바를 설치하거나 스포터를 준비합니다.",
+        "execution": "바를 랙에서 빼 가슴 위에 둡니다. 팔꿈치를 몸통에서 약 45도로 두고 바를 가슴 중간 쪽으로 천천히 내린 뒤 어깨 위 방향으로 밀어 올립니다.",
+        "breathing": "내리면서 들이마시고 밀어 올리면서 내쉽니다. 숨을 오래 참지 않습니다.",
+        "precautions": "엉덩이를 띄우거나 바를 가슴에서 튕기지 않습니다. 손목을 꺾지 말고 감당 가능한 무게만 사용하며 통증이 있으면 중단합니다."
+      },
+      "en": {
+        "setup": "Lie with your eyes under the bar, pull your shoulder blades back and down, and plant your feet. Set the rack height and use safety arms or a spotter.",
+        "execution": "Unrack the bar over your chest. With elbows about 45 degrees from your torso, lower the bar slowly to the mid-chest, then press it up over your shoulders.",
+        "breathing": "Inhale as you lower and exhale as you press. Do not hold your breath for long.",
+        "precautions": "Do not lift your hips or bounce the bar off your chest. Keep wrists straight, use a manageable load, and stop if you feel pain."
+      },
+      "ja": {
+        "setup": "目がバーの真下に来るように寝て、肩甲骨を寄せて下げ、足を床に固定します。ラックの高さを合わせ、セーフティバーを設定するか補助者を付けます。",
+        "execution": "バーをラックから外して胸の上に構えます。肘を体幹から約45度に保ち、バーを胸の中央へゆっくり下ろし、肩の上方向へ押し上げます。",
+        "breathing": "下ろしながら息を吸い、押し上げながら吐きます。長く息を止めないでください。",
+        "precautions": "お尻を浮かせたり、バーを胸で跳ね返したりしないでください。手首を反らさず、扱える重量にし、痛みがあれば中止します。"
+      }
+    }
+  },
+  {
+    "name": "인클라인 덤벨 프레스",
+    "body": "가슴",
+    "equipment": "덤벨",
+    "labels": { "en": "Incline dumbbell press", "ja": "インクラインダンベルプレス" },
+    "guide": {
+      "ko": {
+        "setup": "벤치를 약 30도로 맞추고 덤벨을 허벅지에 올려 앉은 뒤 등받이에 기대며 덤벨을 가슴 옆으로 올립니다. 어깨뼈를 모으고 발을 바닥에 고정합니다.",
+        "execution": "손바닥이 앞을 향하게 하고 덤벨을 상부 가슴 위로 밀어 올립니다. 정점에서 덤벨이 어깨 위에 오게 하고 팔꿈치를 과하게 벌리지 않은 채 천천히 내립니다.",
+        "breathing": "내리면서 들이마시고 올리면서 내쉽니다.",
+        "precautions": "벤치 각도를 너무 높여 어깨 운동이 되지 않게 합니다. 덤벨을 내릴 때 어깨가 앞으로 말리거나 허리가 과하게 꺾이지 않도록 하고, 무거운 무게는 끝낼 때 조심해서 내려놓습니다."
+      },
+      "en": {
+        "setup": "Set the bench to about 30 degrees. Sit with the dumbbells on your thighs, lean back, and bring them to chest level. Retract your shoulder blades and plant your feet.",
+        "execution": "With palms facing forward, press the dumbbells up over your upper chest until they are stacked above your shoulders, then lower them slowly without flaring your elbows.",
+        "breathing": "Inhale as you lower and exhale as you press.",
+        "precautions": "Avoid setting the bench so steep that it becomes a shoulder press. Do not let your shoulders roll forward or your lower back over-arch, and set heavy dumbbells down carefully."
+      },
+      "ja": {
+        "setup": "ベンチを約30度に調整し、ダンベルを太ももに乗せて座り、背もたれに寄りかかりながら胸の横へ持ち上げます。肩甲骨を寄せ、足を床に固定します。",
+        "execution": "手のひらを前に向け、ダンベルを胸の上部の上へ押し上げます。肩の真上で止め、肘を広げすぎないようにゆっくり下ろします。",
+        "breathing": "下ろしながら息を吸い、押し上げながら吐きます。",
+        "precautions": "ベンチの角度を上げすぎるとショルダープレスになります。肩が前に巻いたり腰が反りすぎたりしないようにし、重いダンベルは慎重に置きます。"
+      }
+    }
+  },
+  {
+    "name": "체스트 프레스",
+    "body": "가슴",
+    "equipment": "머신",
+    "labels": { "en": "Chest press", "ja": "チェストプレス" },
+    "guide": {
+      "ko": {
+        "setup": "손잡이가 가슴 중간 높이에 오도록 시트를 조절하고 등과 엉덩이를 등받이에 붙입니다. 어깨뼈를 모으고 발을 바닥에 둡니다.",
+        "execution": "손잡이를 잡고 팔꿈치가 손목 아래에 오도록 한 채 앞으로 밀어냅니다. 팔이 거의 펴질 때까지 민 뒤 가슴이 늘어나는 느낌이 들 만큼만 천천히 돌아옵니다.",
+        "breathing": "돌아오면서 들이마시고 밀면서 내쉽니다.",
+        "precautions": "어깨를 으쓱하거나 등을 등받이에서 떼지 않습니다. 팔꿈치를 완전히 잠그지 말고, 무게 핀을 확인하며 통증이 있으면 중단합니다."
+      },
+      "en": {
+        "setup": "Adjust the seat so the handles sit at mid-chest height, with your back and hips against the pad. Retract your shoulder blades and keep your feet on the floor.",
+        "execution": "Grip the handles with elbows under your wrists and push forward until your arms are nearly straight. Return slowly until you feel a comfortable chest stretch.",
+        "breathing": "Inhale as you return and exhale as you push.",
+        "precautions": "Do not shrug your shoulders or lift your back off the pad. Avoid locking out your elbows, check the weight pin, and stop if you feel pain."
+      },
+      "ja": {
+        "setup": "グリップが胸の中央の高さに来るようシートを調整し、背中とお尻を背もたれにつけます。肩甲骨を寄せ、足を床に置きます。",
+        "execution": "グリップを握り、肘が手首の下に来る状態で前へ押し出し、腕がほぼ伸びるまで押します。胸が心地よく伸びる位置まで、ゆっくり戻します。",
+        "breathing": "戻しながら息を吸い、押しながら吐きます。",
+        "precautions": "肩をすくめたり背中を背もたれから離したりしないでください。肘を完全にロックせず、ウェイトピンを確認し、痛みがあれば中止します。"
+      }
+    }
+  },
+  {
+    "name": "푸시업",
+    "body": "가슴",
+    "equipment": "맨몸",
+    "labels": { "en": "Push-up", "ja": "プッシュアップ" },
+    "guide": {
+      "ko": {
+        "setup": "손을 어깨보다 약간 넓게 바닥에 짚고 발을 모으거나 어깨너비로 둡니다. 머리부터 발뒤꿈치까지 일직선이 되도록 복부와 엉덩이에 힘을 줍니다.",
+        "execution": "팔꿈치를 몸통에서 약 45도로 굽히며 가슴이 바닥 가까이 갈 때까지 내려갑니다. 바닥을 밀어내듯 몸을 일직선으로 유지하며 올라옵니다.",
+        "breathing": "내려가면서 들이마시고 올라오면서 내쉽니다.",
+        "precautions": "허리가 처지거나 엉덩이가 솟지 않게 합니다. 목을 앞으로 빼지 말고, 힘들면 무릎을 대거나 손을 높은 곳에 짚어 난이도를 낮춥니다. 손목이나 어깨에 통증이 있으면 중단합니다."
+      },
+      "en": {
+        "setup": "Place your hands slightly wider than shoulder width and set your feet together or shoulder-width apart. Brace your abs and glutes so your body forms a straight line from head to heels.",
+        "execution": "Bend your elbows about 45 degrees from your torso and lower until your chest is close to the floor. Push the floor away and rise while keeping the straight line.",
+        "breathing": "Inhale as you lower and exhale as you push up.",
+        "precautions": "Do not let your hips sag or pike up. Keep your neck neutral, and make it easier with knees down or hands elevated when needed. Stop if wrists or shoulders hurt."
+      },
+      "ja": {
+        "setup": "手を肩幅よりやや広くついて、足は閉じるか肩幅に置きます。腹部とお尻に力を入れ、頭からかかとまで一直線にします。",
+        "execution": "肘を体幹から約45度に曲げ、胸が床に近づくまで下ろします。床を押すようにして、体を一直線に保ったまま戻ります。",
+        "breathing": "下ろしながら息を吸い、上がりながら吐きます。",
+        "precautions": "腰が落ちたりお尻が上がったりしないようにします。首を前に突き出さず、きつい場合は膝をつくか手を高い位置に置いて負荷を下げます。手首や肩に痛みがあれば中止します。"
+      }
+    }
+  },
+  {
+    "name": "랫 풀다운",
+    "body": "등",
+    "equipment": "머신",
+    "labels": { "en": "Lat pulldown", "ja": "ラットプルダウン" },
+    "guide": {
+      "ko": {
+        "setup": "허벅지 패드를 무릎 위에 고정하고 바를 어깨너비보다 넓게 잡습니다. 상체를 약간 뒤로 기울이고 가슴을 들어 올립니다.",
+        "execution": "어깨를 아래로 내린 뒤 팔꿈치를 몸통 옆 아래쪽으로 끌어내려 바를 쇄골 쪽으로 당깁니다. 등이 늘어나는 위치까지 천천히 팔을 올립니다.",
+        "breathing": "당기면서 내쉬고 올라가면서 들이마십니다.",
+        "precautions": "바를 목 뒤로 내리지 않습니다. 몸을 크게 젖혀 반동을 쓰거나 어깨를 으쓱하지 않으며, 무게를 줄여 자세를 유지합니다."
+      },
+      "en": {
+        "setup": "Secure your thighs under the pad and grip the bar wider than shoulder width. Lean back slightly and lift your chest.",
+        "execution": "Set your shoulders down, then drive your elbows down and toward your sides to pull the bar to your collarbone. Return slowly until your lats are stretched.",
+        "breathing": "Exhale as you pull and inhale as the bar rises.",
+        "precautions": "Do not pull the bar behind your neck. Avoid swinging your torso or shrugging, and reduce the load if your form breaks down."
+      },
+      "ja": {
+        "setup": "太ももパッドを膝の上に固定し、バーを肩幅より広く握ります。上体を少し後ろに傾け、胸を張ります。",
+        "execution": "肩を下げてから、肘を体の横下方向へ引き下ろし、バーを鎖骨のあたりへ引きます。背中が伸びる位置までゆっくり戻します。",
+        "breathing": "引きながら息を吐き、戻しながら吸います。",
+        "precautions": "バーを首の後ろへ下ろさないでください。体を大きく反らして反動を使ったり肩をすくめたりせず、フォームが崩れるなら重量を下げます。"
+      }
+    }
+  },
+  {
+    "name": "시티드 로우",
+    "body": "등",
+    "equipment": "머신",
+    "labels": { "en": "Seated row", "ja": "シーテッドロウ" },
+    "guide": {
+      "ko": {
+        "setup": "발판에 발을 고정하고 무릎을 살짝 굽힌 채 앉습니다. 허리를 중립으로 세우고 손잡이를 잡아 팔을 앞으로 편 상태에서 시작합니다.",
+        "execution": "어깨를 내린 채 팔꿈치를 몸통 옆으로 뒤로 당겨 손잡이를 복부 쪽으로 가져옵니다. 등 근육을 짧게 조인 뒤 팔을 천천히 펴며 돌아갑니다.",
+        "breathing": "당기면서 내쉬고 돌아가면서 들이마십니다.",
+        "precautions": "상체를 앞뒤로 크게 흔들거나 허리를 둥글게 말지 않습니다. 어깨를 으쓱하지 말고, 돌아갈 때 무게에 끌려가지 않도록 합니다."
+      },
+      "en": {
+        "setup": "Brace your feet on the platform and sit with knees slightly bent. Keep your lower back neutral, grab the handle, and start with your arms extended.",
+        "execution": "With shoulders down, pull your elbows back along your sides and bring the handle toward your abdomen. Briefly squeeze your back, then extend your arms slowly.",
+        "breathing": "Exhale as you pull and inhale as you return.",
+        "precautions": "Do not swing your torso back and forth or round your lower back. Avoid shrugging, and do not let the weight yank you forward on the return."
+      },
+      "ja": {
+        "setup": "足をフットプレートに固定し、膝を軽く曲げて座ります。腰を中立に保ち、ハンドルを握って腕を前に伸ばした状態から始めます。",
+        "execution": "肩を下げたまま、肘を体の横で後ろへ引き、ハンドルをお腹の方へ引き寄せます。背中を短く締めてから、腕をゆっくり伸ばして戻します。",
+        "breathing": "引きながら息を吐き、戻しながら吸います。",
+        "precautions": "上体を前後に大きく振ったり腰を丸めたりしないでください。肩をすくめず、戻すときに重りに引っ張られないようにします。"
+      }
+    }
+  },
+  {
+    "name": "바벨 로우",
+    "body": "등",
+    "equipment": "바벨",
+    "labels": { "en": "Barbell row", "ja": "バーベルロウ" },
+    "guide": {
+      "ko": {
+        "setup": "발을 어깨너비로 서고 바를 정강이 가까이 둡니다. 엉덩이를 뒤로 접어 상체를 숙이고 허리를 중립으로 고정한 채 바를 어깨너비 정도로 잡습니다.",
+        "execution": "바를 바닥에서 떼어 무릎 아래에 둔 상태에서 시작합니다. 팔꿈치를 뒤로 당기며 바를 배꼽 쪽으로 끌어올린 뒤 천천히 내립니다.",
+        "breathing": "당기면서 내쉬고 내리면서 들이마십니다. 복부를 단단히 하되 숨을 오래 참지 않습니다.",
+        "precautions": "허리를 둥글게 말거나 상체를 위아래로 흔들지 않습니다. 무게를 감당할 수 없으면 줄이고, 허리나 손목에 통증이 있으면 중단합니다."
+      },
+      "en": {
+        "setup": "Stand with feet shoulder-width apart and the bar close to your shins. Hinge at the hips, keep your lower back neutral, and grip the bar about shoulder width.",
+        "execution": "Lift the bar and hold it below your knees. Pull your elbows back and draw the bar toward your navel, then lower it slowly.",
+        "breathing": "Exhale as you pull and inhale as you lower. Brace your core without holding your breath for long.",
+        "precautions": "Do not round your lower back or heave your torso up and down. Reduce the load if you cannot control it, and stop if your back or wrists hurt."
+      },
+      "ja": {
+        "setup": "足を肩幅に開き、バーをすねの近くに置きます。股関節から上体を倒して腰を中立に保ち、バーを肩幅程度で握ります。",
+        "execution": "バーを持ち上げ、膝より下で構えます。肘を後ろへ引いてバーをおへそのあたりへ引き上げ、ゆっくり下ろします。",
+        "breathing": "引きながら息を吐き、下ろしながら吸います。腹部を固めますが、長く息を止めないでください。",
+        "precautions": "腰を丸めたり、上体を上下に振ったりしないでください。重量を制御できないなら下げ、腰や手首に痛みがあれば中止します。"
+      }
+    }
+  },
+  {
+    "name": "풀업",
+    "body": "등",
+    "equipment": "맨몸",
+    "labels": { "en": "Pull-up", "ja": "プルアップ" },
+    "guide": {
+      "ko": {
+        "setup": "어깨너비보다 약간 넓게 철봉을 잡고 팔을 편 채 매달립니다. 어깨를 아래로 내리고 복부에 힘을 주며 다리는 가볍게 모읍니다.",
+        "execution": "팔꿈치를 아래로 끌어내리며 턱이 바 높이에 오도록 몸을 당겨 올립니다. 정점에서 잠시 멈춘 뒤 팔이 펴질 때까지 천천히 내려옵니다.",
+        "breathing": "올라가면서 내쉬고 내려오면서 들이마십니다.",
+        "precautions": "다리를 차는 반동이나 어깨를 으쓱하는 동작을 줄입니다. 내려올 때 떨어지듯 풀지 않고, 어깨나 팔꿈치가 아프면 중단합니다. 어렵다면 보조 방법을 사용합니다."
+      },
+      "en": {
+        "setup": "Grip the bar slightly wider than shoulder width and hang with arms extended. Set your shoulders down, tighten your abs, and keep your legs together.",
+        "execution": "Drive your elbows down and pull yourself up until your chin is at bar height. Pause briefly, then lower slowly until your arms are extended.",
+        "breathing": "Exhale as you rise and inhale as you lower.",
+        "precautions": "Minimize kicking and shrugging. Do not drop out of the bottom position, and stop if your shoulders or elbows hurt. Use assistance if needed."
+      },
+      "ja": {
+        "setup": "肩幅よりやや広くバーを握り、腕を伸ばしてぶら下がります。肩を下げ、腹部に力を入れ、足は軽くそろえます。",
+        "execution": "肘を下へ引き下ろしながら、あごがバーの高さに来るまで体を引き上げます。頂点で軽く止め、腕が伸びるまでゆっくり下ります。",
+        "breathing": "上がりながら息を吐き、下りながら吸います。",
+        "precautions": "足を振る反動や肩をすくめる動作を抑えます。下りるときに力を抜いて落ちないようにし、肩や肘に痛みがあれば中止します。難しい場合は補助を使います。"
+      }
+    }
+  },
+  {
+    "name": "스쿼트",
+    "body": "하체",
+    "equipment": "바벨",
+    "labels": { "en": "Squat", "ja": "スクワット" },
+    "guide": {
+      "ko": {
+        "setup": "랙 높이를 어깨 정도로 맞추고 바를 승모근 위에 올립니다. 안전바나 스포터를 준비하고 발을 어깨너비로 벌려 발끝을 약간 바깥으로 둡니다.",
+        "execution": "복부에 힘을 주고 바를 랙에서 빼 한두 걸음 물러납니다. 엉덩이를 뒤로 접으며 무릎을 발끝 방향으로 보내 허리가 중립인 깊이까지 앉았다가 발바닥 전체로 바닥을 밀며 일어납니다.",
+        "breathing": "내려가기 전에 숨을 들이마시고 복부를 단단히 한 뒤 올라오면서 내쉽니다. 한 번에 길게 참지 않습니다.",
+        "precautions": "무릎이 안쪽으로 모이거나 뒤꿈치가 뜨지 않게 합니다. 허리를 둥글게 말지 않고 감당 가능한 무게만 사용하며, 실패할 경우 안전바나 스포터를 활용하고 통증이 있으면 중단합니다."
+      },
+      "en": {
+        "setup": "Set the rack at about shoulder height and place the bar across your upper back. Prepare safety arms or a spotter, and set your feet shoulder-width apart with toes slightly out.",
+        "execution": "Brace your abs, unrack the bar, and step back. Hinge your hips back and send your knees in line with your toes to a depth where your back stays neutral, then push through your whole foot to stand.",
+        "breathing": "Inhale and brace before descending, then exhale as you rise. Do not hold your breath for long.",
+        "precautions": "Do not let your knees cave in or your heels lift. Keep your back from rounding, use a manageable load, use safeties or a spotter in case of failure, and stop if you feel pain."
+      },
+      "ja": {
+        "setup": "ラックを肩くらいの高さに合わせ、バーを僧帽筋の上に担ぎます。セーフティバーか補助者を用意し、足を肩幅に開いてつま先を少し外に向けます。",
+        "execution": "腹部を固めてバーを外し、一、二歩下がります。お尻を後ろに引きながら膝をつま先の方向へ出し、腰が中立でいられる深さまでしゃがみ、足裏全体で床を押して立ち上がります。",
+        "breathing": "しゃがむ前に息を吸って腹部を固め、立ち上がりながら吐きます。長く息を止めないでください。",
+        "precautions": "膝が内側に入ったり、かかとが浮いたりしないようにします。腰を丸めず、扱える重量にし、失敗に備えてセーフティバーや補助者を使います。痛みがあれば中止します。"
+      }
+    }
+  },
+  {
+    "name": "데드리프트",
+    "body": "하체",
+    "equipment": "바벨",
+    "labels": { "en": "Deadlift", "ja": "デッドリフト" },
+    "guide": {
+      "ko": {
+        "setup": "바가 발 중앙 위에 오도록 서서 발을 골반너비로 둡니다. 엉덩이를 뒤로 접어 바를 어깨너비로 잡고 가슴을 들어 허리를 중립으로 만듭니다.",
+        "execution": "바를 몸에 붙인 채 바닥을 밀며 엉덩이와 무릎을 함께 펴서 일어섭니다. 꼭대기에서 몸을 곧게 세운 뒤 엉덩이를 먼저 뒤로 보내며 바를 같은 경로로 내립니다.",
+        "breathing": "당기기 전에 들이마시고 복부를 단단히 한 뒤 올라오며 내쉽니다. 반복마다 다시 호흡을 정리합니다.",
+        "precautions": "허리를 둥글게 말거나 바가 몸에서 멀어지지 않게 합니다. 정점에서 허리를 과하게 젖히지 말고, 무게는 폼이 유지되는 범위로 하며 통증이 있으면 중단합니다."
+      },
+      "en": {
+        "setup": "Stand with the bar over mid-foot and feet about hip-width apart. Hinge back, grip the bar at shoulder width, and lift your chest so your back is neutral.",
+        "execution": "Keep the bar against your body, push the floor away, and extend your hips and knees together to stand. At the top stand tall, then push your hips back first and lower the bar along the same path.",
+        "breathing": "Inhale and brace before the pull, then exhale as you rise. Reset your breath each rep.",
+        "precautions": "Do not round your back or let the bar drift forward. Avoid leaning back at lockout, use a weight you can lift with good form, and stop if you feel pain."
+      },
+      "ja": {
+        "setup": "バーが足の中央の上に来るように立ち、足を腰幅にします。お尻を引いて肩幅でバーを握り、胸を持ち上げて腰を中立にします。",
+        "execution": "バーを体に沿わせ、床を押しながら股関節と膝を同時に伸ばして立ちます。頂点で体をまっすぐにし、お尻を先に引いて同じ軌道でバーを下ろします。",
+        "breathing": "引く前に息を吸って腹部を固め、立ち上がりながら吐きます。毎回呼吸を整え直します。",
+        "precautions": "腰を丸めたり、バーが体から離れたりしないようにします。頂点で反りすぎず、フォームを保てる重量にし、痛みがあれば中止します。"
+      }
+    }
+  },
+  {
+    "name": "레그 프레스",
+    "body": "하체",
+    "equipment": "머신",
+    "labels": { "en": "Leg press", "ja": "レッグプレス" },
+    "guide": {
+      "ko": {
+        "setup": "등과 엉덩이를 시트에 붙이고 발을 발판 중앙에 어깨너비로 둡니다. 안전 장치를 확인하고 무릎이 발끝 방향을 향하게 합니다.",
+        "execution": "안전 걸쇠를 풀고 무릎을 굽혀 허리가 뜨지 않는 범위까지 천천히 내립니다. 발바닥 전체로 발판을 밀어 무릎을 거의 펴되 완전히 잠그지 않습니다.",
+        "breathing": "내리면서 들이마시고 밀면서 내쉽니다.",
+        "precautions": "엉덩이가 시트에서 말려 올라가거나 무릎이 안쪽으로 모이지 않게 합니다. 손으로 무릎을 밀지 말고 무게는 조절 가능한 범위로 하며 통증이 있으면 중단합니다."
+      },
+      "en": {
+        "setup": "Press your back and hips into the seat and place your feet shoulder-width apart in the middle of the platform. Check the safety stops and keep your knees tracking over your toes.",
+        "execution": "Release the safety catches and lower slowly to a depth where your lower back stays on the pad. Push through your whole foot until your knees are nearly straight, without locking them.",
+        "breathing": "Inhale as you lower and exhale as you press.",
+        "precautions": "Do not let your hips curl off the seat or your knees collapse inward. Do not push on your knees with your hands, use a controllable load, and stop if you feel pain."
+      },
+      "ja": {
+        "setup": "背中とお尻をシートにつけ、足をプレートの中央に肩幅で置きます。安全装置を確認し、膝をつま先と同じ方向に向けます。",
+        "execution": "ロックを外し、腰が浮かない範囲まで膝を曲げてゆっくり下ろします。足裏全体でプレートを押し、膝をほぼ伸ばしますが、完全にはロックしません。",
+        "breathing": "下ろしながら息を吸い、押しながら吐きます。",
+        "precautions": "お尻がシートから丸まって浮いたり、膝が内側に入ったりしないようにします。手で膝を押さず、扱える重量にし、痛みがあれば中止します。"
+      }
+    }
+  },
+  {
+    "name": "레그 컬",
+    "body": "하체",
+    "equipment": "머신",
+    "labels": { "en": "Leg curl", "ja": "レッグカール" },
+    "guide": {
+      "ko": {
+        "setup": "머신에 앉거나 엎드려 무릎 축을 기계 회전축에 맞춥니다. 발목 패드를 아킬레스건 위쪽에 두고 골반을 패드에 붙입니다.",
+        "execution": "골반을 고정한 채 발뒤꿈치를 엉덩이 쪽으로 천천히 당겨 무릎을 굽힙니다. 정점에서 잠깐 멈추고 같은 속도로 시작 위치까지 돌아옵니다.",
+        "breathing": "당기면서 내쉬고 돌아오면서 들이마십니다.",
+        "precautions": "엉덩이를 들거나 허리를 꺾어 반동을 쓰지 않습니다. 내릴 때 무게가 떨어지듯 풀지 않고, 햄스트링에 경련이나 통증이 있으면 중단합니다."
+      },
+      "en": {
+        "setup": "Sit or lie on the machine with your knees aligned to its pivot. Place the ankle pad just above your heels and keep your hips against the pad.",
+        "execution": "Keeping your hips still, slowly curl your heels toward your glutes by bending your knees. Pause briefly at the top and return at the same speed.",
+        "breathing": "Exhale as you curl and inhale as you return.",
+        "precautions": "Do not lift your hips or arch your back to swing the weight. Do not let the weight drop on the way down, and stop if you have cramping or pain in your hamstrings."
+      },
+      "ja": {
+        "setup": "マシンに座るか伏せ、膝の位置をマシンの回転軸に合わせます。足首パッドをかかとの少し上に当て、骨盤をパッドにつけます。",
+        "execution": "骨盤を動かさずに、かかとをお尻の方へゆっくり引いて膝を曲げます。頂点で軽く止め、同じ速さで元の位置へ戻します。",
+        "breathing": "曲げながら息を吐き、戻しながら吸います。",
+        "precautions": "お尻を浮かせたり腰を反らしたりして反動を使わないでください。戻すときに重りを落とさず、ハムストリングにつりや痛みがあれば中止します。"
+      }
+    }
+  },
+  {
+    "name": "런지",
+    "body": "하체",
+    "equipment": "덤벨",
+    "labels": { "en": "Lunge", "ja": "ランジ" },
+    "guide": {
+      "ko": {
+        "setup": "양손에 덤벨을 들고 팔을 몸 옆에 내린 채 곧게 섭니다. 한 발이 들어갈 넉넉한 공간을 확보하고 시선은 앞을 봅니다.",
+        "execution": "한 발을 앞으로 크게 내디딘 뒤 상체를 세운 채 양 무릎을 굽혀 뒤 무릎이 바닥 가까이 가도록 내려갑니다. 앞발 전체로 바닥을 밀어 시작 자세로 돌아오고 반대 다리로 반복합니다.",
+        "breathing": "내려가며 들이마시고 올라오며 내쉽니다.",
+        "precautions": "앞 무릎이 안쪽으로 모이거나 상체가 앞으로 쓰러지지 않게 합니다. 보폭이 너무 짧거나 길지 않게 하고, 균형이 불안하면 무게를 줄이며 통증이 있으면 중단합니다."
+      },
+      "en": {
+        "setup": "Hold a dumbbell in each hand with arms at your sides and stand tall. Clear enough space to step forward and keep your eyes ahead.",
+        "execution": "Take a long step forward, then bend both knees with your torso upright until your back knee nears the floor. Push through the whole front foot to return, then repeat on the other leg.",
+        "breathing": "Inhale as you descend and exhale as you rise.",
+        "precautions": "Do not let your front knee cave in or your torso collapse forward. Avoid a step that is too short or too long, reduce the weight if you wobble, and stop if you feel pain."
+      },
+      "ja": {
+        "setup": "両手にダンベルを持ち、腕を体の横に下ろしてまっすぐ立ちます。踏み出せる十分なスペースを確保し、視線は前に向けます。",
+        "execution": "片足を大きく前に踏み出し、上体を起こしたまま両膝を曲げ、後ろ膝が床に近づくまで下ろします。前足全体で床を押して戻り、反対の脚でも繰り返します。",
+        "breathing": "下ろしながら息を吸い、上がりながら吐きます。",
+        "precautions": "前の膝が内側に入ったり、上体が前に倒れたりしないようにします。歩幅が短すぎたり長すぎたりしないようにし、ふらつくなら重量を下げ、痛みがあれば中止します。"
+      }
+    }
+  },
+  {
+    "name": "고블릿 스쿼트",
+    "body": "하체",
+    "equipment": "케틀벨",
+    "labels": { "en": "Goblet squat", "ja": "ゴブレットスクワット" },
+    "guide": {
+      "ko": {
+        "setup": "케틀벨의 손잡이나 뿔 부분을 양손으로 잡고 가슴 앞에 붙입니다. 발을 어깨너비보다 약간 넓게 두고 발끝을 조금 바깥으로 향하게 합니다.",
+        "execution": "가슴을 세우고 엉덩이를 뒤로 보내며 무릎을 발끝 방향으로 굽혀 앉습니다. 팔꿈치가 무릎 안쪽에 닿을 정도로 내려간 뒤 발 전체로 바닥을 밀어 일어납니다.",
+        "breathing": "내려가며 들이마시고 일어나며 내쉽니다.",
+        "precautions": "뒤꿈치가 뜨거나 상체가 앞으로 무너지지 않게 합니다. 케틀벨이 가슴에서 멀어지지 않게 하고, 무릎이 안쪽으로 모이면 무게나 깊이를 조절합니다."
+      },
+      "en": {
+        "setup": "Hold the kettlebell by the horns or handle against your chest. Stand with feet slightly wider than shoulder width and toes turned out a little.",
+        "execution": "Keep your chest up, send your hips back, and bend your knees in line with your toes. Lower until your elbows reach the inside of your knees, then push through your whole foot to stand.",
+        "breathing": "Inhale as you descend and exhale as you stand.",
+        "precautions": "Do not let your heels lift or your torso collapse forward. Keep the kettlebell close to your chest, and reduce the weight or depth if your knees cave in."
+      },
+      "ja": {
+        "setup": "ケトルベルのハンドルや角の部分を両手で持ち、胸の前に引きつけます。足を肩幅よりやや広くし、つま先を少し外に向けます。",
+        "execution": "胸を張り、お尻を後ろに引きながら膝をつま先の方向へ曲げてしゃがみます。肘が膝の内側に触れる程度まで下げ、足全体で床を押して立ち上がります。",
+        "breathing": "しゃがみながら息を吸い、立ち上がりながら吐きます。",
+        "precautions": "かかとが浮いたり、上体が前に倒れたりしないようにします。ケトルベルを胸から離さず、膝が内側に入るなら重量や深さを調整します。"
+      }
+    }
+  },
+  {
+    "name": "숄더 프레스",
+    "body": "어깨",
+    "equipment": "덤벨",
+    "labels": { "en": "Shoulder press", "ja": "ショルダープレス" },
+    "guide": {
+      "ko": {
+        "setup": "덤벨을 어깨 높이에서 잡고 팔꿈치를 몸 앞쪽 약간 바깥에 둡니다. 서거나 등받이에 앉아 복부와 엉덩이에 힘을 주고 갈비뼈를 내립니다.",
+        "execution": "덤벨을 머리 위로 곧게 밀어 올려 귀 옆에서 팔이 거의 펴지게 합니다. 같은 경로로 어깨 높이까지 천천히 내립니다.",
+        "breathing": "올리면서 내쉬고 내리면서 들이마십니다.",
+        "precautions": "허리를 과하게 꺾거나 다리 반동으로 밀지 않습니다. 팔꿈치를 완전히 잠그거나 어깨를 으쓱하지 말고, 어깨가 불편하면 무게를 줄이거나 중단합니다."
+      },
+      "en": {
+        "setup": "Hold the dumbbells at shoulder height with elbows slightly in front of your torso. Stand or sit with back support, brace your abs and glutes, and keep your ribs down.",
+        "execution": "Press the dumbbells straight overhead until your arms are nearly straight beside your ears. Lower them along the same path to shoulder height slowly.",
+        "breathing": "Exhale as you press and inhale as you lower.",
+        "precautions": "Do not over-arch your back or use leg drive. Avoid locking your elbows or shrugging, and reduce the weight or stop if your shoulders feel uncomfortable."
+      },
+      "ja": {
+        "setup": "ダンベルを肩の高さで持ち、肘を体の少し前に置きます。立つか背もたれのある椅子に座り、腹部とお尻に力を入れて肋骨を下げます。",
+        "execution": "ダンベルを頭の真上へ押し上げ、耳の横で腕がほぼ伸びるまで上げます。同じ軌道で肩の高さまでゆっくり下ろします。",
+        "breathing": "押し上げながら息を吐き、下ろしながら吸います。",
+        "precautions": "腰を反らしすぎたり、脚の反動で押したりしないでください。肘をロックしたり肩をすくめたりせず、肩に違和感があれば重量を下げるか中止します。"
+      }
+    }
+  },
+  {
+    "name": "사이드 레터럴 레이즈",
+    "body": "어깨",
+    "equipment": "덤벨",
+    "labels": { "en": "Lateral raise", "ja": "サイドレイズ" },
+    "guide": {
+      "ko": {
+        "setup": "가벼운 덤벨을 들고 발을 골반너비로 섭니다. 상체를 곧게 세우고 팔꿈치를 살짝 굽힌 채 덤벨을 허벅지 옆에 둡니다.",
+        "execution": "팔꿈치를 약간 굽힌 상태로 팔을 옆으로 어깨 높이까지 들어 올립니다. 새끼손가락이 엄지보다 약간 높지 않게 하고 천천히 내립니다.",
+        "breathing": "올리면서 내쉬고 내리면서 들이마십니다.",
+        "precautions": "반동을 쓰거나 어깨를 으쓱하지 않습니다. 어깨 높이 이상으로 올리지 않고 무게를 가볍게 하며, 어깨에 찝히는 느낌이 있으면 중단합니다."
+      },
+      "en": {
+        "setup": "Hold light dumbbells and stand with feet hip-width apart. Keep your torso upright, elbows slightly bent, and the dumbbells beside your thighs.",
+        "execution": "Keeping a slight elbow bend, raise your arms out to the sides to shoulder height. Keep your pinky from tilting above your thumb, then lower slowly.",
+        "breathing": "Exhale as you lift and inhale as you lower.",
+        "precautions": "Do not swing or shrug. Do not lift above shoulder height, keep the weight light, and stop if you feel pinching in your shoulder."
+      },
+      "ja": {
+        "setup": "軽いダンベルを持ち、足を腰幅に開いて立ちます。上体を起こし、肘を軽く曲げて、ダンベルを太ももの横に置きます。",
+        "execution": "肘を軽く曲げたまま、腕を横へ肩の高さまで上げます。小指側が親指側より高くなりすぎないようにして、ゆっくり下ろします。",
+        "breathing": "上げながら息を吐き、下ろしながら吸います。",
+        "precautions": "反動を使ったり肩をすくめたりしないでください。肩の高さより上げず、重量は軽めにし、肩に挟まる感じがあれば中止します。"
+      }
+    }
+  },
+  {
+    "name": "덤벨 컬",
+    "body": "팔",
+    "equipment": "덤벨",
+    "labels": { "en": "Dumbbell curl", "ja": "ダンベルカール" },
+    "guide": {
+      "ko": {
+        "setup": "덤벨을 양손에 들고 손바닥이 앞을 향하게 서거나 앉습니다. 팔꿈치를 몸통 옆에 붙이고 어깨를 편하게 내립니다.",
+        "execution": "팔꿈치 위치를 유지하며 덤벨을 어깨 쪽으로 굽혀 올립니다. 위에서 이두근을 잠시 조인 뒤 팔이 거의 펴질 때까지 천천히 내립니다.",
+        "breathing": "올리면서 내쉬고 내리면서 들이마십니다.",
+        "precautions": "상체를 젖히거나 팔꿈치를 앞으로 밀어 반동을 쓰지 않습니다. 손목을 꺾지 말고, 내릴 때 힘을 빼 떨어뜨리지 않습니다."
+      },
+      "en": {
+        "setup": "Hold a dumbbell in each hand with palms forward, standing or seated. Keep your elbows beside your torso and your shoulders relaxed and down.",
+        "execution": "Keeping your elbows in place, curl the dumbbells toward your shoulders. Squeeze your biceps briefly at the top, then lower until your arms are nearly straight.",
+        "breathing": "Exhale as you curl and inhale as you lower.",
+        "precautions": "Do not lean back or swing your elbows forward to cheat the weight up. Keep your wrists straight and do not drop the weight on the way down."
+      },
+      "ja": {
+        "setup": "両手にダンベルを持ち、手のひらを前に向けて立つか座ります。肘を体の横につけ、肩をリラックスさせて下げます。",
+        "execution": "肘の位置を保ったまま、ダンベルを肩の方へ曲げ上げます。上で上腕二頭筋を軽く締め、腕がほぼ伸びるまでゆっくり下ろします。",
+        "breathing": "上げながら息を吐き、下ろしながら吸います。",
+        "precautions": "上体を反らしたり肘を前に出したりして反動を使わないでください。手首を曲げず、下ろすときに力を抜いて落とさないようにします。"
+      }
+    }
+  },
+  {
+    "name": "트라이셉스 푸시다운",
+    "body": "팔",
+    "equipment": "머신",
+    "labels": { "en": "Triceps pushdown", "ja": "トライセプスプッシュダウン" },
+    "guide": {
+      "ko": {
+        "setup": "케이블 앞에 서서 바나 로프를 잡고 팔꿈치를 몸통 옆에 붙입니다. 상체를 약간 앞으로 기울이고 복부에 힘을 줍니다.",
+        "execution": "팔꿈치 위치를 고정한 채 전완만 움직여 손잡이를 허벅지 쪽으로 눌러 내립니다. 팔이 펴지면 잠깐 조인 뒤 팔꿈치가 90도 정도가 될 때까지 천천히 올립니다.",
+        "breathing": "누르면서 내쉬고 올리면서 들이마십니다.",
+        "precautions": "팔꿈치가 앞이나 옆으로 벌어지거나 어깨가 말리지 않게 합니다. 몸 전체로 누르며 반동을 쓰지 말고, 팔꿈치에 통증이 있으면 무게를 줄이거나 중단합니다."
+      },
+      "en": {
+        "setup": "Stand facing the cable, grip the bar or rope, and keep your elbows tucked beside your torso. Lean slightly forward and brace your abs.",
+        "execution": "Holding your elbows still, move only your forearms and press the handle down toward your thighs. Squeeze briefly when your arms are straight, then let it rise slowly until your elbows are about 90 degrees.",
+        "breathing": "Exhale as you press down and inhale as you return.",
+        "precautions": "Do not let your elbows drift forward or flare out, or your shoulders roll forward. Avoid using body weight to shove the handle, and reduce the load or stop if your elbows hurt."
+      },
+      "ja": {
+        "setup": "ケーブルの前に立ち、バーかロープを握って、肘を体の横につけます。上体を少し前に傾け、腹部に力を入れます。",
+        "execution": "肘の位置を固定したまま前腕だけを動かし、ハンドルを太ももの方へ押し下げます。腕が伸びたら軽く締め、肘が約90度になるまでゆっくり戻します。",
+        "breathing": "押し下げながら息を吐き、戻しながら吸います。",
+        "precautions": "肘が前や横に流れたり、肩が前に巻いたりしないようにします。体重を乗せて押し込まず反動を避け、肘に痛みがあれば重量を下げるか中止します。"
+      }
+    }
+  },
+  {
+    "name": "플랭크",
+    "body": "코어",
+    "equipment": "맨몸",
+    "labels": { "en": "Plank", "ja": "プランク" },
+    "guide": {
+      "ko": {
+        "setup": "팔꿈치를 어깨 바로 아래에 두고 전완을 바닥에 댑니다. 발끝을 세워 다리를 뒤로 뻗고 시선은 바닥을 향해 목을 중립으로 둡니다.",
+        "execution": "복부와 엉덩이에 힘을 주고 머리부터 발뒤꿈치까지 일직선을 만듭니다. 그 자세를 정해진 시간 동안 유지하고, 흔들리면 자세를 다시 잡습니다.",
+        "breathing": "멈추지 말고 코로 들이마시고 입으로 내쉬며 일정하게 호흡합니다. 복부 긴장은 유지합니다.",
+        "precautions": "허리가 처지거나 엉덩이가 위로 솟지 않게 합니다. 어깨가 귀 쪽으로 올라가지 않게 하고, 자세가 무너지면 시간을 줄이거나 무릎을 대며 허리나 어깨에 통증이 있으면 중단합니다."
+      },
+      "en": {
+        "setup": "Place your elbows directly under your shoulders with forearms on the floor. Extend your legs back on your toes and look down so your neck stays neutral.",
+        "execution": "Brace your abs and glutes to form a straight line from head to heels. Hold that position for the planned time and reset if you start to shake or sag.",
+        "breathing": "Keep breathing steadily in and out without pausing, and maintain your abdominal tension.",
+        "precautions": "Do not let your lower back sag or your hips pike up. Keep your shoulders away from your ears, shorten the hold or drop to your knees if form breaks down, and stop if your back or shoulders hurt."
+      },
+      "ja": {
+        "setup": "肘を肩の真下に置き、前腕を床につけます。つま先を立てて脚を後ろに伸ばし、視線を床に向けて首を中立に保ちます。",
+        "execution": "腹部とお尻に力を入れ、頭からかかとまで一直線にします。決めた時間その姿勢を保ち、震えたり崩れたりしたら姿勢を整え直します。",
+        "breathing": "止めずに、一定のリズムで吸って吐き続けます。腹部の緊張は保ちます。",
+        "precautions": "腰が落ちたりお尻が上がったりしないようにします。肩を耳に近づけず、崩れたら時間を短くするか膝をつきます。腰や肩に痛みがあれば中止します。"
+      }
+    }
+  },
+  {
+    "name": "런닝",
+    "body": "유산소",
+    "equipment": "머신",
+    "labels": { "en": "Running", "ja": "ランニング" },
+    "guide": {
+      "ko": {
+        "setup": "러닝화를 신고 러닝머신의 안전 클립을 몸에 연결합니다. 걷기나 가벼운 조깅으로 시작해 속도를 서서히 높이고 경사는 낮게 둡니다.",
+        "execution": "상체를 곧게 세우고 시선은 앞을 봅니다. 팔꿈치를 편하게 굽혀 앞뒤로 흔들며 발을 몸 바로 아래에 가볍게 디딥니다. 마지막에는 속도를 낮춰 걷기로 정리합니다.",
+        "breathing": "대화가 가능한 정도의 속도로 일정하게 호흡하며, 필요하면 코와 입을 함께 사용해 숨을 계속 이어갑니다.",
+        "precautions": "손잡이를 잡고 달리거나 벨트 앞쪽으로 너무 가까이 가지 않습니다. 발을 너무 앞으로 뻗지 말고, 어지러움, 가슴 불편감, 관절 통증이 있으면 즉시 속도를 줄이고 중단합니다."
+      },
+      "en": {
+        "setup": "Wear running shoes and attach the treadmill safety clip to your clothing. Start with walking or an easy jog, build speed gradually, and keep the incline low.",
+        "execution": "Stay tall and look ahead. Swing your relaxed, bent arms back and forth and land lightly with your feet under your body. Finish by slowing to a walk to cool down.",
+        "breathing": "Run at a pace where you can still talk and keep your breathing steady, using your nose and mouth as needed without holding your breath.",
+        "precautions": "Do not hang onto the rails or run too close to the front of the belt. Avoid overstriding, and slow down and stop right away if you feel dizzy, uncomfortable in your chest, or have joint pain."
+      },
+      "ja": {
+        "setup": "ランニングシューズを履き、トレッドミルの安全クリップを衣服に付けます。ウォーキングか軽いジョグから始め、速度を徐々に上げ、傾斜は低めにします。",
+        "execution": "上体を起こして視線を前に向けます。肘を楽に曲げて腕を前後に振り、足は体の真下に軽く着地します。最後は速度を落として歩き、整理運動をします。",
+        "breathing": "会話できる程度のペースで、一定の呼吸を続けます。必要に応じて鼻と口を使い、息を止めないでください。",
+        "precautions": "手すりにつかまって走ったり、ベルトの前に寄りすぎたりしないでください。足を前に出しすぎず、めまい、胸の不快感、関節の痛みがあればすぐに減速して中止します。"
+      }
+    }
+  },
+  {
+    "name": "덤벨 벤치 프레스",
+    "body": "가슴",
+    "equipment": "덤벨",
+    "labels": { "en": "Dumbbell bench press", "ja": "ダンベルベンチプレス" },
+    "guide": {
+      "ko": {
+        "setup": "덤벨을 허벅지에 올리고 평평한 벤치에 앉아 뒤로 누우며 가슴 옆으로 올립니다. 어깨뼈를 모아 내리고 발을 바닥에 단단히 둡니다.",
+        "execution": "덤벨을 가슴 위로 밀어 올려 어깨 바로 위에서 만나게 합니다. 팔꿈치를 몸통에서 약 45도로 두고 가슴 옆까지 천천히 내립니다.",
+        "breathing": "내리면서 들이마시고 올리면서 내쉽니다.",
+        "precautions": "덤벨을 내릴 때 팔꿈치를 과하게 벌리거나 어깨를 앞으로 말지 않습니다. 시작과 끝에서 덤벨을 안전하게 다루고, 무게를 감당하기 어려우면 줄이며 통증이 있으면 중단합니다."
+      },
+      "en": {
+        "setup": "Sit on a flat bench with dumbbells on your thighs, lie back, and bring them to chest level. Pull your shoulder blades back and down and plant your feet firmly.",
+        "execution": "Press the dumbbells up over your chest until they are directly above your shoulders. Keep your elbows about 45 degrees from your torso and lower them slowly to chest level.",
+        "breathing": "Inhale as you lower and exhale as you press.",
+        "precautions": "Do not flare your elbows excessively or let your shoulders roll forward. Handle the dumbbells carefully when getting in and out, reduce the weight if you cannot control it, and stop if you feel pain."
+      },
+      "ja": {
+        "setup": "ダンベルを太ももに乗せてフラットベンチに座り、後ろに寝て胸の横へ持ち上げます。肩甲骨を寄せて下げ、足を床にしっかり置きます。",
+        "execution": "ダンベルを胸の上へ押し上げ、肩の真上で合わせます。肘を体幹から約45度に保ち、胸の横までゆっくり下ろします。",
+        "breathing": "下ろしながら息を吸い、押し上げながら吐きます。",
+        "precautions": "肘を広げすぎたり肩が前に巻いたりしないようにします。構えるときと終えるときはダンベルを安全に扱い、制御できないなら重量を下げ、痛みがあれば中止します。"
+      }
+    }
+  },
+  {
+    "name": "디클라인 벤치 프레스",
+    "body": "가슴",
+    "equipment": "바벨",
+    "labels": { "en": "Decline bench press", "ja": "デクラインベンチプレス" },
+    "guide": {
+      "ko": {
+        "setup": "디클라인 벤치에 눕고 발과 다리를 패드에 안전하게 고정합니다. 어깨뼈를 모으고 랙이나 안전장치, 스포터를 확인한 뒤 바를 어깨너비보다 넓게 잡습니다.",
+        "execution": "바를 랙에서 빼 가슴 위에 둡니다. 팔꿈치를 약 45도로 두고 하부 가슴 쪽으로 천천히 내린 뒤 어깨 위로 밀어 올립니다.",
+        "breathing": "내리면서 들이마시고 밀어 올리면서 내쉽니다. 숨을 오래 참지 않습니다.",
+        "precautions": "머리가 아래로 향하므로 어지러우면 즉시 중단합니다. 혼자 하는 경우 안전장치나 스포터를 사용하고, 바를 튕기거나 손목을 꺾지 않으며 무게는 보수적으로 선택합니다."
+      },
+      "en": {
+        "setup": "Lie on a decline bench and secure your feet and legs under the pads. Retract your shoulder blades, check the rack, safeties, or spotter, and grip the bar wider than shoulder width.",
+        "execution": "Unrack the bar over your chest. With elbows about 45 degrees, lower it slowly toward the lower chest, then press it back over your shoulders.",
+        "breathing": "Inhale as you lower and exhale as you press. Do not hold your breath for long.",
+        "precautions": "Because your head is lower than your hips, stop right away if you feel dizzy. Use safeties or a spotter, do not bounce the bar or bend your wrists, and choose a conservative load."
+      },
+      "ja": {
+        "setup": "デクラインベンチに寝て、足と脚をパッドにしっかり固定します。肩甲骨を寄せ、ラック、安全装置、補助者を確認し、肩幅より広くバーを握ります。",
+        "execution": "バーをラックから外して胸の上で構えます。肘を約45度に保ち、胸の下部へゆっくり下ろしてから、肩の上へ押し上げます。",
+        "breathing": "下ろしながら息を吸い、押し上げながら吐きます。長く息を止めないでください。",
+        "precautions": "頭が下になるため、めまいがあればすぐ中止します。セーフティや補助者を使い、バーを跳ね返したり手首を曲げたりせず、重量は控えめに選びます。"
+      }
+    }
+  },
+  {
+    "name": "덤벨 플라이",
+    "body": "가슴",
+    "equipment": "덤벨",
+    "labels": { "en": "Dumbbell fly", "ja": "ダンベルフライ" },
+    "guide": {
+      "ko": {
+        "setup": "가벼운 덤벨을 들고 평평한 벤치에 누워 팔을 가슴 위로 뻗습니다. 팔꿈치를 살짝 굽히고 손바닥이 서로 마주 보게 하며 어깨뼈를 모읍니다.",
+        "execution": "팔꿈치 각도를 유지한 채 팔을 양옆으로 큰 원을 그리듯 천천히 벌려 가슴이 편안하게 늘어나는 곳까지 내립니다. 가슴으로 껴안듯 덤벨을 다시 모읍니다.",
+        "breathing": "벌리면서 들이마시고 모으면서 내쉽니다.",
+        "precautions": "팔꿈치를 펴거나 굽혔다 펴며 프레스처럼 하지 않습니다. 어깨가 앞으로 말릴 정도로 깊이 내리지 말고 가벼운 무게를 사용하며 어깨에 통증이 있으면 중단합니다."
+      },
+      "en": {
+        "setup": "Lie on a flat bench holding light dumbbells with arms extended above your chest. Keep a slight bend in your elbows, palms facing each other, and shoulder blades retracted.",
+        "execution": "Keeping the same elbow angle, slowly open your arms in a wide arc until you feel a comfortable chest stretch. Bring the dumbbells back together as if hugging a barrel.",
+        "breathing": "Inhale as you open your arms and exhale as you bring them together.",
+        "precautions": "Do not straighten the arms or bend and straighten the elbows like a press. Do not lower so deep that your shoulders roll forward, use light weights, and stop if your shoulders hurt."
+      },
+      "ja": {
+        "setup": "軽いダンベルを持ってフラットベンチに寝て、腕を胸の上に伸ばします。肘を軽く曲げ、手のひらを向かい合わせにして、肩甲骨を寄せます。",
+        "execution": "肘の角度を保ったまま、腕を大きな弧を描くようにゆっくり開き、胸が心地よく伸びる位置まで下ろします。大きな樽を抱えるようにダンベルを戻します。",
+        "breathing": "開きながら息を吸い、閉じながら吐きます。",
+        "precautions": "肘を伸ばしたり、曲げ伸ばししてプレスのようにしたりしないでください。肩が前に巻くほど深く下ろさず、軽い重量を使い、肩に痛みがあれば中止します。"
+      }
+    }
+  },
+  {
+    "name": "케이블 플라이",
+    "body": "가슴",
+    "equipment": "머신",
+    "labels": { "en": "Cable fly", "ja": "ケーブルフライ" },
+    "guide": {
+      "ko": {
+        "setup": "양쪽 케이블을 가슴 높이로 맞추고 손잡이를 잡은 뒤 한 발을 앞으로 내딛고 서서 균형을 잡습니다. 상체를 약간 앞으로 기울이고 팔꿈치를 살짝 굽힙니다.",
+        "execution": "팔꿈치 각도를 유지하며 팔을 가슴 앞으로 큰 원을 그리듯 모읍니다. 손이 만나면 잠깐 조인 뒤 가슴이 편하게 늘어나는 곳까지 천천히 돌아갑니다.",
+        "breathing": "모으면서 내쉬고 벌리면서 들이마십니다.",
+        "precautions": "어깨를 과하게 뒤로 당겨 늘리지 않습니다. 몸통을 흔들거나 팔로 당기듯 굽히지 말고, 무게를 가볍게 하며 어깨에 통증이 있으면 중단합니다."
+      },
+      "en": {
+        "setup": "Set both cable pulleys at chest height, grab the handles, and stand in a staggered stance for balance. Lean slightly forward and keep a soft bend in your elbows.",
+        "execution": "Keeping your elbow angle, bring your hands together in front of your chest in a wide arc. Squeeze briefly when they meet, then return slowly until you feel a comfortable chest stretch.",
+        "breathing": "Exhale as you bring your hands together and inhale as you open.",
+        "precautions": "Do not overstretch by pulling your shoulders far behind you. Avoid rocking your torso or turning it into an arm curl, keep the weight light, and stop if your shoulders hurt."
+      },
+      "ja": {
+        "setup": "両側のケーブルを胸の高さに合わせ、ハンドルを握って片足を前に出し、安定して立ちます。上体を少し前に傾け、肘を軽く曲げます。",
+        "execution": "肘の角度を保ったまま、胸の前で大きな弧を描くように両手を合わせます。手が合ったら軽く締め、胸が心地よく伸びる位置までゆっくり戻します。",
+        "breathing": "合わせながら息を吐き、開きながら吸います。",
+        "precautions": "肩を大きく後ろへ引いて伸ばしすぎないでください。体を揺らしたり腕のカールのように曲げたりせず、重量は軽めにし、肩に痛みがあれば中止します。"
+      }
+    }
+  },
+  {
+    "name": "딥스",
+    "body": "가슴",
+    "equipment": "맨몸",
+    "labels": { "en": "Dip", "ja": "ディップス" },
+    "guide": {
+      "ko": {
+        "setup": "딥 바를 잡고 팔을 펴서 몸을 지지합니다. 어깨를 내리고 가슴을 약간 앞으로 기울이며 다리는 모으거나 무릎을 굽혀 둡니다.",
+        "execution": "팔꿈치를 굽혀 어깨가 불편하지 않은 깊이까지 천천히 내려갑니다. 바를 아래로 밀며 팔을 펴 시작 자세로 올라옵니다.",
+        "breathing": "내려가며 들이마시고 올라오며 내쉽니다.",
+        "precautions": "어깨가 귀 쪽으로 올라가거나 앞으로 말릴 정도로 깊이 내려가지 않습니다. 반동을 쓰지 말고, 힘들면 보조 머신이나 밴드를 사용하며 어깨나 팔꿈치 통증이 있으면 중단합니다."
+      },
+      "en": {
+        "setup": "Grip the dip bars and support your body with straight arms. Set your shoulders down, lean your chest slightly forward, and keep your legs together or knees bent.",
+        "execution": "Bend your elbows and lower slowly to a depth where your shoulders stay comfortable. Press down into the bars and straighten your arms to return.",
+        "breathing": "Inhale as you lower and exhale as you press up.",
+        "precautions": "Do not shrug your shoulders or descend so deep that they roll forward. Avoid bouncing, use an assist machine or band if needed, and stop if your shoulders or elbows hurt."
+      },
+      "ja": {
+        "setup": "ディップバーを握り、腕を伸ばして体を支えます。肩を下げ、胸を少し前に傾け、脚はそろえるか膝を曲げます。",
+        "execution": "肘を曲げて、肩に無理のない深さまでゆっくり下ります。バーを下に押して腕を伸ばし、元の姿勢に戻ります。",
+        "breathing": "下りながら息を吸い、上がりながら吐きます。",
+        "precautions": "肩をすくめたり、肩が前に巻くほど深く下りたりしないでください。反動を使わず、きつい場合はアシストマシンやバンドを使い、肩や肘に痛みがあれば中止します。"
+      }
+    }
+  },
+  {
+    "name": "원암 덤벨 로우",
+    "body": "등",
+    "equipment": "덤벨",
+    "labels": { "en": "One-arm dumbbell row", "ja": "ワンハンドダンベルロウ" },
+    "guide": {
+      "ko": {
+        "setup": "한 손과 같은 쪽 무릎을 벤치에 두거나 한 손으로 벤치를 짚고 상체를 바닥과 거의 평행하게 숙입니다. 반대 손으로 덤벨을 잡아 팔을 늘어뜨리고 허리를 중립으로 유지합니다.",
+        "execution": "어깨를 아래로 내린 채 팔꿈치를 엉덩이 쪽으로 당겨 덤벨을 옆구리 높이까지 올립니다. 등을 잠깐 조인 뒤 팔을 펴며 천천히 내립니다.",
+        "breathing": "올리면서 내쉬고 내리면서 들이마십니다.",
+        "precautions": "몸통을 비틀거나 덤벨을 흔들어 반동을 쓰지 않습니다. 어깨를 으쓱하지 말고 허리를 둥글게 하지 않으며, 한쪽씩 같은 횟수로 하고 통증이 있으면 중단합니다."
+      },
+      "en": {
+        "setup": "Place one hand and the same-side knee on a bench, or brace one hand on it, with your torso nearly parallel to the floor. Hold a dumbbell in the other hand with your arm hanging and your lower back neutral.",
+        "execution": "With your shoulder down, pull your elbow toward your hip and raise the dumbbell to your side. Squeeze your back briefly, then extend your arm and lower slowly.",
+        "breathing": "Exhale as you lift and inhale as you lower.",
+        "precautions": "Do not twist your torso or swing the dumbbell. Avoid shrugging or rounding your lower back, work each side for the same reps, and stop if you feel pain."
+      },
+      "ja": {
+        "setup": "片手と同じ側の膝をベンチに置くか、片手でベンチを支え、上体を床とほぼ平行に倒します。反対の手でダンベルを持って腕を垂らし、腰を中立に保ちます。",
+        "execution": "肩を下げたまま、肘をお尻の方へ引いてダンベルを脇腹の高さまで引き上げます。背中を軽く締め、腕を伸ばしてゆっくり下ろします。",
+        "breathing": "引き上げながら息を吐き、下ろしながら吸います。",
+        "precautions": "体をひねったりダンベルを振ったりしないでください。肩をすくめず、腰を丸めず、左右同じ回数を行い、痛みがあれば中止します。"
+      }
+    }
+  },
+  {
+    "name": "체스트 서포티드 로우",
+    "body": "등",
+    "equipment": "덤벨",
+    "labels": { "en": "Chest-supported row", "ja": "チェストサポートロウ" },
+    "guide": {
+      "ko": {
+        "setup": "인클라인 벤치에 가슴을 대고 엎드려 덤벨을 양손에 듭니다. 발을 바닥이나 지지대에 고정하고 목을 중립으로 둔 채 팔을 아래로 늘어뜨립니다.",
+        "execution": "어깨를 아래로 내린 채 팔꿈치를 뒤쪽 위로 당겨 덤벨을 옆구리 쪽으로 올립니다. 등을 잠깐 조인 뒤 팔이 펴질 때까지 천천히 내립니다.",
+        "breathing": "당기면서 내쉬고 내리면서 들이마십니다.",
+        "precautions": "가슴이 벤치에서 떨어질 정도로 몸을 들지 않습니다. 어깨를 으쓱하거나 목을 젖히지 말고, 무게는 반동 없이 다룰 수 있는 범위로 합니다."
+      },
+      "en": {
+        "setup": "Lie chest-down on an incline bench holding a dumbbell in each hand. Plant your feet on the floor or support, keep your neck neutral, and let your arms hang.",
+        "execution": "With your shoulders down, pull your elbows back and up to bring the dumbbells toward your sides. Squeeze your back briefly, then lower until your arms are extended.",
+        "breathing": "Exhale as you pull and inhale as you lower.",
+        "precautions": "Do not lift your chest off the bench. Avoid shrugging or craning your neck, and use a weight you can move without swinging."
+      },
+      "ja": {
+        "setup": "インクラインベンチに胸をつけてうつ伏せになり、両手にダンベルを持ちます。足を床か支えに固定し、首を中立にして腕を垂らします。",
+        "execution": "肩を下げたまま、肘を後ろ上方向へ引いてダンベルを脇腹の方へ引き上げます。背中を軽く締め、腕が伸びるまでゆっくり下ろします。",
+        "breathing": "引きながら息を吐き、下ろしながら吸います。",
+        "precautions": "胸がベンチから離れるほど体を持ち上げないでください。肩をすくめたり首を反らしたりせず、反動なしで動かせる重量にします。"
+      }
+    }
+  },
+  {
+    "name": "티바 로우",
+    "body": "등",
+    "equipment": "바벨",
+    "labels": { "en": "T-bar row", "ja": "Tバーロウ" },
+    "guide": {
+      "ko": {
+        "setup": "티바 위에 발을 어깨너비로 두고 엉덩이를 뒤로 접어 상체를 숙입니다. 손잡이를 잡고 허리를 중립으로 유지하며 무릎을 살짝 굽힙니다.",
+        "execution": "팔꿈치를 몸통 뒤쪽으로 당겨 손잡이를 배 쪽으로 끌어올립니다. 등을 잠깐 조인 뒤 팔이 펴지기 직전까지 천천히 내립니다.",
+        "breathing": "당기면서 내쉬고 내리면서 들이마십니다. 복부를 단단히 하되 오래 참지 않습니다.",
+        "precautions": "허리를 둥글게 말거나 상체를 위아래로 흔들지 않습니다. 목을 들거나 어깨를 으쓱하지 말고 판 무게는 점진적으로 올리며 허리 통증이 있으면 중단합니다."
+      },
+      "en": {
+        "setup": "Stand over the T-bar with feet shoulder-width apart, hinge at the hips, and hold the handle with a neutral lower back and slightly bent knees.",
+        "execution": "Pull your elbows behind your torso to bring the handle toward your abdomen. Squeeze your back briefly, then lower slowly to just short of straight arms.",
+        "breathing": "Exhale as you pull and inhale as you lower. Brace your abs without holding your breath for long.",
+        "precautions": "Do not round your lower back or heave your torso up and down. Avoid craning your neck or shrugging, add plates gradually, and stop if your lower back hurts."
+      },
+      "ja": {
+        "setup": "Tバーをまたいで足を肩幅に開き、股関節から上体を倒します。腰を中立にして膝を軽く曲げ、ハンドルを握ります。",
+        "execution": "肘を体幹の後ろへ引き、ハンドルをお腹の方へ引き上げます。背中を軽く締め、腕が伸びきる少し手前までゆっくり下ろします。",
+        "breathing": "引きながら息を吐き、下ろしながら吸います。腹部を固めますが、長く息を止めないでください。",
+        "precautions": "腰を丸めたり、上体を上下に振ったりしないでください。首を上げたり肩をすくめたりせず、プレートは少しずつ増やし、腰に痛みがあれば中止します。"
+      }
+    }
+  },
+  {
+    "name": "스트레이트 암 풀다운",
+    "body": "등",
+    "equipment": "머신",
+    "labels": { "en": "Straight-arm pulldown", "ja": "ストレートアームプルダウン" },
+    "guide": {
+      "ko": {
+        "setup": "높은 케이블 앞에서 한두 걸음 물러나 바나 로프를 어깨너비로 잡습니다. 상체를 약간 앞으로 기울이고 팔꿈치를 거의 편 채 복부에 힘을 줍니다.",
+        "execution": "팔꿈치 각도를 유지하며 어깨를 내리고 팔을 큰 원호로 허벅지 앞까지 끌어내립니다. 광배근을 조인 뒤 팔이 머리 앞 높이로 돌아갈 때까지 천천히 올립니다.",
+        "breathing": "내리면서 내쉬고 올리면서 들이마십니다.",
+        "precautions": "팔꿈치를 굽혀 풀다운처럼 당기거나 허리를 흔들지 않습니다. 어깨를 으쓱하지 말고 가벼운 무게로 가동 범위를 조절하며 어깨 통증이 있으면 중단합니다."
+      },
+      "en": {
+        "setup": "Stand a step or two back from a high cable and grip the bar or rope shoulder-width apart. Lean slightly forward with nearly straight elbows and brace your abs.",
+        "execution": "Keeping the elbow angle, set your shoulders down and sweep your arms in an arc to the front of your thighs. Squeeze your lats, then let your arms rise slowly to about head height.",
+        "breathing": "Exhale as you pull down and inhale as you return.",
+        "precautions": "Do not bend your elbows into a regular pulldown or rock your lower back. Avoid shrugging, use a light weight with a controlled range, and stop if your shoulders hurt."
+      },
+      "ja": {
+        "setup": "高い位置のケーブルから一、二歩下がり、バーかロープを肩幅で握ります。上体を少し前に傾け、肘をほぼ伸ばしたまま腹部に力を入れます。",
+        "execution": "肘の角度を保ち、肩を下げながら腕を大きな弧で太ももの前まで引き下ろします。広背筋を締め、頭の高さくらいまでゆっくり戻します。",
+        "breathing": "引き下ろしながら息を吐き、戻しながら吸います。",
+        "precautions": "肘を曲げてラットプルダウンのようにしたり、腰を揺らしたりしないでください。肩をすくめず、軽い重量���動きを制御し、肩に痛みがあれば中止します。"
+      }
+    }
+  },
+  {
+    "name": "어시스트 풀업",
+    "body": "등",
+    "equipment": "머신",
+    "labels": { "en": "Assisted pull-up", "ja": "アシストプルアップ" },
+    "guide": {
+      "ko": {
+        "setup": "보조 중량을 선택하고 무릎이나 발을 발판에 안정적으로 올립니다. 바를 어깨너비보다 약간 넓게 잡고 어깨를 내린 채 팔을 편 상태에서 시작합니다.",
+        "execution": "팔꿈치를 아래로 끌어내리며 턱이 바 높이에 오도록 몸을 당겨 올립니다. 패드를 통제하며 팔이 펴질 때까지 천천히 내려옵니다.",
+        "breathing": "올라가면서 내쉬고 내려오면서 들이마십니다.",
+        "precautions": "반동이나 발로 패드를 차는 동작을 피합니다. 어깨를 으쓱하지 말고 내려올 때 갑자기 힘을 풀지 않으며, 점차 보조 중량을 줄이고 통증이 있으면 중단합니다."
+      },
+      "en": {
+        "setup": "Select an assist weight and place your knees or feet securely on the platform. Grip the bar slightly wider than shoulder width and start with arms extended and shoulders down.",
+        "execution": "Drive your elbows down and pull up until your chin is at bar height. Control the platform as you lower slowly until your arms are extended.",
+        "breathing": "Exhale as you rise and inhale as you lower.",
+        "precautions": "Avoid momentum or kicking off the pad. Do not shrug or suddenly relax on the way down, reduce assistance gradually, and stop if you feel pain."
+      },
+      "ja": {
+        "setup": "補助重量を選び、膝か足をプラットフォームに安定して乗せます。バーを肩幅よりやや広く握り、肩を下げて腕を伸ばした状態から始めます。",
+        "execution": "肘を下へ引き下ろし、あごがバーの高さに来るまで体を引き上げます。パッドを制御しながら、腕が伸びるまでゆっくり下ります。",
+        "breathing": "上がりながら息を吐き、下りながら吸います。",
+        "precautions": "反動やパッドを蹴る動作は避けます。肩をすくめず、下りるときに急に力を抜かないでください。補助は少しずつ減らし、痛みがあれば中止します。"
+      }
+    }
+  },
+  {
+    "name": "인버티드 로우",
+    "body": "등",
+    "equipment": "맨몸",
+    "labels": { "en": "Inverted row", "ja": "インバーテッドロウ" },
+    "guide": {
+      "ko": {
+        "setup": "허리 높이쯤의 바 아래에 누워 어깨너비보다 약간 넓게 바를 잡습니다. 발뒤꿈치를 바닥에 두고 머리부터 발까지 일직선이 되도록 복부와 엉덩이에 힘을 줍니다.",
+        "execution": "어깨를 아래로 내린 채 팔꿈치를 뒤로 당겨 가슴을 바 쪽으로 끌어올립니다. 잠깐 조인 뒤 팔이 펴질 때까지 천천히 내려옵니다.",
+        "breathing": "당기면서 내쉬고 내려오면서 들이마십니다.",
+        "precautions": "엉덩이가 처지거나 목을 앞으로 빼지 않습니다. 바가 단단히 고정됐는지 확인하고, 어려우면 무릎을 굽히거나 몸 기울기를 높여 난이도를 낮춥니다. 통증이 있으면 중단합니다."
+      },
+      "en": {
+        "setup": "Lie under a bar at about waist height and grip it slightly wider than shoulder width. Keep your heels on the floor and brace your abs and glutes so your body is straight from head to feet.",
+        "execution": "With your shoulders down, pull your elbows back and draw your chest toward the bar. Squeeze briefly, then lower slowly until your arms are straight.",
+        "breathing": "Exhale as you pull and inhale as you lower.",
+        "precautions": "Do not let your hips sag or your neck jut forward. Check that the bar is secure, and make it easier by bending your knees or raising your body angle. Stop if you feel pain."
+      },
+      "ja": {
+        "setup": "腰くらいの高さのバーの下に寝て、肩幅よりやや広く握ります。かかとを床につけ、腹部とお尻に力を入れて頭から足まで一直線にします。",
+        "execution": "肩を下げたまま、肘を後ろへ引いて胸をバーの方へ引き上げます。軽く締め、腕が伸びるまでゆっくり下ろします。",
+        "breathing": "引きながら息を吐き、下ろしながら吸います。",
+        "precautions": "お尻が落ちたり首が前に出たりしないようにします。バーがしっかり固定されているか確認し、きつい場合は膝を曲げるか体の角度を高くして負荷を下げます。痛みがあれば中止します。"
+      }
+    }
+  },
+  {
+    "name": "페이스 풀",
+    "body": "어깨",
+    "equipment": "머신",
+    "labels": { "en": "Face pull", "ja": "フェイスプル" },
+    "guide": {
+      "ko": {
+        "setup": "케이블을 얼굴 높이 근처에 맞추고 로프를 양손으로 잡은 뒤 뒤로 물러나 팔을 폅니다. 발을 안정적으로 두고 복부에 힘을 주며 가벼운 무게를 선택합니다.",
+        "execution": "팔꿈치를 높게 유지하며 로프를 얼굴 쪽으로 당겨 손이 귀 옆에 오도록 합니다. 뒤 어깨를 잠깐 조인 뒤 천천히 팔을 폅니다.",
+        "breathing": "당기면서 내쉬고 돌아가면서 들이마십니다.",
+        "precautions": "무게를 올리려고 몸을 뒤로 젖히거나 어깨를 으쓱하지 않습니다. 손목을 꺾지 말고 가볍게 정확한 자세로 하며 어깨 통증이 있으면 중단합니다."
+      },
+      "en": {
+        "setup": "Set the cable near face height, hold the rope with both hands, and step back with arms extended. Plant your feet, brace your abs, and choose a light weight.",
+        "execution": "Keeping your elbows high, pull the rope toward your face until your hands reach the sides of your ears. Squeeze your rear shoulders briefly, then extend your arms slowly.",
+        "breathing": "Exhale as you pull and inhale as you return.",
+        "precautions": "Do not lean back or shrug to move more weight. Keep your wrists straight, stay light and precise, and stop if your shoulders hurt."
+      },
+      "ja": {
+        "setup": "ケーブルを顔の高さ付近に合わせ、ロープを両手で握って後ろへ下がり、腕を伸ばします。足を安定させ、腹部に力を入れ、軽い重量を選びます。",
+        "execution": "肘を高く保ったままロープを顔の方へ引き、手が耳の横に来るようにします。後ろの肩を軽く締め、ゆっくり腕を伸ばします。",
+        "breathing": "引きながら息を吐き、戻しながら吸います。",
+        "precautions": "重量を扱うために体を反らしたり肩をすくめたりしないでください。手首を曲げず、軽い重量で正確に行い、肩に痛みがあれば中止します。"
+      }
+    }
+  },
+  {
+    "name": "프론트 스쿼트",
+    "body": "하체",
+    "equipment": "바벨",
+    "labels": { "en": "Front squat", "ja": "フロントスクワット" },
+    "guide": {
+      "ko": {
+        "setup": "랙 높이를 맞추고 바를 앞쪽 어깨와 쇄골 위에 얹습니다. 팔꿈치를 높게 들고 안전바나 스포터를 준비하며 발을 어깨너비로 둡니다.",
+        "execution": "복부를 단단히 하고 바를 랙에서 뺍니다. 상체와 허리 자세를 유지할 수 있는 편안한 깊이까지 무릎을 발끝 방향으로 굽힌 뒤 발바닥 전체로 밀어 일어납니다.",
+        "breathing": "내려가기 전 들이마시고 복부를 단단히 한 뒤 올라오며 내쉽니다. 오래 참지 않습니다.",
+        "precautions": "팔꿈치가 떨어지거나 상체가 앞으로 무너지면 바가 굴러떨어질 수 있으니 무게를 낮춥니다. 시작 전에 안전바 높이와 랙 복귀 방법을 확인하고, 자세��� 무너지기 전에 세트를 끝내며 통증이 있으면 중단합니다."
+      },
+      "en": {
+        "setup": "Set the rack height and rest the bar on your front shoulders and collarbone. Keep your elbows high, prepare safety arms or a spotter, and set your feet shoulder-width apart.",
+        "execution": "Brace your abs and unrack the bar. Bend your knees in line with your toes to a comfortable depth where your torso and back stay stable, then push through your whole foot to stand.",
+        "breathing": "Inhale and brace before descending, then exhale as you rise. Do not hold your breath for long.",
+        "precautions": "If your elbows drop or your torso collapses forward, the bar can roll off, so lower the weight. Check safety-arm height and how to rerack before starting, end the set before form breaks down, and stop if you feel pain."
+      },
+      "ja": {
+        "setup": "ラックの高さを合わせ、バーを肩の前面と鎖骨の上に乗せます。肘を高く保ち、セーフティバーか補助者を用意して、足を肩幅に開きます。",
+        "execution": "腹部を固めてバーを外します。上体と腰の姿勢を保てる無理のない深さまで膝をつま先の方向へ曲げ、足裏全体で押して立ち上がります。",
+        "breathing": "しゃがむ前に息を吸って腹部を固め、立ち上がりながら吐きます。長く息を止めないでください。",
+        "precautions": "肘が下がったり上体が前に倒れたりするとバーが転がり落ちるため、重量を下げます。開始前にセーフティバーの高さとラックへの戻し方を確認し、姿勢が崩れる前にセットを終え、痛みがあれば中止します。"
+      }
+    }
+  },
+  {
+    "name": "루마니안 데드리프트",
+    "body": "하체",
+    "equipment": "바벨",
+    "labels": { "en": "Romanian deadlift", "ja": "ルーマニアンデッドリフト" },
+    "guide": {
+      "ko": {
+        "setup": "바를 허벅지 앞에 들고 서서 발을 골반너비로 둡니다. 무릎을 살짝 굽히고 가슴을 들어 허리를 중립으로 만듭니다.",
+        "execution": "무릎 각도를 거의 고정한 채 엉덩이를 뒤로 밀며 바를 다리에 붙여 정강이 중간 정도까지 내립니다. 햄스트링이 늘어나면 엉덩이를 앞으로 밀며 일어납니다.",
+        "breathing": "내리기 전 들이마시고 복부를 단단히 한 뒤 올라오며 내쉽니다.",
+        "precautions": "허리가 둥글어지기 전에 내리기를 멈춥니다. 바를 몸에서 멀리 보내거나 정점에서 허리를 젖히지 않고, 무게를 조절하며 허리나 햄스트링에 날카로운 통증이 있으면 중단합니다."
+      },
+      "en": {
+        "setup": "Stand holding the bar in front of your thighs with feet hip-width apart. Soften your knees, lift your chest, and keep your lower back neutral.",
+        "execution": "Keeping your knee angle nearly fixed, push your hips back and slide the bar down your legs to about mid-shin. When your hamstrings are stretched, drive your hips forward to stand.",
+        "breathing": "Inhale and brace before lowering, then exhale as you rise.",
+        "precautions": "Stop lowering before your lower back rounds. Do not let the bar drift away from you or lean back at the top, use a controllable weight, and stop if you feel sharp pain in your back or hamstrings."
+      },
+      "ja": {
+        "setup": "バーを太ももの前で持って立ち、足を腰幅にします。膝を軽く曲げ、胸を張って腰を中立に保ちます。",
+        "execution": "膝の角度をほぼ固定したまま、お尻を後ろへ引いてバーを脚に沿わせ、すねの中ほどまで下ろします。ハムストリングが伸びたら、股関節を前に出して立ち上がります。",
+        "breathing": "下ろす前に息を吸って腹部を固め、立ち上がりながら吐きます。",
+        "precautions": "腰が丸まる前に下ろすのを止めます。バーが体から離れたり、頂点で反りすぎたりしないようにし、重量を制御できる範囲にして、腰やハムストリングに鋭い痛みがあれば中止します。"
+      }
+    }
+  },
+  {
+    "name": "스모 데드리프트",
+    "body": "하체",
+    "equipment": "바벨",
+    "labels": { "en": "Sumo deadlift", "ja": "スモウデッドリフト" },
+    "guide": {
+      "ko": {
+        "setup": "발을 어깨너비보다 넓게 벌려 발끝을 바깥으로 향하게 하고 바를 정강이 가까이 둡니다. 팔을 다리 안쪽에서 바를 잡고 가슴을 들어 허리를 중립으로 만듭니다.",
+        "execution": "무릎을 발끝 방향으로 벌리며 바닥을 밀어 일어섭니다. 바를 몸에 붙여 엉덩이를 앞으로 펴 곧게 선 뒤 엉덩이를 뒤로 보내며 같은 경로로 내립니다.",
+        "breathing": "당기기 전에 들이마시고 복부를 단단히 한 뒤 올라오며 내쉽니다. 반복마다 호흡을 정리합니다.",
+        "precautions": "무릎이 안쪽으로 모이거나 허리가 둥글어지지 않게 합니다. 엉덩이가 먼저 솟지 않게 하고, 고관절 부위가 불편하면 발 간격을 조정하거나 중단합니다."
+      },
+      "en": {
+        "setup": "Set your feet wider than shoulder width with toes turned out and the bar close to your shins. Grip the bar inside your legs, lift your chest, and keep your lower back neutral.",
+        "execution": "Push the floor away while spreading your knees over your toes to stand. Keep the bar against your body, extend your hips to stand tall, then push your hips back and lower the bar along the same path.",
+        "breathing": "Inhale and brace before the pull, then exhale as you rise. Reset your breath each rep.",
+        "precautions": "Do not let your knees cave in or your lower back round. Avoid letting your hips shoot up first, and adjust your stance or stop if your hips feel uncomfortable."
+      },
+      "ja": {
+        "setup": "足を肩幅より広く開いてつま先を外に向け、バーをすねの近くに置きます。脚の内側でバーを握り、胸を張って腰を中立にします。",
+        "execution": "膝をつま先の方向へ開きながら床を押して立ち上がります。バーを体に沿わせ、股関節を伸ばして直立し、お尻を引いて同じ軌道で下ろします。",
+        "breathing": "引く前に息を吸って腹部を固め、立ち上がりながら吐きます。毎回呼吸を整えます。",
+        "precautions": "膝が内側に入ったり腰が丸まったりしないようにします。お尻だけが先に上がらないようにし、股関節に違和感があれば足幅を調整するか中止します。"
+      }
+    }
+  },
+  {
+    "name": "불가리안 스플릿 스쿼트",
+    "body": "하체",
+    "equipment": "덤벨",
+    "labels": { "en": "Bulgarian split squat", "ja": "ブルガリアンスクワット" },
+    "guide": {
+      "ko": {
+        "setup": "벤치에서 한 걸음 앞에 서서 뒤발 발등을 벤치에 올립니다. 앞발을 충분히 앞에 두고 양손에 덤벨을 들거나 맨몸으로 상체를 세웁니다.",
+        "execution": "앞 무릎을 발끝 방향으로 굽히며 뒤 무릎이 바닥 가까이 가도록 수직으로 내려갑니다. 앞발 전체로 바닥을 밀어 올라오고 한쪽을 끝낸 뒤 반대쪽을 합니다.",
+        "breathing": "내려가며 들이마시고 올라오며 내쉽니다.",
+        "precautions": "앞 무릎이 안쪽으로 모이거나 뒤발로 밀어 올리지 않습니다. 균형이 불안하면 무게를 줄이거나 지지대를 잡고, 앞발 위치가 너무 가깝지 않게 하며 통증이 있으면 중단합니다."
+      },
+      "en": {
+        "setup": "Stand a step in front of a bench and rest the top of your back foot on it. Place your front foot far enough forward, hold dumbbells or use bodyweight, and keep your torso upright.",
+        "execution": "Bend your front knee in line with your toes and lower straight down until your back knee nears the floor. Push through your whole front foot to rise, then repeat on the other side.",
+        "breathing": "Inhale as you descend and exhale as you rise.",
+        "precautions": "Do not let your front knee cave in or push up mainly with the back foot. Reduce the weight or hold a support if you wobble, keep the front foot far enough forward, and stop if you feel pain."
+      },
+      "ja": {
+        "setup": "ベンチの一歩前に立ち、後ろ足の甲をベンチに乗せます。前足を十分前に置き、ダンベルを持つか自重で、上体を起こします。",
+        "execution": "前の膝をつま先の方向へ曲げ、後ろ膝が床に近づくまでまっすぐ下ろします。前足全体で床を押して上がり、片側が終わったら反対側を行います。",
+        "breathing": "下ろしながら息を吸い、上がりながら吐きます。",
+        "precautions": "前の膝が内側に入ったり、後ろ足で押し上げたりしないようにします。ふらつくなら重量を下げるか支えをつかみ、前足を近づけすぎず、痛みがあれば中止します。"
+      }
+    }
+  },
+  {
+    "name": "레그 익스텐션",
+    "body": "하체",
+    "equipment": "머신",
+    "labels": { "en": "Leg extension", "ja": "レッグエクステンション" },
+    "guide": {
+      "ko": {
+        "setup": "등받이에 기대어 앉아 무릎 축을 기계 회전축에 맞춥니다. 발목 패드를 발목 바로 위에 두고 손잡이를 잡아 엉덩이를 고정합니다.",
+        "execution": "발끝을 위로 향하게 하고 무릎을 천천히 펴 다리를 거의 일직선으로 만듭니다. 대퇴사두근을 잠깐 조인 뒤 같은 속도로 내립니다.",
+        "breathing": "펴면서 내쉬고 내리면서 들이마십니다.",
+        "precautions": "무릎을 세게 잠그거나 반동으로 차 올리지 않습니다. 엉덩이를 들지 말고 가벼운 무게로 시작하며 무릎에 통증이 있으면 중단합니다."
+      },
+      "en": {
+        "setup": "Sit back against the pad with your knees aligned to the machine pivot. Place the ankle pad just above your ankles and hold the handles to keep your hips down.",
+        "execution": "With toes pointing up, slowly extend your knees until your legs are nearly straight. Squeeze your quadriceps briefly and lower at the same speed.",
+        "breathing": "Exhale as you extend and inhale as you lower.",
+        "precautions": "Do not slam into a hard lockout or kick the weight up. Keep your hips down, start light, and stop if you feel knee pain."
+      },
+      "ja": {
+        "setup": "背もたれに寄りかかって座り、膝の位置をマシンの回転軸に合わせます。足首パッドを足首のすぐ上に当て、グリップを握ってお尻を固定します。",
+        "execution": "つま先を上に向け、膝をゆっくり伸ばして脚をほぼ一直線にします。大腿四頭筋を軽く締め、同じ速さで下ろします。",
+        "breathing": "伸ばしながら息を吐き、下ろしながら吸います。",
+        "precautions": "膝を強くロックしたり、反動で蹴り上げたりしないでください。お尻を浮かせず、軽い重量から始め、膝に痛みがあれば中止します。"
+      }
+    }
+  },
+  {
+    "name": "스탠딩 카프 레이즈",
+    "body": "하체",
+    "equipment": "머신",
+    "labels": { "en": "Standing calf raise", "ja": "スタンディングカーフレイズ" },
+    "guide": {
+      "ko": {
+        "setup": "어깨 패드 아래에 서서 발볼을 발판 가장자리에 올리고 발을 골반너비로 둡니다. 무릎을 거의 편 채 상체를 곧게 세우고 뒤꿈치를 편안히 내립니다.",
+        "execution": "발볼로 밀어 뒤꿈치를 최대한 높이 들어 올립니다. 위에서 잠깐 멈춘 뒤 종아리가 늘어나는 곳까지 천천히 내립니다.",
+        "breathing": "올리면서 내쉬고 내리면서 들이마십니다.",
+        "precautions": "무릎을 굽혔다 펴며 반동을 쓰지 않습니다. 발목이 바깥으로 꺾이지 않게 하고, 아킬레스건이나 종아리에 통증이 있으면 무게를 줄이거나 중단합니다."
+      },
+      "en": {
+        "setup": "Stand under the shoulder pads with the balls of your feet on the platform edge and feet hip-width apart. Keep your knees nearly straight and your torso upright, with heels lowered comfortably.",
+        "execution": "Push through the balls of your feet to lift your heels as high as you can. Pause briefly at the top, then lower slowly until your calves are stretched.",
+        "breathing": "Exhale as you rise and inhale as you lower.",
+        "precautions": "Do not bounce by bending and straightening your knees. Keep your ankles from rolling outward, and reduce the load or stop if your Achilles tendon or calves hurt."
+      },
+      "ja": {
+        "setup": "ショルダーパッドの下に立ち、足の母指球をプラットフォームの端に乗せ、足を腰幅に置きます。膝をほぼ伸ばして上体を起こし、かかとを楽に下ろします。",
+        "execution": "母指球で押してかかとをできるだけ高く上げます。上で軽く止め、ふくらはぎが伸びる位置までゆっくり下ろします。",
+        "breathing": "上げながら息を吐き、下ろしながら吸います。",
+        "precautions": "膝の曲げ伸ばしで反動を使わないでください。足首が外側に倒れないようにし、アキレス腱やふくらはぎに痛みがあれば重量を下げるか中止します。"
+      }
+    }
+  },
+  {
+    "name": "시티드 카프 레이즈",
+    "body": "하체",
+    "equipment": "머신",
+    "labels": { "en": "Seated calf raise", "ja": "シーテッドカーフレイズ" },
+    "guide": {
+      "ko": {
+        "setup": "머신에 앉아 발볼을 발판에 올리고 무릎 패드를 허벅지 아래쪽에 맞춥니다. 안전 장치를 풀고 뒤꿈치를 편안히 내린 상태에서 시작합니다.",
+        "execution": "발볼로 밀어 뒤꿈치를 최대한 높이 들어 올립니다. 위에서 잠깐 멈춘 뒤 종아리가 늘어나는 곳까지 천천히 내립니다.",
+        "breathing": "올리면서 내쉬고 내리면서 들이마십니다.",
+        "precautions": "반동으로 튕기거나 무릎을 흔들지 않습니다. 발목이 안쪽이나 바깥쪽으로 쏠리지 않게 하고, 무게는 가동 범위를 유지할 수 있는 정도로 하며 통증이 있으면 중단합니다."
+      },
+      "en": {
+        "setup": "Sit on the machine with the balls of your feet on the platform and the knee pad set on your lower thighs. Release the safety and start with your heels comfortably lowered.",
+        "execution": "Push through the balls of your feet to raise your heels as high as you can. Pause briefly at the top, then lower slowly until your calves are stretched.",
+        "breathing": "Exhale as you rise and inhale as you lower.",
+        "precautions": "Do not bounce or jerk your knees. Keep your ankles from rolling in or out, use a weight that lets you keep full range, and stop if you feel pain."
+      },
+      "ja": {
+        "setup": "マシンに座り、足の母指球をプラットフォームに乗せ、ニーパッドを太ももの下側に合わせます。安全装置を外し、かかとを楽に下ろした状態から始めます。",
+        "execution": "母指球で押してかかとをできるだけ高く上げます。上で軽く止め、ふくらはぎが伸びる位置までゆっくり下ろします。",
+        "breathing": "上げながら息を吐き、下ろしながら吸います。",
+        "precautions": "反動で跳ねたり膝を揺らしたりしないでください。足首が内外に倒れないようにし、���動域を保てる重量にして、痛みがあれば中止します。"
+      }
+    }
+  },
+  {
+    "name": "힙 쓰러스트",
+    "body": "하체",
+    "equipment": "바벨",
+    "labels": { "en": "Hip thrust", "ja": "ヒップスラスト" },
+    "guide": {
+      "ko": {
+        "setup": "벤치에 어깨뼈 아래를 대고 앉아 바를 골반 위에 놓고 패드나 매트로 보호합니다. 발을 무릎 아래에 오도록 어깨너비로 두고 턱을 살짝 당깁니다.",
+        "execution": "발바닥으로 바닥을 밀며 엉덩이를 들어 올려 무릎에서 어깨까지 일직선이 되게 합니다. 엉덩이를 조인 뒤 천천히 내립니다.",
+        "breathing": "올리면서 내쉬고 내리면서 들이마십니다. 정점에서 숨을 오래 참지 않습니다.",
+        "precautions": "정점에서 허리를 과하게 젖히거나 갈비뼈가 벌어지지 않게 합니다. 바가 굴러가지 않게 잡고 무게를 감당 가능한 범위로 하며, 벤치가 고정되었는지 확인하고 통증이 있으면 중단합니다."
+      },
+      "en": {
+        "setup": "Sit with your upper back against a bench and roll the bar over your hips with a pad or mat. Set your feet shoulder-width apart so they are under your knees at the top, and tuck your chin slightly.",
+        "execution": "Drive through your feet to lift your hips until your body is straight from knees to shoulders. Squeeze your glutes, then lower slowly.",
+        "breathing": "Exhale as you lift and inhale as you lower. Do not hold your breath for long at the top.",
+        "precautions": "Do not over-arch your lower back or flare your ribs at the top. Keep control of the bar so it does not roll, use a manageable load, make sure the bench is stable, and stop if you feel pain."
+      },
+      "ja": {
+        "setup": "ベンチに肩甲骨の下をつけて座り、バーを骨盤の上に置いてパッドやマットで保護します。足を肩幅にし、上でかかとが膝の下に来る位置にして、あごを軽く引きます。",
+        "execution": "足裏で床を押してお尻を持ち上げ、膝から肩まで一直線にします。お尻を締めてから、ゆっくり下ろします。",
+        "breathing": "持ち上げながら息を吐き、下ろしながら吸います。頂点で長く息を止めないでください。",
+        "precautions": "頂点で腰を反りすぎたり肋骨が開いたりしないようにします。バーが転がらないよう制御し、扱える重量にして、ベンチが安定していることを確認し、痛みがあれば中止します。"
+      }
+    }
+  },
+  {
+    "name": "글루트 브리지",
+    "body": "하체",
+    "equipment": "맨몸",
+    "labels": { "en": "Glute bridge", "ja": "グルートブリッジ" },
+    "guide": {
+      "ko": {
+        "setup": "바닥에 등을 대고 누워 무릎을 굽히고 발을 골반너비로 둡니다. 팔은 몸 옆에 두고 발뒤꿈치가 무릎 아래에 오게 하며 복부에 가볍게 힘을 줍니다.",
+        "execution": "발바닥으로 바닥을 밀며 엉덩이를 들어 어깨에서 무릎까지 일직선을 만듭니다. 엉덩이를 조인 뒤 천천히 내려놓습니다.",
+        "breathing": "올리면서 내쉬고 내리면서 들이마십니다.",
+        "precautions": "허리를 과하게 꺾어 올리거나 무릎이 벌어지지 않게 합니다. 목에 힘을 주지 말고, 햄스트링에만 경련이 오면 발 위치를 조정하며 통증이 있으면 중단합니다."
+      },
+      "en": {
+        "setup": "Lie on your back with knees bent and feet hip-width apart. Keep your arms at your sides, heels under your knees, and lightly brace your abs.",
+        "execution": "Push through your feet to lift your hips until your body is straight from shoulders to knees. Squeeze your glutes, then lower slowly.",
+        "breathing": "Exhale as you lift and inhale as you lower.",
+        "precautions": "Do not over-arch your lower back or let your knees drift apart. Keep your neck relaxed, adjust your foot position if only your hamstrings cramp, and stop if you feel pain."
+      },
+      "ja": {
+        "setup": "仰向けに寝て膝を曲げ、足を腰幅に置きます。腕は体の横に置き、かかとが膝の下に来るようにして、腹部に軽く力を入れます。",
+        "execution": "足裏で床を押してお尻を持ち上げ、肩から膝まで一直線にします。お尻を締めてから、ゆっくり下ろします。",
+        "breathing": "持ち上げながら息を吐き、下ろしながら吸います。",
+        "precautions": "腰を反らして持ち上げたり、膝が開いたりしないようにします。首に力を入れず、ハムストリングだけがつる場合は足の位置を調整し、痛みがあれば中止します。"
+      }
+    }
+  },
+  {
+    "name": "스텝 업",
+    "body": "하체",
+    "equipment": "덤벨",
+    "labels": { "en": "Step-up", "ja": "ステップアップ" },
+    "guide": {
+      "ko": {
+        "setup": "무릎 높이 이하의 안정적인 박스나 벤치 앞에 서서 양손에 덤벨을 듭니다. 한 발 전체를 박스 위에 올리고 상체를 세웁니다.",
+        "execution": "박스 위 발로 바닥을 밀어 몸을 올리고 위에서 곧게 섭니다. 같은 발로 버티며 반대 발을 천천히 내려놓고 한쪽 반복을 마친 뒤 반대쪽을 합니다.",
+        "breathing": "올라가며 내쉬고 내려오며 들이마십니다.",
+        "precautions": "뒤쪽 발로 밀어 올리거나 무릎이 안쪽으로 모이지 않게 합니다. 박스가 미끄럽지 않은지 확인하고 너무 높은 박스는 피하며, 균형이 불안하면 무게를 줄입니다."
+      },
+      "en": {
+        "setup": "Stand in front of a stable box or bench at or below knee height, holding dumbbells at your sides. Place your whole foot on the box and keep your torso upright.",
+        "execution": "Drive through the foot on the box to lift your body and stand tall on top. Control the descent by lowering the other foot slowly, finish all reps on one side, then switch.",
+        "breathing": "Exhale as you step up and inhale as you step down.",
+        "precautions": "Do not push off mainly with the trailing foot or let your knee cave in. Check that the box is not slippery, avoid one that is too high, and reduce the weight if you wobble."
+      },
+      "ja": {
+        "setup": "膝の高さ以下の安定した箱かベンチの前に立ち、両手にダンベルを持ちます。片足全体を箱に乗せ、上体を起こします。",
+        "execution": "箱の上の足で床を押して体を持ち上げ、上でまっすぐ立ちます。反対の足をゆっくり下ろして制御し、片側の回数を終えたら反対側を行います。",
+        "breathing": "上がりながら息を吐き、下りながら吸います。",
+        "precautions": "後ろ足で押し上げたり、膝が内側に入ったりしないようにします。箱が滑らないか確認し、高すぎる箱は避け、ふらつくなら重量を下げます。"
+      }
+    }
+  },
+  {
+    "name": "밀리터리 프레스",
+    "body": "어깨",
+    "equipment": "바벨",
+    "labels": { "en": "Military press", "ja": "ミリタリープレス" },
+    "guide": {
+      "ko": {
+        "setup": "바를 쇄골과 앞쪽 어깨 위에 올리고 어깨너비보다 약간 넓게 잡습니다. 발을 골반너비로 서서 복부와 엉덩이에 힘을 주고 팔꿈치를 바 앞쪽에 둡니다.",
+        "execution": "머리를 살짝 뒤로 비키며 바를 머리 위로 곧게 밀어 올립니다. 바가 머리 위 어깨 라인에 오면 머리를 앞으로 넣고, 같은 경로로 천천히 쇄골까지 내립니다.",
+        "breathing": "밀기 전에 들이마시고 복부를 단단히 한 뒤 올리면서 내쉽니다. 오래 참지 않습니다.",
+        "precautions": "허리를 과하게 젖히거나 다리 반동을 쓰지 않습니다. 팔꿈치를 뒤로 빠뜨리지 말고, 랙에서 바를 안전하게 다루며 어깨나 허리에 통증이 있으면 중단합니다."
+      },
+      "en": {
+        "setup": "Rest the bar on your collarbone and front shoulders and grip slightly wider than shoulder width. Stand with feet hip-width apart, brace your abs and glutes, and keep your elbows slightly in front of the bar.",
+        "execution": "Move your head back slightly and press the bar straight overhead. Once it clears your head, bring your head forward under it, then lower the bar slowly along the same path to your collarbone.",
+        "breathing": "Inhale and brace before pressing, then exhale as you press. Do not hold your breath for long.",
+        "precautions": "Do not over-arch your back or use leg drive. Do not let your elbows drift behind the bar, handle the bar safely at the rack, and stop if your shoulders or back hurt."
+      },
+      "ja": {
+        "setup": "バーを鎖骨と肩の前面に乗せ、肩幅よりやや広く握ります。足を腰幅に立ち、腹部とお尻に力を入れ、肘をバーの少し前に置きます。",
+        "execution": "頭を少し後ろに引き、バーをまっすぐ頭上へ押し上げます。バーが頭を越えたら頭を前に入れ、同じ軌道でゆっくり鎖骨まで下ろします。",
+        "breathing": "押す前に息を吸って腹部を固め、押し上げながら吐きます。長く息を止めないでください。",
+        "precautions": "腰を反りすぎたり脚の反動を使ったりしないでください。肘がバーの後ろに流れないようにし、ラックでバーを安全に扱い、肩や腰に痛みがあれば中止します。"
+      }
+    }
+  },
+  {
+    "name": "아놀드 프레스",
+    "body": "어깨",
+    "equipment": "덤벨",
+    "labels": { "en": "Arnold press", "ja": "アーノルドプレス" },
+    "guide": {
+      "ko": {
+        "setup": "덤벨을 가슴 앞에 들고 손바닥이 얼굴 쪽을 향하게 합니다. 서거나 등받이에 앉아 복부에 힘을 주고 팔꿈치를 몸 앞에 모읍니다.",
+        "execution": "덤벨을 위로 밀며 팔꿈치를 옆으로 벌리고 손바닥을 앞쪽으로 돌립니다. 머리 위에서 팔이 거의 펴지면 반대 순서로 회전하며 가슴 앞까지 내립니다.",
+        "breathing": "올리면서 내쉬고 내리면서 들이마십니다.",
+        "precautions": "회전하는 동안 허리를 젖히거나 덤벨을 부딪치지 않습니다. 가벼운 무게로 천천히 하고, 어깨가 불편하면 회전 범위를 줄이거나 중단합니다."
+      },
+      "en": {
+        "setup": "Hold dumbbells in front of your chest with palms facing you. Stand or sit with back support, brace your abs, and bring your elbows together in front of your body.",
+        "execution": "Press the dumbbells up while swinging your elbows out and rotating your palms forward. When your arms are nearly straight overhead, reverse the rotation as you lower the dumbbells to your chest.",
+        "breathing": "Exhale as you press and inhale as you lower.",
+        "precautions": "Do not arch your back or clash the dumbbells while rotating. Use light weights and move slowly, and reduce the rotation or stop if your shoulders are uncomfortable."
+      },
+      "ja": {
+        "setup": "ダンベルを胸の前で持ち、手のひらを顔の方に向けます。立つか背もたれのある椅子に座り、腹部に力を入れて、肘を体の前に寄せます。",
+        "execution": "ダンベルを押し上げながら肘を横に開き、手のひらを前へ回します。頭上で腕がほぼ伸びたら、逆の順で回しながら胸の前まで下ろします。",
+        "breathing": "押し上げながら息を吐き、下ろしながら吸います。",
+        "precautions": "回す間に腰を反らしたり、ダンベル同士をぶつけたりしないでください。軽い重量でゆっくり行い、肩に違和感があれば回転範囲を小さくするか中止します。"
+      }
+    }
+  },
+  {
+    "name": "리어 델트 플라이",
+    "body": "어깨",
+    "equipment": "덤벨",
+    "labels": { "en": "Rear delt fly", "ja": "リアデルトフライ" },
+    "guide": {
+      "ko": {
+        "setup": "가벼운 덤벨을 들고 엉덩이를 뒤로 접어 상체를 숙이거나 벤치에 가슴을 기댑니다. 허리를 중립으로 두고 팔을 아래로 늘어뜨리며 팔꿈치를 살짝 굽힙니다.",
+        "execution": "팔꿈치 각도를 유지하며 팔을 양옆으로 어깨 높이까지 들어 올립니다. 뒤 어깨를 잠깐 조인 뒤 천천히 내립니다.",
+        "breathing": "올리면서 내쉬고 내리면서 들이마십니다.",
+        "precautions": "상체를 들어 올리거나 반동으로 덤벨을 던지지 않습니다. 어깨를 으쓱하지 말고 아주 가벼운 무게로 시작하며 어깨에 찝힘이 있으면 중단합니다."
+      },
+      "en": {
+        "setup": "Hold light dumbbells and hinge forward at the hips or rest your chest on a bench. Keep your lower back neutral, arms hanging down, and elbows slightly bent.",
+        "execution": "Keeping your elbow angle, raise your arms out to the sides to shoulder height. Squeeze your rear shoulders briefly, then lower slowly.",
+        "breathing": "Exhale as you lift and inhale as you lower.",
+        "precautions": "Do not rise up with your torso or swing the dumbbells up. Avoid shrugging, start very light, and stop if you feel pinching in your shoulders."
+      },
+      "ja": {
+        "setup": "軽いダンベルを持ち、股関節から上体を倒すか、ベンチに胸を預けます。腰を中立にし、腕を垂らして肘を軽く曲げます。",
+        "execution": "肘の角度を保ったまま、腕を横へ肩の高さまで上げます。後ろの肩を軽く締め、ゆっくり下ろします。",
+        "breathing": "上げながら息を吐き、下ろしながら吸います。",
+        "precautions": "上体を起こしたり、反動でダンベルを振り上げたりしないでください。肩をすくめず、ごく軽い重量から始め、肩に挟まる感じがあれば中止します。"
+      }
+    }
+  },
+  {
+    "name": "머신 숄더 프레스",
+    "body": "어깨",
+    "equipment": "머신",
+    "labels": { "en": "Machine shoulder press", "ja": "マシンショルダープレス" },
+    "guide": {
+      "ko": {
+        "setup": "손잡이가 어깨 높이 근처에 오도록 시트를 조절하고 등을 등받이에 붙입니다. 손잡이를 잡아 팔꿈치가 손목 아래에 오게 하고 발을 바닥에 둡니다.",
+        "execution": "손잡이를 머리 위로 곧게 밀어 팔을 거의 폅니다. 어깨 높이 근처까지 천천히 내립니다.",
+        "breathing": "밀면서 내쉬고 내리면서 들이마십니다.",
+        "precautions": "허리를 과하게 꺾거나 어깨를 으쓱하지 않습니다. 팔꿈치를 완전히 잠그지 않고, 무게 핀을 확인하며 어깨가 불편하면 중단합니다."
+      },
+      "en": {
+        "setup": "Adjust the seat so the handles are near shoulder height and press your back against the pad. Grip the handles with elbows under your wrists and your feet on the floor.",
+        "execution": "Press the handles straight overhead until your arms are nearly straight. Lower slowly to about shoulder height.",
+        "breathing": "Exhale as you press and inhale as you lower.",
+        "precautions": "Do not over-arch your back or shrug. Avoid locking your elbows, check the weight pin, and stop if your shoulders are uncomfortable."
+      },
+      "ja": {
+        "setup": "グリップが肩の高さ付近に来るようシートを調整し、背中を背もたれにつけます。肘が手首の下に来るようにグリップを握り、足を床に置きます。",
+        "execution": "グリップを頭上へまっすぐ押し上���、腕をほぼ伸ばします。肩の高さ付近までゆっくり下ろします。",
+        "breathing": "押しながら息を吐き、下ろしながら吸います。",
+        "precautions": "腰を反りすぎたり肩をすくめたりしないでください。肘をロックせず、ウェイトピンを確認し、肩に違和感があれば中止します。"
+      }
+    }
+  },
+  {
+    "name": "프론트 레이즈",
+    "body": "어깨",
+    "equipment": "덤벨",
+    "labels": { "en": "Front raise", "ja": "フロントレイズ" },
+    "guide": {
+      "ko": {
+        "setup": "가벼운 덤벨을 허벅지 앞에 들고 발을 골반너비로 섭니다. 복부에 힘을 주고 팔꿈치를 살짝 굽힌 채 어깨를 내립니다.",
+        "execution": "팔을 앞으로 어깨 높이까지 들어 올립니다. 잠깐 멈춘 뒤 천천히 시작 위치로 내립니다.",
+        "breathing": "올리면서 내쉬고 내리면서 들이마십니다.",
+        "precautions": "상체를 젖히거나 반동으로 올리지 않습니다. 어깨 높이 이상으로 올리지 말고 어깨를 으쓱하지 않으며 어깨에 통증이 있으면 중단합니다."
+      },
+      "en": {
+        "setup": "Hold light dumbbells in front of your thighs with feet hip-width apart. Brace your abs, keep a slight elbow bend, and set your shoulders down.",
+        "execution": "Raise your arms forward to shoulder height. Pause briefly, then lower slowly to the start.",
+        "breathing": "Exhale as you lift and inhale as you lower.",
+        "precautions": "Do not lean back or swing the weights up. Do not raise above shoulder height or shrug, and stop if your shoulders hurt."
+      },
+      "ja": {
+        "setup": "軽いダンベルを太ももの前で持ち、足を腰幅に立ちます。腹部に力を入れ、肘を軽く曲げ、肩を下げます。",
+        "execution": "腕を前へ肩の高さまで上げます。軽く止めてから、ゆっくり開始位置へ下ろします。",
+        "breathing": "上げながら息を吐き、下ろしながら吸います。",
+        "precautions": "上体を反らしたり反動で上げたりしないでください。肩の高さより上げず、肩をすくめず、肩に痛みがあれば中止します。"
+      }
+    }
+  },
+  {
+    "name": "바벨 컬",
+    "body": "팔",
+    "equipment": "바벨",
+    "labels": { "en": "Barbell curl", "ja": "バーベルカール" },
+    "guide": {
+      "ko": {
+        "setup": "바를 어깨너비로 손바닥이 위를 향하게 잡고 발을 골반너비로 섭니다. 팔꿈치를 몸통 옆에 붙이고 어깨를 내리며 복부에 힘을 줍니다.",
+        "execution": "팔꿈치 위치를 유지하며 바를 가슴 쪽으로 굽혀 올립니다. 위에서 잠깐 조인 뒤 팔이 거의 펴질 때까지 천천히 내립니다.",
+        "breathing": "올리면서 내쉬고 내리면서 들이마십니다.",
+        "precautions": "허리를 젖히거나 팔꿈치를 앞으로 밀어 반동을 쓰지 않습니다. 손목을 꺾지 말고, 무게가 무거우면 EZ바를 쓰거나 무게를 줄이며 통증이 있으면 중단합니다."
+      },
+      "en": {
+        "setup": "Grip the bar shoulder-width apart with palms up and stand with feet hip-width apart. Keep your elbows beside your torso, shoulders down, and abs braced.",
+        "execution": "Keeping your elbows in place, curl the bar toward your chest. Squeeze briefly at the top, then lower slowly until your arms are nearly straight.",
+        "breathing": "Exhale as you curl and inhale as you lower.",
+        "precautions": "Do not arch your back or swing your elbows forward to cheat. Keep your wrists straight, use an EZ bar or lighter weight if needed, and stop if you feel pain."
+      },
+      "ja": {
+        "setup": "バーを肩幅で手のひらを上に向けて握り、足を腰幅に立ちます。肘を体の横につけ、肩を下げ、腹部に力を入れます。",
+        "execution": "肘の位置を保ったまま、バーを胸の方へ曲げ上げます。上で軽く締め、腕がほぼ伸びるまでゆっくり下ろします。",
+        "breathing": "上げながら息を吐き、下ろしながら吸います。",
+        "precautions": "腰を反らしたり肘を前に出したりして反動を使わないでください。手首を曲げず、必要ならEZバーや軽い重量を使い、痛みがあれば中止します。"
+      }
+    }
+  },
+  {
+    "name": "해머 컬",
+    "body": "팔",
+    "equipment": "덤벨",
+    "labels": { "en": "Hammer curl", "ja": "ハンマーカール" },
+    "guide": {
+      "ko": {
+        "setup": "덤벨을 양손에 들고 손바닥이 몸 쪽을 향하게 합니다. 서거나 앉아 팔꿈치를 몸통 옆에 붙이고 어깨를 편하게 내립니다.",
+        "execution": "손바닥이 서로 마주 보는 중립 그립을 유지하며 덤벨을 어깨 쪽으로 굽혀 올립니다. 위에서 잠깐 멈춘 뒤 천천히 내립니다.",
+        "breathing": "올리면서 내쉬고 내리면서 들이마십니다.",
+        "precautions": "상체를 흔들거나 팔꿈치를 앞으로 밀지 않습니다. 손목을 꺾지 말고 무게가 떨어지듯 내리지 않으며 팔꿈치나 손목 통증이 있으면 중단합니다."
+      },
+      "en": {
+        "setup": "Hold a dumbbell in each hand with palms facing your body. Stand or sit with elbows beside your torso and shoulders relaxed and down.",
+        "execution": "Keep a neutral grip with palms facing each other and curl the dumbbells toward your shoulders. Pause briefly at the top, then lower slowly.",
+        "breathing": "Exhale as you curl and inhale as you lower.",
+        "precautions": "Do not rock your torso or push your elbows forward. Keep your wrists straight, do not let the weights drop on the way down, and stop if your elbows or wrists hurt."
+      },
+      "ja": {
+        "setup": "両手にダンベルを持ち、手のひらを体の方に向けます。立つか座り、肘を体の横につけ、肩をリラックスさせて下げます。",
+        "execution": "手のひらが向かい合うニュートラルグリップを保ち、ダンベルを肩の方へ曲げ上げます。上で軽く止め、ゆっくり下ろします。",
+        "breathing": "上げながら息を吐き、下ろしながら吸います。",
+        "precautions": "上体を揺らしたり肘を前に出したりしないでください。手首を曲げず、下ろすときに重りを落とさず、肘や手首に痛みがあれば中止します。"
+      }
+    }
+  },
+  {
+    "name": "프리처 컬",
+    "body": "팔",
+    "equipment": "머신",
+    "labels": { "en": "Preacher curl", "ja": "プリーチャーカール" },
+    "guide": {
+      "ko": {
+        "setup": "시트 높이를 조절해 겨드랑이가 패드 위쪽에 오게 앉고 팔 뒤쪽을 패드에 완전히 올립니다. 손잡이를 손바닥이 위를 향하게 잡고 가슴을 패드에 가깝게 둡니다.",
+        "execution": "팔 뒤쪽을 패드에 붙인 채 손잡이를 어깨 쪽으로 굽혀 올립니다. 위에서 잠깐 조인 뒤 팔이 거의 펴질 때까지 천천히 내립니다.",
+        "breathing": "올리면서 내쉬고 내리면서 들이마십니다.",
+        "precautions": "맨 아래에서 팔꿈치를 완전히 튕기며 펴거나 몸을 들어 올리지 않습니다. 이두근 아래쪽에 과한 부담이 생기지 않게 무게를 낮추고 통증이 있으면 중단합니다."
+      },
+      "en": {
+        "setup": "Adjust the seat so your armpits rest on top of the pad and the backs of your arms lie flat on it. Grip the handles with palms up and keep your chest close to the pad.",
+        "execution": "Keeping your upper arms on the pad, curl the handles toward your shoulders. Squeeze briefly at the top, then lower slowly until your arms are nearly straight.",
+        "breathing": "Exhale as you curl and inhale as you lower.",
+        "precautions": "Do not bounce out of the bottom or lift your body off the pad. Use a lighter weight to avoid overloading the lower biceps, and stop if you feel pain."
+      },
+      "ja": {
+        "setup": "脇の下がパッドの上部に来るようシートを調整し、上腕の裏側をパッドにしっかり乗せます。手のひらを上にしてグリップを握り、胸をパッドに近づけます。",
+        "execution": "上腕をパッドにつけたまま、グリップを肩の方へ曲げ上げます。上で軽く締め、腕がほぼ伸びるまでゆっくり下ろします。",
+        "breathing": "上げながら息を吐き、下ろしながら吸います。",
+        "precautions": "下で肘を勢いよく伸ばして跳ね返したり、体を持ち上げたりしないでください。上腕二頭筋の下部に負担がかかりすぎないよう軽めの重量にし、痛みがあれば中止します。"
+      }
+    }
+  },
+  {
+    "name": "인클라인 덤벨 컬",
+    "body": "팔",
+    "equipment": "덤벨",
+    "labels": { "en": "Incline dumbbell curl", "ja": "インクラインダンベルカール" },
+    "guide": {
+      "ko": {
+        "setup": "벤치를 50~60도 정도로 기울이고 등과 머리를 기대어 앉습니다. 덤벨을 든 팔을 몸 뒤쪽으로 자연스럽게 늘어뜨리고 어깨를 벤치에 붙입니다.",
+        "execution": "팔꿈치를 몸통 아래에 둔 채 덤벨을 어깨 쪽으로 굽혀 올립니다. 위에서 잠깐 조인 뒤 팔이 늘어나는 위치까지 천천히 내립니다.",
+        "breathing": "올리면서 내쉬고 내리면서 들이마십니다.",
+        "precautions": "어깨가 앞으로 말리거나 팔꿈치가 앞으로 나가지 않게 합니다. 가볍게 시작해 어깨 앞쪽의 과한 늘어남을 피하고, 통증이 있으면 중단합니다."
+      },
+      "en": {
+        "setup": "Set the bench to about 50-60 degrees and sit back with your head and back supported. Let your arms hang naturally behind your torso with your shoulders against the bench.",
+        "execution": "With your elbows under your torso, curl the dumbbells toward your shoulders. Squeeze briefly at the top, then lower slowly to a comfortable stretch.",
+        "breathing": "Exhale as you curl and inhale as you lower.",
+        "precautions": "Do not let your shoulders roll forward or your elbows move forward. Start light to avoid overstretching the front of your shoulders, and stop if you feel pain."
+      },
+      "ja": {
+        "setup": "ベンチを約50〜60度に調整し、頭と背中を預けて座ります。ダンベルを持った腕を体の後ろに自然に垂らし、肩をベンチにつけます。",
+        "execution": "肘を体の下に保ったまま、ダンベルを肩の方へ曲げ上げます。上で軽く締め、腕が心地よく伸びる位置までゆっくり下ろします。",
+        "breathing": "上げながら息を吐き、下ろしながら吸います。",
+        "precautions": "肩が前に巻いたり肘が前に出たりしないようにします。肩の前面を伸ばしすぎないよう軽めから始め、痛みがあれば中止します。"
+      }
+    }
+  },
+  {
+    "name": "오버헤드 트라이셉스 익스텐션",
+    "body": "팔",
+    "equipment": "덤벨",
+    "labels": { "en": "Overhead triceps extension", "ja": "オーバーヘッドトライセプスエクステンション" },
+    "guide": {
+      "ko": {
+        "setup": "덤벨 한 개를 양손으로 잡고 머리 위로 올려 팔을 폅니다. 서거나 앉아 복부에 힘을 주고 갈비뼈를 내리며 팔꿈치를 귀 쪽으로 향하게 합니다.",
+        "execution": "상완을 고정한 채 팔꿈치를 굽혀 덤벨을 머리 뒤로 내립니다. 팔꿈치를 위로 펴며 시작 위치로 돌아옵니다.",
+        "breathing": "내리면서 들이마시고 펴면서 내쉽니다.",
+        "precautions": "허리를 젖히거나 팔꿈치가 바깥으로 벌어지지 않게 합니다. 덤벨을 머리 위에서 놓치지 않도록 단단히 잡고, 가볍게 시작하며 팔꿈치나 어깨 통증이 있으면 중단합니다."
+      },
+      "en": {
+        "setup": "Hold one dumbbell with both hands and press it overhead with straight arms. Stand or sit, brace your abs, keep your ribs down, and point your elbows toward the ceiling beside your ears.",
+        "execution": "Keeping your upper arms still, bend your elbows to lower the dumbbell behind your head. Extend your elbows upward to return to the start.",
+        "breathing": "Inhale as you lower and exhale as you extend.",
+        "precautions": "Do not arch your back or let your elbows flare out. Hold the dumbbell securely so it cannot slip overhead, start light, and stop if your elbows or shoulders hurt."
+      },
+      "ja": {
+        "setup": "ダンベル1個を両手で持ち、頭上で腕を伸ばします。立つか座り、腹部に力を入れて肋骨を下げ、肘を耳の横で天井に向けます。",
+        "execution": "上腕を動かさずに肘を曲げ、ダンベルを頭の後ろへ下ろします。肘を上へ伸ばして開始位置へ戻ります。",
+        "breathing": "下ろしながら息を吸い、伸ばしながら吐きます。",
+        "precautions": "腰を反らしたり肘が外に開いたりしないようにします。頭上で落とさないようダンベルをしっかり持ち、軽めから始め、肘や肩に痛みがあれば中止します。"
+      }
+    }
+  },
+  {
+    "name": "스컬 크러셔",
+    "body": "팔",
+    "equipment": "바벨",
+    "labels": { "en": "Skull crusher", "ja": "スカルクラッシャー" },
+    "guide": {
+      "ko": {
+        "setup": "벤치에 누워 발을 바닥에 두고 EZ바나 바벨을 어깨너비로 잡아 가슴 위로 팔을 뻗습니다. 팔꿈치를 어깨 위쪽에 두고 상완을 거의 수직으로 유지합니다.",
+        "execution": "상완을 고정한 채 팔꿈치만 굽혀 바를 이마 뒤쪽이나 머리 위쪽으로 천천히 내립니다. 팔꿈치를 펴 시작 위치로 돌아옵니다.",
+        "breathing": "내리면서 들이마시고 펴면서 내쉽니다.",
+        "precautions": "바가 얼굴 위를 지나므로 항상 통제할 수 있는 무게를 쓰고 필요하면 스포터를 둡니다. 팔꿈치가 벌어지거나 어깨로 밀지 않게 하며 팔꿈치 통증이 있으면 중단합니다."
+      },
+      "en": {
+        "setup": "Lie on a bench with feet on the floor and hold an EZ bar or barbell about shoulder-width apart, arms extended over your chest. Keep your elbows above your shoulders and upper arms nearly vertical.",
+        "execution": "Keeping your upper arms fixed, bend only your elbows to lower the bar slowly toward the top of your head or just behind your forehead. Extend your elbows to return.",
+        "breathing": "Inhale as you lower and exhale as you extend.",
+        "precautions": "The bar travels near your face, so use a weight you can always control and a spotter if needed. Do not let your elbows flare or push with your shoulders, and stop if your elbows hurt."
+      },
+      "ja": {
+        "setup": "ベンチに寝て足を床につけ、EZバーかバーベルを肩幅で握り、胸の上で腕を伸ばします。肘を肩の真上に置き、上腕をほぼ垂直に保ちます。",
+        "execution": "上腕を固定したまま肘だけを曲げ、バーを額のあたりか頭の少し後ろへゆっくり下ろします。肘を伸ばして開始位置へ戻ります。",
+        "breathing": "下ろしながら息を吸い、伸ばしながら吐きます。",
+        "precautions": "バーが顔の近くを通るため、常に制御できる重量にし、必要なら補助者を付けます。肘が開いたり肩で押したりしないようにし、肘に痛みがあれば中止します。"
+      }
+    }
+  },
+  {
+    "name": "클로즈 그립 벤치 프레스",
+    "body": "팔",
+    "equipment": "바벨",
+    "labels": { "en": "Close-grip bench press", "ja": "クローズグリップベンチプレス" },
+    "guide": {
+      "ko": {
+        "setup": "벤치에 눕고 어깨뼈를 모아 내린 뒤 바를 어깨너비 정도나 약간 좁게 잡습니다. 안전바나 스포터를 준비하고 발을 바닥에 고정합니다.",
+        "execution": "바를 랙에서 빼 가슴 위에 둡니다. 팔꿈치를 몸통 가까이 두고 바를 하부 가슴 쪽으로 천천히 내린 뒤 팔을 펴며 밀어 올립니다.",
+        "breathing": "내리면서 들이마시고 올리면서 내쉽니다. 숨을 오래 참지 않습니다.",
+        "precautions": "그립을 너무 좁게 잡아 손목이 꺾이지 않게 합니다. 엉덩이를 띄우거나 바를 튕기지 않고, 혼자 할 때는 안전바를 사용하며 팔꿈치나 손목 통증이 있으면 중단합니다."
+      },
+      "en": {
+        "setup": "Lie on the bench, pull your shoulder blades back and down, and grip the bar about shoulder width or slightly narrower. Prepare safety arms or a spotter and plant your feet.",
+        "execution": "Unrack the bar over your chest. Keep your elbows close to your torso and lower the bar slowly to the lower chest, then extend your arms to press it up.",
+        "breathing": "Inhale as you lower and exhale as you press. Do not hold your breath for long.",
+        "precautions": "Do not use a grip so narrow that your wrists bend. Do not lift your hips or bounce the bar, use safeties when training alone, and stop if your elbows or wrists hurt."
+      },
+      "ja": {
+        "setup": "ベンチに寝て肩甲骨を寄せて下げ、バーを肩幅かそれよりやや狭く握ります。セーフティバーか補助者を用意し、足を床に固定します。",
+        "execution": "バーをラックから外して胸の上で構えます。肘を体幹の近くに保ち、バーを胸の下部へゆっくり下ろし、腕を伸ばして押し上げます。",
+        "breathing": "下ろしながら息を吸い、押し上げながら吐きます。長く息を止めないでください。",
+        "precautions": "グリップを狭くしすぎて手首が曲がらないようにします。お尻を浮かせたりバーを跳ね返したりせず、一人のときはセーフティバーを使い、肘や手首に痛みがあれば中止します。"
+      }
+    }
+  },
+  {
+    "name": "크런치",
+    "body": "코어",
+    "equipment": "맨몸",
+    "labels": { "en": "Crunch", "ja": "クランチ" },
+    "guide": {
+      "ko": {
+        "setup": "바닥에 누워 무릎을 굽히고 발을 바닥에 둡니다. 손을 가슴에 교차하거나 머리 옆에 가볍게 두고 허리를 바닥 쪽으로 편안히 유지합니다.",
+        "execution": "복부를 조이며 머리와 어깨뼈를 바닥에서 살짝 들어 올립니다. 갈비뼈를 골반 쪽으로 모은 뒤 천천히 내려옵니다.",
+        "breathing": "올라가며 내쉬고 내려오며 들이마십니다.",
+        "precautions": "목을 손으로 잡아당기거나 상체 전체를 크게 일으키지 않습니다. 반동을 쓰지 말고 허리나 목에 통증이 있으면 중단합니다."
+      },
+      "en": {
+        "setup": "Lie on your back with knees bent and feet on the floor. Cross your arms on your chest or lightly place your hands beside your head, keeping your lower back comfortably toward the floor.",
+        "execution": "Tighten your abs and lift your head and shoulder blades slightly off the floor. Draw your ribs toward your pelvis, then lower slowly.",
+        "breathing": "Exhale as you curl up and inhale as you lower.",
+        "precautions": "Do not pull on your neck with your hands or sit all the way up. Avoid momentum, and stop if your lower back or neck hurts."
+      },
+      "ja": {
+        "setup": "仰向けに寝て膝を曲げ、足を床につけます。腕を胸の前で組むか、頭の横に軽く添え、腰を床の方へ楽に保ちます。",
+        "execution": "腹筋を締めて、頭と肩甲骨を床から少し持ち上げます。肋骨を骨盤の方へ寄せ、ゆっくり下ろします。",
+        "breathing": "上げながら息を吐き、下ろしながら吸います。",
+        "precautions": "手で首を引っ張ったり、上体を完全に起こしたりしないでください。反動を使わず、腰や首に痛みがあれば中止します。"
+      }
+    }
+  },
+  {
+    "name": "레그 레이즈",
+    "body": "코어",
+    "equipment": "맨몸",
+    "labels": { "en": "Leg raise", "ja": "レッグレイズ" },
+    "guide": {
+      "ko": {
+        "setup": "바닥에 누워 두 다리를 모아 펴고 손바닥을 엉덩이 옆에 둡니다. 복부에 힘을 주어 허리가 바닥에서 크게 뜨지 않도록 합니다.",
+        "execution": "무릎을 살짝 굽힌 채 두 다리를 천천히 들어 고관절이 90도 가까이 되게 합니다. 허리 위치를 유지하며 발이 바닥에 닿기 직전까지 내립니다.",
+        "breathing": "다리를 올리면서 내쉬고 내리면서 들이마십니다.",
+        "precautions": "허리가 뜨거나 반동으로 다리를 흔들지 않습니다. 허리가 불편하면 무릎을 더 굽히거나 범위를 줄이고, 통증이 있으면 중단합니다."
+      },
+      "en": {
+        "setup": "Lie on your back with legs together and straight, palms beside your hips. Brace your abs so your lower back does not lift far off the floor.",
+        "execution": "With a slight knee bend, slowly raise both legs until your hips are near 90 degrees. Keep your lower back position and lower until your feet are just above the floor.",
+        "breathing": "Exhale as you raise your legs and inhale as you lower.",
+        "precautions": "Do not let your lower back arch or swing your legs. Bend your knees more or shorten the range if your back is uncomfortable, and stop if you feel pain."
+      },
+      "ja": {
+        "setup": "仰向けに寝て両脚をそろえて伸ばし、手のひらを腰の横に置きます。腹部に力を入れ、腰が床から大きく浮かないようにします。",
+        "execution": "膝を軽く曲げたまま、両脚をゆっくり上げて股関節が約90度になるようにします。腰の位置を保ち、足が床に触れる少し手前まで下ろします。",
+        "breathing": "脚を上げながら息を吐き、下ろしながら吸います。",
+        "precautions": "腰が反ったり、脚を振って反動を使ったりしないでください。腰がつらい場合は膝をより曲げるか可動域を小さくし、痛みがあれば中止します。"
+      }
+    }
+  },
+  {
+    "name": "케이블 크런치",
+    "body": "코어",
+    "equipment": "머신",
+    "labels": { "en": "Cable crunch", "ja": "ケーブルクランチ" },
+    "guide": {
+      "ko": {
+        "setup": "높은 케이블 앞에서 무릎을 꿇고 로프를 머리 양옆이나 이마 앞에 잡습니다. 엉덩이를 발뒤꿈치 위에 두고 허리를 중립으로 둡니다.",
+        "execution": "엉덩이를 고정한 채 복부를 말아 갈비뼈를 골반 쪽으로 가져가며 머리를 무릎 쪽으로 숙입니다. 정점에서 조인 뒤 천천히 시작 자세로 돌아옵니다.",
+        "breathing": "숙이면서 내쉬고 돌아오면서 들이마십니다.",
+        "precautions": "엉덩이를 뒤로 빼거나 팔로 당기지 않고 복부로 움직입니다. 무게는 가볍게 시작하고 허리나 목에 통증이 있으면 중단합니다."
+      },
+      "en": {
+        "setup": "Kneel facing a high cable and hold the rope beside your head or in front of your forehead. Sit your hips over your heels and keep your lower back neutral.",
+        "execution": "Keeping your hips still, curl your abs to bring your ribs toward your pelvis and lower your head toward your knees. Squeeze at the bottom, then return slowly to the start.",
+        "breathing": "Exhale as you crunch down and inhale as you return.",
+        "precautions": "Do not pull with your arms or shift your hips back; move with your abs. Start light, and stop if your lower back or neck hurts."
+      },
+      "ja": {
+        "setup": "高い位置のケーブルに向かって膝立ちになり、ロープを頭の横か額の前で持ちます。お尻をかかとの上に置き、腰を中立に保ちます。",
+        "execution": "お尻を動かさずに腹筋を丸め、肋骨を骨盤の方へ寄せて頭を膝の方へ下げます。下で締め、ゆっくり開始姿勢へ戻ります。",
+        "breathing": "丸めながら息を吐き、戻しながら吸います。",
+        "precautions": "腕で引いたりお尻を後ろへ引いたりせず、腹筋で動かします。軽い重量から始め、腰や首に痛みがあれば中止します。"
+      }
+    }
+  },
+  {
+    "name": "러시안 트위스트",
+    "body": "코어",
+    "equipment": "맨몸",
+    "labels": { "en": "Russian twist", "ja": "ロシアンツイスト" },
+    "guide": {
+      "ko": {
+        "setup": "바닥에 앉아 무릎을 굽히고 상체를 뒤로 약간 기울입니다. 가슴을 펴고 허리를 중립으로 유지하며 두 손을 가슴 앞에 모읍니다.",
+        "execution": "복부에 힘을 주고 가슴과 팔을 함께 한쪽으로 돌린 뒤 중앙을 지나 반대쪽으로 돌립니다. 발은 바닥에 두거나 균형이 되면 살짝 듭니다.",
+        "breathing": "돌리는 동안 멈추지 않고 일정한 리듬으로 호흡하며, 한쪽으로 돌릴 때마다 내쉽니다.",
+        "precautions": "허리를 둥글게 말거나 팔만 흔들지 않습니다. 천천히 하고 무릎이나 허리가 불편하면 발을 바닥에 두며 통증이 있으면 중단합니다."
+      },
+      "en": {
+        "setup": "Sit on the floor with knees bent and lean back slightly. Lift your chest, keep your lower back neutral, and hold your hands together in front of your chest.",
+        "execution": "Brace your abs and rotate your chest and arms together to one side, then through the center to the other side. Keep your feet on the floor or lift them slightly if you can stay balanced.",
+        "breathing": "Keep breathing at a steady rhythm without pausing, exhaling as you turn to each side.",
+        "precautions": "Do not round your lower back or twist only your arms. Move slowly, keep your feet down if your knees or back are uncomfortable, and stop if you feel pain."
+      },
+      "ja": {
+        "setup": "床に座って膝を曲げ、上体を少し後ろに傾けます。胸を張り、腰を中立に保って、両手を胸の前で合わせます。",
+        "execution": "腹部に力を入れ、胸と腕を一緒に片側へ回し、中央を通って反対側へ回します。足は床につけるか、バランスが取れるなら少し浮かせます。",
+        "breathing": "止めずに一定のリズムで呼吸を続け、各側へ回すたびに息を吐きます。",
+        "precautions": "腰を丸めたり腕だけを振ったりしないでください。ゆっくり行い、膝や腰がつらい場合は足を床につけ、痛みがあれば中止します。"
+      }
+    }
+  },
+  {
+    "name": "실내 자전거",
+    "body": "유산소",
+    "equipment": "머신",
+    "labels": { "en": "Stationary bike", "ja": "エアロバイク" },
+    "guide": {
+      "ko": {
+        "setup": "안장 높이를 페달이 가장 아래일 때 무릎이 약간 굽혀지도록 맞춥니다. 핸들 거리와 발 고정 상태를 확인하고 낮은 저항으로 시작합니다.",
+        "execution": "상체를 편안히 세우고 어깨와 손의 힘을 뺍니다. 페달을 원을 그리듯 일정한 속도로 밟고 저항을 서서히 올린 뒤 마지막에는 낮추어 정리합니다.",
+        "breathing": "대화가 가능한 정도의 강도로 일정하게 호흡하고 숨을 참지 않습니다.",
+        "precautions": "안장이 너무 낮거나 높아 무릎이 불편하지 않게 합니다. 핸들을 과하게 쥐거나 등을 둥글게 하지 않고, 어지러움이나 가슴 불편감, 관절 통증이 있으면 속도를 낮추고 중단합니다."
+      },
+      "en": {
+        "setup": "Set the saddle height so your knee has a slight bend at the bottom of the pedal stroke. Check the handlebar reach and foot straps, and start with low resistance.",
+        "execution": "Sit tall and comfortable with relaxed shoulders and hands. Pedal in smooth circles at a steady cadence, raise the resistance gradually, and lower it at the end to cool down.",
+        "breathing": "Use an effort level where you can still talk and keep your breathing steady without holding your breath.",
+        "precautions": "Avoid a saddle height that is too low or too high and bothers your knees. Do not grip the handlebar tightly or round your back, and slow down or stop if you feel dizzy, uncomfortable in your chest, or have joint pain."
+      },
+      "ja": {
+        "setup": "ペダルが一番下に来たとき膝が軽く曲がるようにサドルの高さを合わせます。ハンドルの距離と足の固定を確認し、低い負荷から始めます。",
+        "execution": "上体を楽に起こし、肩と手の力を抜きます。ペダルを円を描くように一定のペースで漕ぎ、負荷を徐々に上げ、最後は負荷を下げて整理運動をします。",
+        "breathing": "会話できる程度の強度で呼吸を一定に保ち、息を止めないでください。",
+        "precautions": "サドルが低すぎたり高すぎたりして膝に違和感が出ないようにします。ハンドルを強く握ったり背中を丸めたりせず、めまい、胸の不快感、関節の痛みがあれば減速して中止します。"
+      }
+    }
+  },
+  {
+    "name": "로잉 머신",
+    "body": "유산소",
+    "equipment": "머신",
+    "labels": { "en": "Rowing machine", "ja": "ローイングマシン" },
+    "guide": {
+      "ko": {
+        "setup": "발을 발판 끈에 고정하고 손잡이를 잡아 팔을 펴고 앉습니다. 허리를 중립으로 세우고 낮은 저항으로 시작해 몸을 앞으로 접은 준비 자세를 만듭니다.",
+        "execution": "먼저 다리로 밀고, 이어서 상체를 약간 뒤로 기울이며 마지막에 손잡이를 배 쪽으로 당깁니다. 돌아올 때는 팔, 상체, 무릎 순서로 풀어 천천히 앞으로 갑니다.",
+        "breathing": "당길 때 내쉬고 돌아올 때 들이마시며 일정한 리듬을 유지합니다. 숨을 오래 참지 않습니다.",
+        "precautions": "허리를 둥글게 말거나 팔부터 당기지 않습니다. 너무 빠른 속도로 시작하지 말고, 어지러움이나 허리 통증, 가슴 불편감이 있으면 속도를 줄이고 중단합니다."
+      },
+      "en": {
+        "setup": "Strap your feet in, grab the handle, and sit with arms extended. Keep your lower back neutral, start with low resistance, and set up in the forward catch position.",
+        "execution": "Drive with your legs first, then lean back slightly, and finish by pulling the handle to your abdomen. On the return, extend your arms, hinge your torso forward, then bend your knees and slide forward slowly.",
+        "breathing": "Exhale as you pull and inhale as you return, keeping a steady rhythm without holding your breath for long.",
+        "precautions": "Do not round your lower back or start the stroke by pulling with your arms. Avoid starting too fast, and slow down or stop if you feel dizzy, have back pain, or feel discomfort in your chest."
+      },
+      "ja": {
+        "setup": "足をフットストラップに固定し、ハンドルを握って腕を伸ばして座ります。腰を中立に保ち、低い負荷から始め、体を前に倒したキャッチ姿勢を作ります。",
+        "execution": "まず脚で押し、次に上体を少し後ろへ倒し、最後にハンドルをお腹の方へ引きます。戻るときは腕、上体、膝の順に動かし、ゆっくり前へ戻ります。",
+        "breathing": "引くときに息を吐き、戻るときに吸い、一定のリズムを保ちます。長く息を止めないでください。",
+        "precautions": "腰を丸めたり、腕から引き始めたりしないでください。最初から速くしすぎず、めまい、腰の痛み、胸の不快感があれば減速して中止します。"
+      }
+    }
+  }
+]

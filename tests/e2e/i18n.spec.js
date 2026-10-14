@@ -53,6 +53,9 @@ test("language switching persists and does not translate user data or lose recor
   await page.goto("/");
   await page.locator("#exercise-name").fill("사용자 운동 이름");
   await page.locator('[data-action="add-exercise"]').click();
+  await expect(page.locator(".exercise-head")).toContainText(
+    "사용자 운동 이름",
+  );
   await page.locator("#note").fill("운동 캘린더 · My note");
   await page.locator("#note").press("Tab");
   await page.locator("#language-select").selectOption("en");

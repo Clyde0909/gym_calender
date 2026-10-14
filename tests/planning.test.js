@@ -76,7 +76,7 @@ test("reject invalid plans and duplicated weeks; all preset exercises exist in t
     id: crypto.randomUUID(),
   });
   assert.throws(() => validateState(duplicate));
-  assert.equal(library.length, 60);
+  assert.equal(library.length, 120);
   assert.throws(() => weekStart("2026-99-99"));
   for (const p of programs)
     for (const day of Object.values(p.days))

@@ -1,5 +1,27 @@
-import messages from "./translations.json" with { type: "json" };
+import uiMessages from "./translations.json" with { type: "json" };
+import { exerciseCatalog, exerciseGuideKey } from "./exercises.js";
 export const languages = ["en", "ko", "ja"];
+const messages = { ...uiMessages };
+const guideSections = [
+  ["setup", "guideSetup"],
+  ["execution", "guideExecution"],
+  ["breathing", "guideBreathing"],
+  ["precautions", "guidePrecautions"],
+];
+for (const exercise of exerciseCatalog) {
+  messages[exercise.name] = { ...exercise.labels, ko: exercise.name };
+  messages[exerciseGuideKey(exercise.name)] = Object.fromEntries(
+    languages.map((lang) => [
+      lang,
+      guideSections
+        .map(
+          ([section, label]) =>
+            `${uiMessages[label][lang]}: ${exercise.guide[lang][section]}`,
+        )
+        .join("\n\n"),
+    ]),
+  );
+}
 export function resolveLanguage(value) {
   const base = String(value || "")
     .toLowerCase()
