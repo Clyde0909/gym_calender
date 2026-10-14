@@ -262,6 +262,7 @@ test("source records are complete, localized and individual to each exercise", (
     ORIGINAL,
   );
   for (const r of records) {
+    assert.doesNotMatch(JSON.stringify(r), /\uFFFD/, r.name + " text encoding");
     assert.deepEqual(Object.keys(r).sort(), [
       "body",
       "equipment",
