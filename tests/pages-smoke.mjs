@@ -10,6 +10,8 @@ const mime = {
   ".js": "text/javascript",
   ".css": "text/css",
   ".svg": "image/svg+xml",
+  ".jpg": "image/jpeg",
+  ".md": "text/plain; charset=utf-8",
   ".webmanifest": "application/manifest+json",
 };
 const server = createServer(async (req, res) => {
@@ -48,11 +50,36 @@ try {
   );
   await page.reload();
   await page.waitForFunction(() => navigator.serviceWorker.controller !== null);
+  await page.locator('[data-tab="guide"]').click();
+  await page.locator("#guide-search").fill("벤치 프레스");
+  const bench = page.locator(".guide-card").filter({
+    has: page.getByRole("heading", { name: "벤치 프레스", exact: true }),
+  });
+  await bench.waitFor();
+  assert.equal(await bench.locator("img").count(), 2);
+  await bench.locator("img").evaluateAll(async (images) => {
+    for (const image of images) {
+      await image.decode();
+      if (!image.naturalWidth || !new URL(image.src).pathname.startsWith("/gym_calender/exercise-media/"))
+        throw new Error("Invalid Pages exercise image");
+    }
+  });
   await context.setOffline(true);
   await page.reload();
   await page
     .getByRole("heading", { name: "운동 캘린더", exact: true })
     .waitFor();
+  await page.locator('[data-tab="guide"]').click();
+  await page.locator("#guide-search").fill("벤치 프레스");
+  await bench.waitFor();
+  assert.equal(await bench.locator("img").count(), 2);
+  await bench.locator("img").evaluateAll(async (images) => {
+    for (const image of images) {
+      await image.decode();
+      if (!image.naturalWidth) throw new Error("Viewed exercise image unavailable offline");
+    }
+  });
+  await page.locator('[data-tab="calendar"]').click();
   await page
     .getByPlaceholder("운동 검색 또는 직접 입력")
     .fill("오프라인 스쿼트");
@@ -76,7 +103,7 @@ try {
   );
   assert.deepEqual(errors, []);
   console.log(
-    "PASS: GitHub Pages subpath, offline HEIC decoding, persistent recording and encrypted sharing.",
+    "PASS: GitHub Pages subpath, self-hosted posture images and viewed-image offline cache, offline HEIC decoding, persistent recording and encrypted sharing.",
   );
 } finally {
   await browser?.close();

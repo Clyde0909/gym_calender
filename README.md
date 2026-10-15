@@ -88,6 +88,12 @@ HEIC/HEIF는 브라우저 기본 디코더를 우선 사용하고, 지원하지 
 
 운동 이름·분류 참고: [Free Exercise DB](https://github.com/yuhonas/free-exercise-db), public domain / Unlicense, 876종의 공개 데이터를 확인하고 기존 60종을 선별·정리했습니다. 기존 60종의 운동 안내는 자체 작성한 3개 언어 설명입니다. 추가 60종의 이름·분류·안내는 외부 출처로 개별 검증하지 않았으며 외부 자료에서 가져왔다고 표시하지 않습니다.
 
-종목별 안내는 일반적인 자세·호흡 참고용입니다. 일반 웨이트 트레이닝의 기술·호흡 원칙은 [Mayo Clinic 웨이트 트레이닝 안내](https://www.mayoclinic.org/healthy-lifestyle/fitness/in-depth/weight-training/art-20045842)를 안전 참고 자료로 확인할 수 있으나, 각 종목의 안내 문구를 이 자료에서 가져왔거나 승인받았다는 뜻은 아닙니다. 개인별 건강 상태·부상·통증에 대한 의료·트레이너 조언이 아니며 통증이 있으면 운동을 멈추세요. 종목별 사진·시범 영상은 제공하지 않으며 종목 안내는 4개 항목의 텍스트입니다. [공개 r/Fitness 구성 확인 자료](https://github.com/astashov/liftosaur/blob/master/programs/builtin/basicBeginner.md)는 운동 구성·원문 출처 확인에 사용했으며 해당 저장소의 프로그램 실행 코드를 복사하지 않았습니다.
+종목별 안내는 일반적인 자세·호흡 참고용입니다. 일반 웨이트 트레이닝의 기술·호흡 원칙은 [Mayo Clinic 웨이트 트레이닝 안내](https://www.mayoclinic.org/healthy-lifestyle/fitness/in-depth/weight-training/art-20045842)를 안전 참고 자료로 확인할 수 있으나, 각 종목의 안내 문구를 이 자료에서 가져왔거나 승인받았다는 뜻은 아닙니다. 개인별 건강 상태·부상·통증에 대한 의료·트레이너 조언이 아니며 통증이 있으면 운동을 멈추세요. 종목 안내는 4개 항목의 텍스트이며, 동작·기구가 일치하는 공개 자료가 있는 종목에는 자세 사진을 함께 제공합니다. [공개 r/Fitness 구성 확인 자료](https://github.com/astashov/liftosaur/blob/master/programs/builtin/basicBeginner.md)는 운동 구성·원문 출처 확인에 사용했으며 해당 저장소의 프로그램 실행 코드를 복사하지 않았습니다.
+
+### 운동 자세 사진
+
+자세 사진은 [Free Exercise DB](https://github.com/yuhonas/free-exercise-db)의 로컬 이미지 사용 안내와 Unlicense에 따라 `public/exercise-media/`에 포함하여 GitHub Pages에서 직접 제공합니다. `src/exercise-media.json`에 종목별 명시적 매핑과 고정된 원본 커밋을 보관하며, 각 카드에 원본과 라이선스를 표시합니다. `node scripts/import-exercise-media.mjs`로 해당 커밋의 사진과 라이선스를 다시 받을 수 있습니다. 저장소의 공개 라이선스 표시에 근거한 사용이며 사진별 권리 관계나 모델 동의까지 독립적으로 확인한 것은 아닙니다.
+
+사진 두 장은 동작의 참고 자세이며 항상 시작·종료 순서를 뜻하지 않습니다. 일치하는 자료가 없는 종목에는 텍스트와 기구 아이콘만 표시합니다. GIF·영상이나 외부 이미지 API는 사용하지 않습니다. 사진은 지연 로딩하며 서비스 워커가 제어하는 상태에서 본 사진만 오프라인 캐시에 저장합니다. 첫 방문에 전체 사진을 내려받지 않으며, 미열람 사진·캐시 삭제·업데이트 후 오프라인에서는 사진 없이 텍스트 안내를 사용할 수 있습니다.
 
 공유 인코딩의 이론적 한계와 실제 사진 포함 길이 비교는 [공유 형식·실측](docs/SHARING.md)을 참고하세요.

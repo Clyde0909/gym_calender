@@ -1594,5 +1594,25 @@
     "en": "Read original program",
     "ko": "추천 프로그램 원문 보기",
     "ja": "原文プログラムを見る"
+  },
+  "자세 {n}": {
+    "en": "Pose {n}",
+    "ja": "ポーズ {n}"
+  },
+  "{name} 자세 사진 {n}": {
+    "en": "{name} demonstration photo, pose {n}",
+    "ja": "{name}のデモ写真、ポーズ{n}"
+  },
+  "자세 사진을 불러올 수 없습니다. 아래 가이드를 참고하세요.": {
+    "en": "Posture photos are unavailable. Use the guidance below.",
+    "ja": "姿勢の写真を読み込めません。下のガイドをご覧ください。"
+  },
+  "자세 사진 출처": {
+    "en": "Photo source",
+    "ja": "写真の出典"
+  },
+  "라이선스": {
+    "en": "License",
+    "ja": "ライセンス"
   }
 }

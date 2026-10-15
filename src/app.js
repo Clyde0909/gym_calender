@@ -25,6 +25,7 @@ import {
   monthLabel,
   dateLabel,
 } from "./i18n.js";
+import { exerciseMedia } from "./exercise-media.js";
 import "./style.css";
 import {
   exercises,
@@ -248,6 +249,16 @@ function routineApply(id) {
       })),
     );
 }
+app.addEventListener(
+  "error",
+  (e) => {
+    const media = e.target.closest?.(".exercise-media");
+    if (!media || e.target.tagName !== "IMG") return;
+    media.querySelector(".exercise-photos").hidden = true;
+    media.querySelector(".exercise-media-fallback").hidden = false;
+  },
+  true,
+);
 app.addEventListener("input", (e) => {
   if (e.target.id === "exercise-name") newExercise = e.target.value;
   if (e.target.id === "guide-search") {
@@ -1098,12 +1109,26 @@ function settings() {
 function guide() {
   return `<div class="intro"><h2>${tr("알고, 제대로 움직이기.")}</h2><p>${tr("이름과 한글 초성으로 검색하고 부위·기구별로 찾아보세요. 가이드는 일반 참고용이며 통증이 있으면 운동을 멈추세요.")}</p></div><section class="panel"><div class="guide-filters"><input id="guide-search" placeholder="${tr("운동 검색 · ㅂㅊㅍㄹㅅ")}" value="${esc(guideQuery)}"><select id="guide-body" aria-label="${tr("부위 필터")}"><option value="">${tr("모든 부위")}</option>${["가슴", "등", "어깨", "하체", "팔", "코어", "유산소"].map((v) => `<option value="${v}" ${guideBody === v ? "selected" : ""}>${tr(v)}</option>`).join("")}</select><select id="guide-equipment" aria-label="${tr("기구 필터")}"><option value="">${tr("모든 기구")}</option>${["바벨", "덤벨", "머신", "케틀벨", "맨몸"].map((v) => `<option value="${v}" ${guideEquipment === v ? "selected" : ""}>${tr(v)}</option>`).join("")}</select></div><div id="guide-results">${guideResults()}</div></section>`;
 }
+function guideVisual(e) {
+  const m = exerciseMedia(e.name);
+  if (!m)
+    return `<div class="exercise-illustration" role="img" aria-label="${tr(e.equipment)} ${tr("운동 아이콘")}"><svg viewBox="0 0 100 70" aria-hidden="true"><path d="M20 35H80M25 18V52M33 23V47M67 23V47M75 18V52" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/></svg></div>`;
+  const name = exerciseLabel(e.name);
+  return `<div class="exercise-media"><div class="exercise-photos">${m.images
+    .map(
+      (src, i) =>
+        `<figure><img src="${esc(src)}" alt="${esc(tr("{name} 자세 사진 {n}", { name, n: i + 1 }))}" loading="lazy" decoding="async"><figcaption>${tr("자세 {n}", { n: i + 1 })}</figcaption></figure>`,
+    )
+    .join(
+      "",
+    )}</div><div class="exercise-media-fallback" hidden>${tr("자세 사진을 불러올 수 없습니다. 아래 가이드를 참고하세요.")}</div><div class="exercise-source"><a href="${esc(m.sourceUrl)}" target="_blank" rel="noopener noreferrer">${tr("자세 사진 출처")}</a> · ${esc(m.license)} · <a href="${esc(m.licenseUrl)}" target="_blank" rel="noopener noreferrer">${tr("라이선스")}</a></div></div>`;
+}
 function guideResults() {
   return `<div class="guide-grid">${
     searchExercises(guideQuery, guideBody, guideEquipment)
       .map(
         (e) =>
-          `<article class="guide-card"><div class="exercise-illustration" role="img" aria-label="${tr(e.equipment)} ${tr("운동 아이콘")}"><svg viewBox="0 0 100 70" aria-hidden="true"><path d="M20 35H80M25 18V52M33 23V47M67 23V47M75 18V52" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/></svg></div><div class="eyebrow">${tr(e.body)} · ${tr(e.equipment)}</div><h3>${esc(exerciseLabel(e.name))}</h3><p>${esc(tr(e.guide))}</p><button class="secondary" data-action="guide-add" data-name="${esc(e.name)}">${tr("선택 날짜 운동에 추가 ＋")}</button></article>`,
+          `<article class="guide-card">${guideVisual(e)}<div class="eyebrow">${tr(e.body)} · ${tr(e.equipment)}</div><h3>${esc(exerciseLabel(e.name))}</h3><p>${esc(tr(e.guide))}</p><button class="secondary" data-action="guide-add" data-name="${esc(e.name)}">${tr("선택 날짜 운동에 추가 ＋")}</button></article>`,
       )
       .join("") ||
     `<p class="hint">${tr("검색 결과가 없습니다. 캘린더에서 종목을 직접 입력할 수 있습니다.")}</p>`
