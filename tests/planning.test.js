@@ -86,3 +86,28 @@ test("reject invalid plans and duplicated weeks; all preset exercises exist in t
           e.name,
         );
 });
+
+import { copyWeekPlan, weekProgress } from "../src/planning.js";
+test("weekly copy crosses year boundaries and isolates sets; progress follows actual records", () => {
+  const state = { ...newState(), settings: defaultSettings() };
+  const plan = programWeek(programs[1], "2026-12-28", "Training");
+  plan.days[1][0].sets[0].done = true;
+  const copy = copyWeekPlan(plan, "2027-01-05");
+  assert.equal(copy.weekStart, "2027-01-04");
+  assert.notEqual(copy.id, plan.id);
+  assert.equal(copy.days[1][0].sets[0].done, false);
+  copy.days[1][0].sets[0].weight = 50;
+  assert.notEqual(plan.days[1][0].sets[0].weight, 50);
+  state.weekPlans = [copy];
+  const session = scheduledSession(state, "2027-01-04");
+  state.sessions = [session];
+  assert.equal(weekProgress(state, copy).done, 0);
+  session.exercises[0].sets[0].done = true;
+  assert.equal(weekProgress(state, copy).days[0].status, "weekInProgress");
+  session.exercises.forEach((e) => e.sets.forEach((s) => (s.done = true)));
+  assert.equal(weekProgress(state, copy).done, 1);
+  copy.days[1] = [];
+  assert.equal(weekProgress(state, copy).days[0].status, "weekDone");
+  assert.equal(session.exercises.length > 0, true);
+  assert.throws(() => weekStart("2026-02-30"));
+});

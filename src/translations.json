@@ -1491,9 +1491,9 @@
     "ja": "マイ週間計画"
   },
   "weekHint": {
-    "en": "Assign saved routines to each day. Weekly lists take precedence over recurring schedules.",
-    "ko": "요일마다 저장한 루틴을 선택하세요. 주간 목록은 반복 요일 계획보다 우선합니다.",
-    "ja": "各曜日に保存済みルーティンを割り当てます。週間リストは繰り返し予定より優先されます。"
+    "ko": "월요일부터 일요일까지 루틴을 배치하거나 빈 주간 계획을 만든 뒤 요일별 운동을 직접 편집하세요. 기록이 없는 날짜에 자동으로 불러옵니다.",
+    "en": "Assign routines Monday through Sunday, or create an empty week and edit each day. Plans load automatically on dates without records.",
+    "ja": "月曜から日曜にルーティンを配置するか、空の週間計画を作って曜日別に編集します。記録のない日に自動で読み込みます。"
   },
   "weekSaved": {
     "en": "Weekly plan saved. Empty dates now show its sets automatically.",
@@ -1614,5 +1614,60 @@
   "라이선스": {
     "en": "License",
     "ja": "ライセンス"
+  },
+  "weekProgress": {
+    "ko": "완료 {done}/{total}일",
+    "en": "Completed {done}/{total} days",
+    "ja": "完了 {done}/{total}日"
+  },
+  "weekDone": {
+    "ko": "완료",
+    "en": "Completed",
+    "ja": "完了"
+  },
+  "weekInProgress": {
+    "ko": "진행 중",
+    "en": "In progress",
+    "ja": "進行中"
+  },
+  "weekPending": {
+    "ko": "예정",
+    "en": "Planned",
+    "ja": "予定"
+  },
+  "weekRename": {
+    "ko": "이름 변경",
+    "en": "Rename",
+    "ja": "名前を変更"
+  },
+  "weekCopy": {
+    "ko": "다음 주로 복사",
+    "en": "Copy to next week",
+    "ja": "翌週にコピー"
+  },
+  "weekAssign": {
+    "ko": "요일 구성 변경",
+    "en": "Replace day",
+    "ja": "曜日の内容を変更"
+  },
+  "weekChoose": {
+    "ko": "루틴 또는 휴식 선택",
+    "en": "Choose routine or rest",
+    "ja": "ルーティンまたは休息を選択"
+  },
+  "weekAssignConfirm": {
+    "ko": "이 요일의 계획을 교체할까요? 이미 저장한 운동 기록은 유지됩니다.",
+    "en": "Replace this day’s plan? Saved workout records will be preserved.",
+    "ja": "この曜日の計画を変更しますか？保存済みの運動記録は保持されます。"
+  },
+  "weekRest": {
+    "ko": "주간 계획에 지정된 휴식일입니다. 원하면 운동을 직접 추가할 수 있습니다.",
+    "en": "This is a planned rest day. You can still add a workout.",
+    "ja": "週間計画の休息日です。必要に応じて運動を追加できます。"
+  },
+  "weekDaySaved": {
+    "ko": "주간 운동 구성을 저장했습니다.",
+    "en": "Weekly workout saved.",
+    "ja": "週間の運動内容を保存しました。"
   }
 }

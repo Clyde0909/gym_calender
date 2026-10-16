@@ -1,7 +1,12 @@
 import { t } from "./i18n.js";
 export function weekStart(date) {
   const d = new Date(date + "T12:00:00Z");
-  if (!Number.isFinite(d.getTime())) throw Error(t("weekInvalid"));
+  if (
+    !/^\d{4}-\d{2}-\d{2}$/.test(date) ||
+    !Number.isFinite(d.getTime()) ||
+    d.toISOString().slice(0, 10) !== date
+  )
+    throw Error(t("weekInvalid"));
   d.setUTCDate(d.getUTCDate() - ((d.getUTCDay() + 6) % 7));
   return d.toISOString().slice(0, 10);
 }
@@ -68,4 +73,47 @@ export function mergeWeekPlans(current, incoming) {
   return [...map.values()].sort((a, b) =>
     a.weekStart.localeCompare(b.weekStart),
   );
+}
+
+export function copyWeekPlan(plan, target) {
+  return {
+    ...structuredClone(plan),
+    id: crypto.randomUUID(),
+    weekStart: weekStart(target),
+    days: Object.fromEntries(
+      Object.entries(plan.days).map(([day, exercises]) => [
+        day,
+        cleanExercises(exercises),
+      ]),
+    ),
+  };
+}
+export function weekProgress(state, plan) {
+  const days = weekDates(plan.weekStart).map(({ date, weekday }) => {
+    const record = state.sessions.find((s) => s.date === date);
+    const sets = (record?.exercises || plan.days[weekday]).flatMap(
+      (e) => e.sets,
+    );
+    const done = record ? sets.filter((s) => s.done).length : 0;
+    return {
+      date,
+      weekday,
+      total: sets.length,
+      done,
+      planned: plan.days[weekday].length > 0,
+      status:
+        record?.endedAt || (sets.length > 0 && done === sets.length)
+          ? "weekDone"
+          : record?.startedAt || done > 0
+            ? "weekInProgress"
+            : plan.days[weekday].length
+              ? "weekPending"
+              : "휴식",
+    };
+  });
+  return {
+    days,
+    total: days.filter((d) => d.planned).length,
+    done: days.filter((d) => d.planned && d.status === "weekDone").length,
+  };
 }

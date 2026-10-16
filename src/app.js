@@ -12,6 +12,8 @@ import {
   cleanExercises,
   makeWeekPlan,
   mergeWeekPlans,
+  copyWeekPlan,
+  weekProgress,
 } from "./planning.js";
 import { nextPending, remainingRest, focusProgress } from "./focus.js";
 import { primeAlerts, alertRest, keepScreenAwake } from "./alerts.js";
@@ -198,7 +200,7 @@ function calendar() {
     },
   ).join(
     "",
-  )}</div><div class="legend"><i class="workout-dot"></i> ${tr("완료")} <i class="pending-dot"></i> ${tr("기록")} <i class="planned-dot"></i> ${tr("예정")} <span>${tr("▧ 사진")}</span></div><div class="motivation"><span>${tr("CONSISTENCY IS EVERYTHING")}</span><h3>${tr("작은 기록이 만드는")}<br>${tr("큰 변화.")}</h3><p>${tr("오늘의 한 세트부터 시작해 보세요.")}</p><div class="barbell">━━▰━▰━━</div></div></section><section class="panel session-panel"><div class="panel-title"><div><div class="eyebrow">${tr("DAILY WORKOUT")}</div><h2>${dateLabel(selected)}</h2></div><button class="text-button" data-action="share-day">${tr("공유 ↗")}</button></div><div class="session-stats"><span><b>${s?.exercises.length || 0}</b> ${tr("운동")}</span><span><b>${s ? completed(s) : 0}</b> ${tr("완료 세트")}</span><span><b>${fmt(displayWeight(s ? volume(s) : 0))}</b> ${unit()}</span><button class="text-button" data-action="timer">◷ ${state.settings.restSeconds}${tr("초 휴식")}</button></div>${sessionControls(s)}${daySchedule(state, selected)?.source === "week" ? `<p class="hint">${tr(state.sessions.some((record) => record.date === selected) ? "weekExisting" : "weekAutoLoaded")} <button class="text-button" data-action="week-load">${tr("weekLoad")}</button></p>` : ""}<div class="exercise-list">${s?.exercises.map((e, i) => exerciseCard(e, i)).join("") || `<div class="empty"><div class="empty-icon">＋</div><h3>${tr("오늘의 운동을 기록하세요")}</h3><p>${tr("운동을 추가하거나 저장한 루틴으로 시작하세요.")}</p></div>`}</div><div class="add-box"><label for="exercise-name">${tr("운동 추가")}</label><div class="row"><input id="exercise-name" list="exercise-options" placeholder="${tr("운동 검색 또는 직접 입력")}" maxlength="100" value="${esc(newExercise)}"><datalist id="exercise-options">${library.map(({ name: e }) => `<option value="${esc(exerciseLabel(e))}">`).join("")}</datalist><button class="primary" data-action="add-exercise">${tr("＋ 추가")}</button></div><div class="row"><select id="routine-select" aria-label="${tr("루틴 선택")}"><option value="">${tr("저장한 루틴 선택")}</option>${state.routines.map((r) => `<option value="${esc(r.id)}">${esc(r.name)}</option>`).join("")}</select><button class="secondary" data-action="apply-routine">${tr("불러오기")}</button></div></div><label class="field-label" for="note">${tr("오늘의 메모")}</label><textarea id="note" maxlength="10000" placeholder="${tr("컨디션, 운동 느낌, 다음 목표를 남겨보세요.")}">${esc(s?.note || "")}</textarea><div class="photo-head"><label class="field-label">${tr("운동 사진")} <small>${tr("하루 1장")}</small></label><label class="text-button upload">${s?.photo ? tr("사진 교체") : tr("＋ 사진 추가")}<input id="photo" type="file" accept="image/*,.heic,.heif" hidden></label></div>${s?.photo ? `<div class="photo-wrap"><img src="${s.photo}" alt="${selected} ${tr("운동 사진")}"><button class="photo-delete" data-action="remove-photo">${tr("사진 삭제")}</button></div>` : `<p class="hint">${tr("사진은 자동으로 크기 조정·압축되어 기기에 저장됩니다.")}</p>`}<div class="session-bottom"><button class="secondary" data-action="save-routine">${tr("현재 운동을 루틴으로 저장")}</button><button class="danger-text" data-action="delete-day">${tr("기록 삭제")}</button></div></section></div>`;
+  )}</div><div class="legend"><i class="workout-dot"></i> ${tr("완료")} <i class="pending-dot"></i> ${tr("기록")} <i class="planned-dot"></i> ${tr("예정")} <span>${tr("▧ 사진")}</span></div><div class="motivation"><span>${tr("CONSISTENCY IS EVERYTHING")}</span><h3>${tr("작은 기록이 만드는")}<br>${tr("큰 변화.")}</h3><p>${tr("오늘의 한 세트부터 시작해 보세요.")}</p><div class="barbell">━━▰━▰━━</div></div></section><section class="panel session-panel"><div class="panel-title"><div><div class="eyebrow">${tr("DAILY WORKOUT")}</div><h2>${dateLabel(selected)}</h2></div><button class="text-button" data-action="share-day">${tr("공유 ↗")}</button></div><div class="session-stats"><span><b>${s?.exercises.length || 0}</b> ${tr("운동")}</span><span><b>${s ? completed(s) : 0}</b> ${tr("완료 세트")}</span><span><b>${fmt(displayWeight(s ? volume(s) : 0))}</b> ${unit()}</span><button class="text-button" data-action="timer">◷ ${state.settings.restSeconds}${tr("초 휴식")}</button></div>${sessionControls(s)}${daySchedule(state, selected)?.source === "week" ? `<p class="hint">${tr(state.sessions.some((record) => record.date === selected) ? "weekExisting" : daySchedule(state, selected).exercises.length ? "weekAutoLoaded" : "weekRest")} ${daySchedule(state, selected).exercises.length ? `<button class="text-button" data-action="week-load">${tr("weekLoad")}</button>` : ""}</p>` : ""}<div class="exercise-list">${s?.exercises.map((e, i) => exerciseCard(e, i)).join("") || `<div class="empty"><div class="empty-icon">＋</div><h3>${tr("오늘의 운동을 기록하세요")}</h3><p>${tr("운동을 추가하거나 저장한 루틴으로 시작하세요.")}</p></div>`}</div><div class="add-box"><label for="exercise-name">${tr("운동 추가")}</label><div class="row"><input id="exercise-name" list="exercise-options" placeholder="${tr("운동 검색 또는 직접 입력")}" maxlength="100" value="${esc(newExercise)}"><datalist id="exercise-options">${library.map(({ name: e }) => `<option value="${esc(exerciseLabel(e))}">`).join("")}</datalist><button class="primary" data-action="add-exercise">${tr("＋ 추가")}</button></div><div class="row"><select id="routine-select" aria-label="${tr("루틴 선택")}"><option value="">${tr("저장한 루틴 선택")}</option>${state.routines.map((r) => `<option value="${esc(r.id)}">${esc(r.name)}</option>`).join("")}</select><button class="secondary" data-action="apply-routine">${tr("불러오기")}</button></div></div><label class="field-label" for="note">${tr("오늘의 메모")}</label><textarea id="note" maxlength="10000" placeholder="${tr("컨디션, 운동 느낌, 다음 목표를 남겨보세요.")}">${esc(s?.note || "")}</textarea><div class="photo-head"><label class="field-label">${tr("운동 사진")} <small>${tr("하루 1장")}</small></label><label class="text-button upload">${s?.photo ? tr("사진 교체") : tr("＋ 사진 추가")}<input id="photo" type="file" accept="image/*,.heic,.heif" hidden></label></div>${s?.photo ? `<div class="photo-wrap"><img src="${s.photo}" alt="${selected} ${tr("운동 사진")}"><button class="photo-delete" data-action="remove-photo">${tr("사진 삭제")}</button></div>` : `<p class="hint">${tr("사진은 자동으로 크기 조정·압축되어 기기에 저장됩니다.")}</p>`}<div class="session-bottom"><button class="secondary" data-action="save-routine">${tr("현재 운동을 루틴으로 저장")}</button><button class="danger-text" data-action="delete-day">${tr("기록 삭제")}</button></div></section></div>`;
 }
 function exerciseCard(e, i) {
   return `<article class="exercise-card"><div class="exercise-head"><h3><span>${String(i + 1).padStart(2, "0")}</span>${esc(exerciseLabel(e.name))}</h3><button class="icon" data-action="remove-exercise" data-i="${i}" aria-label="${esc(exerciseLabel(e.name))} ${tr("삭제")}">×</button></div><div class="set-head"><span>SET</span><span>${tr("무게 (")}${unit()})</span><span>${tr("횟수")}</span><span>${tr("완료")}</span><span></span></div>${e.sets.map((s, j) => `<div class="set-row ${s.done ? "done" : ""}"><span>${j + 1}</span><input aria-label="${esc(exerciseLabel(e.name))} ${j + 1}${tr("세트 무게")}" type="number" min="0" max="10000" step="0.5" value="${displayWeight(s.weight)}" data-i="${i}" data-j="${j}" data-field="weight"><input aria-label="${esc(exerciseLabel(e.name))} ${j + 1}${tr("세트 횟수")}" type="number" min="0" max="100000" step="1" value="${s.reps}" data-i="${i}" data-j="${j}" data-field="reps"><button class="check ${s.done ? "checked" : ""}" data-action="toggle-set" data-i="${i}" data-j="${j}" aria-label="${j + 1}${tr("세트 완료")}" aria-pressed="${s.done}">✓</button><button class="remove-set" data-action="remove-set" data-i="${i}" data-j="${j}" aria-label="${j + 1}${tr("세트 삭제")}">×</button></div>`).join("")}<div class="exercise-tools"><button class="text-button" data-action="previous" data-i="${i}">${tr("↶ 이전 기록")}</button><button class="text-button" data-action="recommend" data-i="${i}">${tr("중량 추천")}</button><button class="text-button" data-action="template" data-i="${i}">5 × 5</button><button class="text-button" data-action="move-up" data-i="${i}">${tr("↑ 순서")}</button></div><button class="add-set" data-action="add-set" data-i="${i}">${tr("＋ 세트 추가")}</button></article>`;
@@ -318,6 +320,18 @@ app.addEventListener("change", async (e) => {
               : t.value;
       });
     }
+    if (t.dataset.weekAssign) {
+      const plan = state.weekPlans.find((p) => p.id === t.dataset.weekAssign);
+      const exercises =
+        t.value === "rest"
+          ? []
+          : state.routines.find((r) => r.id === t.value)?.exercises;
+      if (exercises && confirm(tr("weekAssignConfirm")))
+        await mutate(
+          () => (plan.days[Number(t.dataset.day)] = cleanExercises(exercises)),
+        );
+      else render();
+    }
     if (t.dataset.schedule !== undefined)
       await mutate(
         () => (state.settings.schedule[t.dataset.schedule] = t.value),
@@ -385,6 +399,19 @@ app.addEventListener("click", async (event) => {
     focusState.phase = "ready";
     saveFocus();
     render();
+    return;
+  }
+  if (direct === "week-start") {
+    selected = b.dataset.dateTarget;
+    month = new Date(selected + "T12:00:00");
+    month.setDate(1);
+    tab = "calendar";
+    render();
+    app
+      .querySelector(
+        '[data-action="focus-resume"], [data-action="start-session"]',
+      )
+      ?.click();
     return;
   }
   if (["start-session", "focus-resume", "timer", "toggle-set"].includes(direct))
@@ -679,28 +706,19 @@ function programCards() {
   }</div>`;
 }
 function weekPlansView() {
-  return `<section class="panel week-planner"><h2>${tr("weekTitle")}</h2><p class="hint">${tr("weekHint")}</p><div class="row"><label>${tr("weekStart")}<input type="date" id="week-date" value="${selected}"></label><label>${tr("weekName")}<input id="week-name" maxlength="100" value="${tr("weekCustom")}"></label></div><div class="schedule-grid">${weekdays()
-    .map(
-      (day, i) =>
-        `<label>${day}<select data-weekday="${i}"><option value="">${tr("휴식")}</option>${state.routines.map((r) => `<option value="${esc(r.id)}" ${state.settings.schedule[i] === r.id ? "selected" : ""}>${esc(r.name)}</option>`).join("")}</select></label>`,
-    )
-    .join(
-      "",
-    )}</div><button class="primary full" data-action="week-create">${tr("weekCreate")}</button></section>${[
-    ...(state.weekPlans || []),
+  return `<section class="panel week-planner"><h2>${tr("weekTitle")}</h2><p class="hint">${tr("weekHint")}</p><div class="row"><label>${tr("weekStart")}<input type="date" id="week-date" value="${selected}"></label><label>${tr("weekName")}<input id="week-name" maxlength="100" value="${tr("weekCustom")}"></label></div><div class="schedule-grid">${[1, 2, 3, 4, 5, 6, 0].map((i) => `<label>${weekdays()[i]}<select data-weekday="${i}"><option value="">${tr("휴식")}</option>${state.routines.map((r) => `<option value="${esc(r.id)}" ${state.settings.schedule[i] === r.id ? "selected" : ""}>${esc(r.name)}</option>`).join("")}</select></label>`).join("")}</div><button class="primary full" data-action="week-create">${tr("weekCreate")}</button></section>${[
+    ...state.weekPlans,
   ]
     .sort((a, b) => b.weekStart.localeCompare(a.weekStart))
-    .map(
-      (plan) =>
-        `<section class="panel week-plan"><div class="panel-title"><div><div class="eyebrow">${plan.weekStart}</div><h2>${esc(plan.name)}</h2></div><button class="danger-text" data-action="week-delete" data-id="${esc(plan.id)}">${tr("삭제")}</button></div><div class="week-plan-days">${weekDates(
-          plan.weekStart,
-        )
-          .map(({ date, weekday }) => {
-            const items = plan.days[weekday];
-            return `<article><b>${weekdays()[weekday]}</b><small>${date.slice(5)}</small><p>${items.length ? items.map((e) => `${esc(exerciseLabel(e.name))} (${e.sets.length})`).join(" · ") : tr("휴식")}</p><div class="row"><button class="text-button" data-action="week-edit-day" data-id="${esc(plan.id)}" data-day="${weekday}">${tr("편집")}</button><button class="text-button" data-history="${date}">${tr("weekViewDay")} ↗</button></div></article>`;
-          })
-          .join("")}</div></section>`,
-    )
+    .map((plan) => {
+      const progress = weekProgress(state, plan);
+      return `<section class="panel week-plan" data-plan="${esc(plan.id)}"><div class="panel-title"><div><div class="eyebrow">${plan.weekStart} — ${weekDates(plan.weekStart)[6].date}</div><h2>${esc(plan.name)}</h2><p class="hint">${tr("weekProgress", { done: progress.done, total: progress.total })}</p></div><div class="row week-actions"><button class="text-button" data-action="week-rename" data-id="${esc(plan.id)}">${tr("weekRename")}</button><button class="text-button" data-action="week-copy" data-id="${esc(plan.id)}">${tr("weekCopy")}</button><button class="danger-text" data-action="week-delete" data-id="${esc(plan.id)}">${tr("삭제")}</button></div></div><div class="week-plan-days">${progress.days
+        .map((day) => {
+          const items = plan.days[day.weekday];
+          return `<article data-plan-date="${day.date}" class="${day.date === today ? "week-today" : ""}"><b>${weekdays()[day.weekday]}</b><small>${day.date.slice(5)}</small><span class="week-status">${tr(day.status)}${day.total ? ` · ${day.done}/${day.total}` : ""}</span><p>${items.length ? items.map((e) => `${esc(exerciseLabel(e.name))} (${e.sets.length})`).join(" · ") : tr("휴식")}</p><label class="field-label">${tr("weekAssign")}<select data-week-assign="${esc(plan.id)}" data-day="${day.weekday}"><option value="" disabled selected>${tr("weekChoose")}</option><option value="rest">${tr("휴식")}</option>${state.routines.map((r) => `<option value="${esc(r.id)}">${esc(r.name)}</option>`).join("")}</select></label><div class="row"><button class="text-button" data-action="week-edit-day" data-id="${esc(plan.id)}" data-day="${day.weekday}">${tr("편집")}</button><button class="text-button" data-history="${day.date}">${tr("weekViewDay")} ↗</button>${day.total > day.done ? `<button class="primary" data-action="week-start" data-date-target="${day.date}">${tr(day.status === "weekInProgress" ? "focusResume" : "▶ 운동 시작")}</button>` : ""}</div></article>`;
+        })
+        .join("")}</div></section>`;
+    })
     .join("")}`;
 }
 async function saveWeeklyPlan(plan) {
@@ -716,6 +734,20 @@ async function saveWeeklyPlan(plan) {
   toast(tr("weekSaved"));
 }
 async function planningAction(action, button) {
+  if (action === "week-copy") {
+    const plan = state.weekPlans.find((p) => p.id === button.dataset.id);
+    const next = new Date(plan.weekStart + "T12:00:00Z");
+    next.setUTCDate(next.getUTCDate() + 7);
+    await saveWeeklyPlan(copyWeekPlan(plan, next.toISOString().slice(0, 10)));
+  }
+  if (action === "week-rename") {
+    const plan = state.weekPlans.find((p) => p.id === button.dataset.id);
+    const name = prompt(tr("weekName"), plan.name)?.trim();
+    if (name) {
+      validateState({ ...state, weekPlans: [{ ...plan, name }] });
+      await mutate(() => (plan.name = name));
+    }
+  }
   if (action === "program-create") {
     const program = programs.find((p) => p.id === button.dataset.id),
       date = document.querySelector("#program-week").value;
@@ -732,7 +764,6 @@ async function planningAction(action, button) {
       .querySelectorAll("[data-weekday]")
       .forEach((el) => (assignments[el.dataset.weekday] = el.value));
     if (!date || !name) throw Error(tr("weekInvalid"));
-    if (!Object.values(assignments).some(Boolean)) throw Error(tr("weekEmpty"));
     await saveWeeklyPlan(makeWeekPlan(state, date, name, assignments));
   }
   if (action === "week-delete" && confirm(tr("weekDelete")))
@@ -1146,7 +1177,7 @@ function scheduleView() {
     .join("")}</div></section>`;
 }
 function routineEditor() {
-  return `<section class="panel"><div class="panel-title"><h2>${tr(weekEditorTarget ? "weekDayEdit" : "루틴 편집")}</h2><button class="text-button" data-action="cancel-edit">${tr("취소")}</button></div><label class="field-label" for="edit-name">${tr("루틴 이름")}</label><input id="edit-name" value="${esc(editing.name)}" maxlength="100">${editing.exercises.map((e, i) => `<article class="exercise-card"><div class="exercise-head"><input aria-label="${tr("루틴 종목")} ${i + 1}" data-edit-field="name" data-i="${i}" maxlength="100" value="${esc(exerciseLabel(e.name))}"><button class="icon" data-action="edit-up" data-i="${i}" aria-label="${tr("종목 위로 이동")}">↑</button><button class="icon" data-action="edit-remove" data-i="${i}" aria-label="${tr("루틴 종목 삭제")}">×</button></div>${e.sets.map((s, j) => `<div class="row edit-set"><span>${j + 1}</span><input type="number" min="0" max="10000" aria-label="${tr("루틴")} ${i + 1}${tr("종목")} ${j + 1}${tr("세트 무게")}" value="${displayWeight(s.weight)}" data-edit-field="weight" data-i="${i}" data-j="${j}"><span>${unit()}</span><input type="number" min="0" max="100000" aria-label="${tr("루틴")} ${i + 1}${tr("종목")} ${j + 1}${tr("세트 횟수")}" value="${s.reps}" data-edit-field="reps" data-i="${i}" data-j="${j}"><span>${tr("회")}</span><button class="icon" data-action="edit-set-remove" data-i="${i}" data-j="${j}" aria-label="${tr("루틴 세트 삭제")}">×</button></div>`).join("")}<button class="add-set" data-action="edit-set-add" data-i="${i}">${tr("＋ 세트 추가")}</button></article>`).join("")}<div class="row"><input id="edit-exercise-name" placeholder="${tr("추가할 운동 이름")}" list="edit-exercises" maxlength="100"><datalist id="edit-exercises">${library.map((e) => `<option value="${esc(exerciseLabel(e.name))}">`).join("")}</datalist><button class="secondary" data-action="edit-add">${tr("＋ 운동 추가")}</button></div><button class="primary full" data-action="commit-edit">${tr("루틴 저장")}</button><p class="hint">${tr("루틴을 수정해도 기존 날짜의 운동 기록은 유지됩니다.")}</p></section>`;
+  return `<section class="panel"><div class="panel-title"><h2>${tr(weekEditorTarget ? "weekDayEdit" : "루틴 편집")}</h2><button class="text-button" data-action="cancel-edit">${tr("취소")}</button></div>${weekEditorTarget ? `<h3>${esc(editing.name)}</h3>` : `<label class="field-label" for="edit-name">${tr("루틴 이름")}</label><input id="edit-name" value="${esc(editing.name)}" maxlength="100">`}${editing.exercises.map((e, i) => `<article class="exercise-card"><div class="exercise-head"><input aria-label="${tr("루틴 종목")} ${i + 1}" data-edit-field="name" data-i="${i}" maxlength="100" value="${esc(exerciseLabel(e.name))}"><button class="icon" data-action="edit-up" data-i="${i}" aria-label="${tr("종목 위로 이동")}">↑</button><button class="icon" data-action="edit-remove" data-i="${i}" aria-label="${tr("루틴 종목 삭제")}">×</button></div>${e.sets.map((s, j) => `<div class="row edit-set"><span>${j + 1}</span><input type="number" min="0" max="10000" aria-label="${tr("루틴")} ${i + 1}${tr("종목")} ${j + 1}${tr("세트 무게")}" value="${displayWeight(s.weight)}" data-edit-field="weight" data-i="${i}" data-j="${j}"><span>${unit()}</span><input type="number" min="0" max="100000" aria-label="${tr("루틴")} ${i + 1}${tr("종목")} ${j + 1}${tr("세트 횟수")}" value="${s.reps}" data-edit-field="reps" data-i="${i}" data-j="${j}"><span>${tr("회")}</span><button class="icon" data-action="edit-set-remove" data-i="${i}" data-j="${j}" aria-label="${tr("루틴 세트 삭제")}">×</button></div>`).join("")}<button class="add-set" data-action="edit-set-add" data-i="${i}">${tr("＋ 세트 추가")}</button></article>`).join("")}<div class="row"><input id="edit-exercise-name" placeholder="${tr("추가할 운동 이름")}" list="edit-exercises" maxlength="100"><datalist id="edit-exercises">${library.map((e) => `<option value="${esc(exerciseLabel(e.name))}">`).join("")}</datalist><button class="secondary" data-action="edit-add">${tr("＋ 운동 추가")}</button></div><button class="primary full" data-action="commit-edit">${tr("루틴 저장")}</button><p class="hint">${tr("루틴을 수정해도 기존 날짜의 운동 기록은 유지됩니다.")}</p></section>`;
 }
 function strengthStats() {
   const performances = new Map();
@@ -1339,6 +1370,7 @@ async function extraAction(a, b, i, j) {
       throw Error(tr("루틴에 운동을 추가하세요."));
     validateState({ version: 1, sessions: [], routines: [editing] });
     const draft = structuredClone(editing);
+    const isWeekDay = Boolean(weekEditorTarget);
     await mutate(() => {
       if (weekEditorTarget) {
         state.weekPlans.find((p) => p.id === weekEditorTarget.id).days[
@@ -1353,7 +1385,7 @@ async function extraAction(a, b, i, j) {
     editing = null;
     weekEditorTarget = null;
     render();
-    toast(tr("루틴을 저장했습니다."));
+    toast(tr(isWeekDay ? "weekDaySaved" : "루틴을 저장했습니다."));
   }
   if (a === "calculate-rm") {
     const weight = Number(document.querySelector("#rm-weight").value),

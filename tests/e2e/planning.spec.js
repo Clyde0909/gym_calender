@@ -102,13 +102,11 @@ test("large photo compact encrypted export restores safely with symbol-rich text
     ctx.putImageData(image, 0, 0);
     return canvas.toDataURL("image/webp", 0.65).split(",")[1];
   });
-  await page
-    .locator("#photo")
-    .setInputFiles({
-      name: "detail.webp",
-      mimeType: "image/webp",
-      buffer: Buffer.from(photo, "base64"),
-    });
+  await page.locator("#photo").setInputFiles({
+    name: "detail.webp",
+    mimeType: "image/webp",
+    buffer: Buffer.from(photo, "base64"),
+  });
   await expect(page.locator(".photo-wrap img")).toBeVisible();
   await page.locator('[data-tab="transfer"]').click();
   await page.locator("#export-password").fill("large-photo");
@@ -120,4 +118,86 @@ test("large photo compact encrypted export restores safely with symbol-rich text
   await page.locator("#import-password").fill("large-photo");
   await page.locator('[data-action="inspect-import"]').click();
   await expect(page.locator("#import-preview")).toContainText("사진 1장");
+});
+
+test("weekly workflow copies snapshots, assigns rest, preserves history and starts from plan", async ({
+  page,
+}) => {
+  await page.goto("/?lang=ko");
+  await page.locator('[data-tab="programs"]').click();
+  await page.locator("#program-week").fill("2026-12-28");
+  await page
+    .locator('[data-action="program-create"][data-id="full-3"]')
+    .click();
+  page.once("dialog", (d) => d.accept("연말 루틴"));
+  await page.locator('[data-action="week-rename"]').click();
+  await expect(page.locator(".week-plan h2")).toHaveText("연말 루틴");
+  await page.locator('[data-action="week-copy"]').click();
+  await expect(page.locator(".week-plan")).toHaveCount(2);
+  const next = page
+    .locator(".week-plan")
+    .filter({ hasText: "2027-01-04 — 2027-01-10" });
+  await next.locator('[data-action="week-edit-day"][data-day="1"]').click();
+  await expect(page.locator("#edit-name")).toHaveCount(0);
+  await page.locator('[data-edit-field="weight"]').first().fill("70");
+  await page.locator('[data-edit-field="weight"]').first().press("Tab");
+  await page.locator('[data-action="commit-edit"]').click();
+  await next.locator('[data-history="2027-01-04"]').click();
+  await expect(page.locator('[data-field="weight"]').first()).toHaveValue("70");
+  await page.locator('[data-action="toggle-set"]').first().click();
+  await page.locator('[data-tab="routines"]').click();
+  await expect(next.locator('[data-plan-date="2027-01-04"]')).toContainText(
+    "진행 중",
+  );
+  page.once("dialog", (d) => d.accept());
+  await next.locator('[data-week-assign][data-day="1"]').selectOption("rest");
+  await next.locator('[data-history="2027-01-04"]').click();
+  await expect(page.locator('[data-field="weight"]').first()).toHaveValue("70");
+  await expect(
+    page.locator('[data-action="toggle-set"]').first(),
+  ).toHaveAttribute("aria-pressed", "true");
+  await page.locator('[data-tab="routines"]').click();
+  await next
+    .locator('[data-plan-date="2027-01-06"] [data-action="week-start"]')
+    .click();
+  if (page.viewportSize().width <= 850)
+    await expect(page.locator(".phase-running")).toBeVisible();
+  else
+    await expect(page.locator(".session-controls")).toContainText(
+      "운동 진행 중",
+    );
+  await page.reload();
+  if (page.viewportSize().width <= 850) {
+    await expect(page.locator(".phase-running")).toBeVisible();
+    await page.locator('[data-action="focus-exit"]').click();
+  }
+  await page.locator('[data-tab="routines"]').click();
+  await expect(page.locator(".week-plan")).toHaveCount(2);
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= innerWidth,
+    ),
+  ).toBe(true);
+});
+
+test("create an empty week without saved routines then build a day directly", async ({
+  page,
+}) => {
+  await page.goto("/?lang=ko");
+  await page.locator('[data-tab="routines"]').click();
+  await page.locator("#week-date").fill("2026-11-02");
+  await page.locator('[data-action="week-create"]').click();
+  await expect(page.locator(".week-plan")).toHaveCount(1);
+  await page.locator('[data-action="week-edit-day"][data-day="1"]').click();
+  await page.locator("#edit-exercise-name").fill("벤치 프레스");
+  await page.locator('[data-action="edit-add"]').click();
+  await page.locator('[data-action="commit-edit"]').click();
+  await page.locator('[data-history="2026-11-02"]').click();
+  await expect(page.locator(".exercise-card")).toHaveCount(1);
+  await page.locator('[data-tab="routines"]').click();
+  await page.locator('[data-history="2026-11-03"]').click();
+  await expect(page.locator(".session-panel")).toContainText(
+    "주간 계획에 지정된 휴식일",
+  );
+  await expect(page.locator('[data-action="week-load"]')).toHaveCount(0);
 });
