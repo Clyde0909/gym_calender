@@ -4,7 +4,7 @@
 
 ## 실행
 
-Node.js 22.12+ 또는 24 사용.
+로컬 개발과 GitHub Actions 빌드는 `.nvmrc`의 Node.js 24 LTS를 사용합니다. 액션 자체의 JavaScript 런타임도 Node 24 지원 버전을 사용합니다.
 
 ```sh
 npm ci
