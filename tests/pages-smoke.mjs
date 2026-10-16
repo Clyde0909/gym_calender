@@ -109,7 +109,7 @@ try {
   }, cacheName);
   await page.reload();
   await page
-    .getByRole("heading", { name: "운동 캘린더", exact: true })
+    .getByRole("heading", { name: "운동 가이드", exact: true })
     .waitFor();
   assert.equal(
     await page.evaluate(async () =>
@@ -120,7 +120,7 @@ try {
   await context.setOffline(true);
   await page.reload();
   await page
-    .getByRole("heading", { name: "운동 캘린더", exact: true })
+    .getByRole("heading", { name: "운동 가이드", exact: true })
     .waitFor();
   await page.locator('[data-tab="guide"]').click();
   await page.locator("#guide-search").fill("벤치 프레스");

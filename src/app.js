@@ -1,3 +1,4 @@
+import { createPageRouter } from "./navigation.js";
 import { createInstaller } from "./pwa.js";
 import {
   programs,
@@ -61,10 +62,19 @@ const installer = createInstaller(window, () => {
       installer.isInstalled() ? "pwaInstalled" : "pwaIntro",
     );
 });
+const pageRouter = createPageRouter(window, (page) => {
+  tab = page;
+  if (!state) return;
+  if (focusState) leaveFocus();
+  else render();
+});
+function setTab(page) {
+  tab = pageRouter.navigate(page);
+}
 const today = dateKey(new Date());
 let selected = today,
   month = new Date(new Date().getFullYear(), new Date().getMonth(), 1),
-  tab = "calendar",
+  tab = pageRouter.current,
   state,
   newExercise = "",
   timer = null,
@@ -416,14 +426,14 @@ app.addEventListener("click", async (event) => {
     try {
       const result = await installer.install();
       if (result === "instructions") {
-        tab = "settings";
+        setTab("settings");
         render();
         document
           .querySelector("#pwa-panel")
           ?.scrollIntoView({ block: "start" });
       } else if (result === "dismissed") toast(tr("pwaDismissed"));
     } catch {
-      tab = "settings";
+      setTab("settings");
       render();
       toast(tr("pwaManual"));
     }
@@ -433,7 +443,7 @@ app.addEventListener("click", async (event) => {
     selected = b.dataset.dateTarget;
     month = new Date(selected + "T12:00:00");
     month.setDate(1);
-    tab = "calendar";
+    setTab("calendar");
     render();
     app
       .querySelector(
@@ -456,7 +466,7 @@ app.addEventListener("click", async (event) => {
   }
   await queue;
   if (b.dataset.tab) {
-    tab = b.dataset.tab;
+    setTab(b.dataset.tab);
     render();
     return;
   }
@@ -469,7 +479,7 @@ app.addEventListener("click", async (event) => {
     selected = b.dataset.history;
     month = new Date(selected + "T12:00:00");
     month.setDate(1);
-    tab = "calendar";
+    setTab("calendar");
     render();
     return;
   }
@@ -559,7 +569,7 @@ app.addEventListener("click", async (event) => {
     }
     if (a === "use-routine") {
       selected = today;
-      tab = "calendar";
+      setTab("calendar");
       month = new Date(new Date().getFullYear(), new Date().getMonth(), 1);
       await mutate(() => routineApply(b.dataset.id));
     }
@@ -577,7 +587,7 @@ app.addEventListener("click", async (event) => {
       render();
     }
     if (a === "share-day") {
-      tab = "transfer";
+      setTab("transfer");
       render();
     }
     if (a === "export") {
@@ -781,7 +791,7 @@ async function planningAction(action, button) {
       date = document.querySelector("#program-week").value;
     if (!date) throw Error(tr("weekInvalid"));
     await saveWeeklyPlan(programWeek(program, date, tr(program.title)));
-    tab = "routines";
+    setTab("routines");
     render();
   }
   if (action === "week-create") {
@@ -1040,7 +1050,7 @@ function openShareDialog(data, message) {
     if (action === "advanced") {
       dialog.close();
       if (focusState) leaveFocus();
-      tab = "transfer";
+      setTab("transfer");
       render();
       return;
     }
