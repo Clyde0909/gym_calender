@@ -1,4 +1,5 @@
 import { defineConfig } from "vite";
+import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 export default defineConfig({
   plugins: [
@@ -8,15 +9,29 @@ export default defineConfig({
         const assets = Object.keys(bundle).filter((n) =>
           n.startsWith("assets/"),
         );
+        const publicFiles = [
+          "manifest.webmanifest",
+          "icon.svg",
+          "icon-192.png",
+          "icon-512.png",
+          "icon-maskable-512.png",
+          "apple-touch-icon.png",
+        ];
         const revision = createHash("sha256")
           .update(assets.join(","))
+          .update(
+            Buffer.concat(
+              publicFiles.map((name) =>
+                readFileSync(new URL("./public/" + name, import.meta.url)),
+              ),
+            ),
+          )
           .digest("hex")
           .slice(0, 12);
         const files = [
           "./",
           "./index.html",
-          "./icon.svg",
-          "./manifest.webmanifest",
+          ...publicFiles.map((name) => "./" + name),
           ...assets.map((n) => "./" + n),
         ];
         this.emitFile({

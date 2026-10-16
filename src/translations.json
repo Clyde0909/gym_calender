@@ -1669,5 +1669,55 @@
     "ko": "주간 운동 구성을 저장했습니다.",
     "en": "Weekly workout saved.",
     "ja": "週間の運動内容を保存しました。"
+  },
+  "pwaInstall": {
+    "ko": "앱 설치",
+    "en": "Install app",
+    "ja": "アプリをインストール"
+  },
+  "pwaIntro": {
+    "ko": "홈 화면에서 앱처럼 실행하고 운동 기록을 오프라인으로 사용할 수 있습니다. 지원 브라우저에서는 상단 설치 버튼으로 설치하세요.",
+    "en": "Launch from your home screen and use workout records offline. In supported browsers, use the install button above.",
+    "ja": "ホーム画面からアプリとして起動し、運動記録をオフラインで使えます。対応ブラウザでは上部のインストールボタンを押してください。"
+  },
+  "pwaInstalled": {
+    "ko": "설치된 앱으로 사용 중이거나 설치가 완료되었습니다.",
+    "en": "Running as an installed app, or installation completed.",
+    "ja": "インストール済みのアプリで使用中、またはインストールが完了しました。"
+  },
+  "pwaAndroidTitle": {
+    "ko": "Android · PC (Chrome / Edge)",
+    "en": "Android · PC (Chrome / Edge)",
+    "ja": "Android · PC（Chrome / Edge）"
+  },
+  "pwaAndroid": {
+    "ko": "설치 버튼이 나타나지 않으면 브라우저 메뉴에서 “앱 설치” 또는 “홈 화면에 추가”를 선택하세요. 다른 앱 안에서 열었다면 Chrome이나 Edge에서 다시 여세요.",
+    "en": "If no install prompt appears, choose “Install app” or “Add to Home screen” from the browser menu. If opened inside another app, reopen in Chrome or Edge.",
+    "ja": "インストール画面が表示されない場合は、ブラウザのメニューから「アプリをインストール」または「ホーム画面に追加」を選びます。他のアプリ内で開いた場合はChromeまたはEdgeで開き直してください。"
+  },
+  "pwaIosTitle": {
+    "ko": "iPhone · iPad (Safari)",
+    "en": "iPhone · iPad (Safari)",
+    "ja": "iPhone · iPad（Safari）"
+  },
+  "pwaIos": {
+    "ko": "Safari에서 이 페이지를 열고 공유 버튼 → “홈 화면에 추가” → “추가”를 선택하세요. “웹 앱으로 열기” 옵션이 보이면 켜세요. iOS에서는 설치 팝업 대신 이 메뉴를 사용합니다.",
+    "en": "Open this page in Safari, then choose Share → “Add to Home Screen” → “Add”. Enable “Open as Web App” if shown. iOS uses this menu instead of an install prompt.",
+    "ja": "Safariでこのページを開き、共有 →「ホーム画面に追加」→「追加」を選びます。「Webアプリとして開く」が表示されたらオンにします。iOSではインストール画面の代わりにこのメニューを使います。"
+  },
+  "pwaStorage": {
+    "ko": "처음 한 번 온라인으로 열어야 오프라인 사용을 준비할 수 있습니다. 기기·브라우저에 따라 설치 앱과 브라우저의 저장 공간이 다를 수 있으니 전환 전에 전체 백업을 보관하세요.",
+    "en": "Open online once to prepare offline use. Installed apps and browser storage may differ by device and browser; keep a full backup before switching.",
+    "ja": "オフライン利用の準備には一度オンラインで開く必要があります。端末やブラウザによってインストールしたアプリと保存領域が異なる場合があるため、切り替え前に全体バックアップを保存してください。"
+  },
+  "pwaDismissed": {
+    "ko": "설치를 취소했습니다. 브라우저 메뉴에서도 설치할 수 있습니다.",
+    "en": "Installation dismissed. You can also install from the browser menu.",
+    "ja": "インストールをキャンセルしました。ブラウザのメニューからも追加できます。"
+  },
+  "pwaManual": {
+    "ko": "브라우저 설치 메뉴 또는 아래 안내를 이용하세요.",
+    "en": "Use the browser install menu or the instructions below.",
+    "ja": "ブラウザのインストールメニュー、または下の手順を利用してください。"
   }
 }

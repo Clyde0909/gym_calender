@@ -1,3 +1,4 @@
+import { createInstaller } from "./pwa.js";
 import {
   programs,
   programSources,
@@ -50,6 +51,16 @@ import {
 const app = document.querySelector("#app");
 const dateKey = (d) =>
   `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+const installer = createInstaller(window, () => {
+  document
+    .querySelectorAll('[data-action="install-app"]')
+    .forEach((button) => (button.hidden = installer.isInstalled()));
+  const status = document.querySelector("#pwa-status");
+  if (status)
+    status.textContent = tr(
+      installer.isInstalled() ? "pwaInstalled" : "pwaIntro",
+    );
+});
 const today = dateKey(new Date());
 let selected = today,
   month = new Date(new Date().getFullYear(), new Date().getMonth(), 1),
@@ -134,7 +145,7 @@ function shell(content) {
     )
     .join(
       "",
-    )}</nav><div class="local-card"><span class="status-dot"></span> ${tr("내 기기에 안전하게 저장")}<p>${tr("계정 없이, 나만의 운동 기록.")}<br>${tr("주기적으로 백업을 내보내세요.")}</p></div><div class="sidebar-foot">${tr("SHOW UP. GET STRONGER.")}</div></aside><main><header><div class="eyebrow">${tr("YOUR PERSONAL TRAINING JOURNAL")}</div><div class="topline"><h1>${{ calendar: tr("운동 캘린더"), programs: tr("programsTitle"), routines: tr("나의 루틴"), guide: tr("운동 가이드"), settings: tr("개인 설정"), stats: tr("기록 분석"), transfer: tr("백업 & 공유") }[tab]}</h1><select id="language-select" class="language-select" aria-label="${tr("Language")}">${[
+    )}</nav><div class="local-card"><span class="status-dot"></span> ${tr("내 기기에 안전하게 저장")}<p>${tr("계정 없이, 나만의 운동 기록.")}<br>${tr("주기적으로 백업을 내보내세요.")}</p></div><div class="sidebar-foot">${tr("SHOW UP. GET STRONGER.")}</div></aside><main><header><div class="eyebrow">${tr("YOUR PERSONAL TRAINING JOURNAL")}</div><div class="topline"><h1>${{ calendar: tr("운동 캘린더"), programs: tr("programsTitle"), routines: tr("나의 루틴"), guide: tr("운동 가이드"), settings: tr("개인 설정"), stats: tr("기록 분석"), transfer: tr("백업 & 공유") }[tab]}</h1><button class="secondary" data-action="install-app" ${installer.isInstalled() ? "hidden" : ""}>${tr("pwaInstall")}</button><select id="language-select" class="language-select" aria-label="${tr("Language")}">${[
     ["en", "English"],
     ["ko", "한국어"],
     ["ja", "日本語"],
@@ -399,6 +410,23 @@ app.addEventListener("click", async (event) => {
     focusState.phase = "ready";
     saveFocus();
     render();
+    return;
+  }
+  if (direct === "install-app") {
+    try {
+      const result = await installer.install();
+      if (result === "instructions") {
+        tab = "settings";
+        render();
+        document
+          .querySelector("#pwa-panel")
+          ?.scrollIntoView({ block: "start" });
+      } else if (result === "dismissed") toast(tr("pwaDismissed"));
+    } catch {
+      tab = "settings";
+      render();
+      toast(tr("pwaManual"));
+    }
     return;
   }
   if (direct === "week-start") {
@@ -1135,7 +1163,7 @@ function sessionControls(s) {
   return `<div class="session-controls"><div class="row"><button class="${s?.startedAt && !s?.endedAt ? "secondary" : "primary"}" data-action="${s?.startedAt && !s?.endedAt ? "end-session" : "start-session"}">${s?.startedAt && !s?.endedAt ? tr("■ 운동 종료") : tr("▶ 운동 시작")}</button>${mobileUI() && s?.startedAt && !s?.endedAt ? `<button class="secondary" data-action="focus-resume">${tr("focusResume")}</button>` : ""}<span class="hint">${s?.startedAt ? (s.endedAt ? tr("sessionDuration", { minutes: Math.round((s.endedAt - s.startedAt) / 60000), sets: completed(s) }) : tr("운동 진행 중 · 시작 ") + new Date(s.startedAt).toLocaleTimeString(locale(), { hour: "2-digit", minute: "2-digit" })) : tr("시작과 종료 시간을 기록하세요.")}</span></div>${planned ? `<p class="hint">${tr("예정된 루틴:")} ${esc(planned.name)} <button class="text-button" data-action="planned-routine" data-id="${esc(planned.id)}">${tr("운동에 추가 ↗")}</button></p>` : ""}</div>`;
 }
 function settings() {
-  return `<section class="panel settings-panel"><h2>${tr("내 운동 환경")}</h2><p class="hint">${tr("회원가입 없이 이 브라우저에 설정을 저장합니다. 전체 백업에 설정이 포함됩니다.")}</p><label class="field-label" for="unit">${tr("중량 단위")}</label><select id="unit" data-setting="unit">${["kg", "lbs"].map((u) => `<option ${unit() === u ? "selected" : ""}>${u}</option>`).join("")}</select><label class="field-label" for="goal">${tr("운동 목표")}</label><select id="goal" data-setting="goal">${["근비대", tr("근력 향상"), tr("체지방 감량"), tr("건강 유지")].map((g) => `<option value="${g}" ${state.settings.goal === g ? "selected" : ""}>${tr(g)}</option>`).join("")}</select><label class="field-label" for="weekly-days">${tr("주간 목표 운동일")}</label><input id="weekly-days" data-setting="weeklyDays" type="number" min="1" max="7" value="${state.settings.weeklyDays}"><label class="field-label" for="rest-seconds">${tr("기본 휴식 시간 (초)")}</label><input id="rest-seconds" data-setting="restSeconds" type="number" min="10" max="600" value="${state.settings.restSeconds}"><label class="checkbox-label"><input type="checkbox" data-setting="autoRest" ${state.settings.autoRest ? "checked" : ""}> ${tr("세트 완료 시 휴식 타이머 자동 시작")}</label><p class="hint">${tr("무게는 내부적으로 kg 단위로 보관하며 화면에서만 변환합니다.")}</p></section>`;
+  return `<section class="panel settings-panel" id="pwa-panel"><h2>${tr("pwaInstall")}</h2><p id="pwa-status" class="hint">${tr(installer.isInstalled() ? "pwaInstalled" : "pwaIntro")}</p><h3>${tr("pwaAndroidTitle")}</h3><p>${tr("pwaAndroid")}</p><h3>${tr("pwaIosTitle")}</h3><p>${tr("pwaIos")}</p><p class="hint">${tr("pwaStorage")}</p></section><section class="panel settings-panel"><h2>${tr("내 운동 환경")}</h2><p class="hint">${tr("회원가입 없이 이 브라우저에 설정을 저장합니다. 전체 백업에 설정이 포함됩니다.")}</p><label class="field-label" for="unit">${tr("중량 단위")}</label><select id="unit" data-setting="unit">${["kg", "lbs"].map((u) => `<option ${unit() === u ? "selected" : ""}>${u}</option>`).join("")}</select><label class="field-label" for="goal">${tr("운동 목표")}</label><select id="goal" data-setting="goal">${["근비대", tr("근력 향상"), tr("체지방 감량"), tr("건강 유지")].map((g) => `<option value="${g}" ${state.settings.goal === g ? "selected" : ""}>${tr(g)}</option>`).join("")}</select><label class="field-label" for="weekly-days">${tr("주간 목표 운동일")}</label><input id="weekly-days" data-setting="weeklyDays" type="number" min="1" max="7" value="${state.settings.weeklyDays}"><label class="field-label" for="rest-seconds">${tr("기본 휴식 시간 (초)")}</label><input id="rest-seconds" data-setting="restSeconds" type="number" min="10" max="600" value="${state.settings.restSeconds}"><label class="checkbox-label"><input type="checkbox" data-setting="autoRest" ${state.settings.autoRest ? "checked" : ""}> ${tr("세트 완료 시 휴식 타이머 자동 시작")}</label><p class="hint">${tr("무게는 내부적으로 kg 단위로 보관하며 화면에서만 변환합니다.")}</p></section>`;
 }
 function guide() {
   return `<div class="intro"><h2>${tr("알고, 제대로 움직이기.")}</h2><p>${tr("이름과 한글 초성으로 검색하고 부위·기구별로 찾아보세요. 가이드는 일반 참고용이며 통증이 있으면 운동을 멈추세요.")}</p></div><section class="panel"><div class="guide-filters"><input id="guide-search" placeholder="${tr("운동 검색 · ㅂㅊㅍㄹㅅ")}" value="${esc(guideQuery)}"><select id="guide-body" aria-label="${tr("부위 필터")}"><option value="">${tr("모든 부위")}</option>${["가슴", "등", "어깨", "하체", "팔", "코어", "유산소"].map((v) => `<option value="${v}" ${guideBody === v ? "selected" : ""}>${tr(v)}</option>`).join("")}</select><select id="guide-equipment" aria-label="${tr("기구 필터")}"><option value="">${tr("모든 기구")}</option>${["바벨", "덤벨", "머신", "케틀벨", "맨몸"].map((v) => `<option value="${v}" ${guideEquipment === v ? "selected" : ""}>${tr(v)}</option>`).join("")}</select></div><div id="guide-results">${guideResults()}</div></section>`;

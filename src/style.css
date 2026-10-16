@@ -1640,3 +1640,17 @@ footer {
   min-height: 36px;
   font-size: 11px;
 }
+[data-action="install-app"][hidden] {
+  display: none;
+}
+#pwa-panel {
+  margin-bottom: 24px;
+}
+#pwa-panel p {
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+#pwa-panel h3 {
+  margin-top: 20px;
+  font-size: 14px;
+}

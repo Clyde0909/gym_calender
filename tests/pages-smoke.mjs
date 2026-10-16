@@ -1,6 +1,7 @@
 import { createServer } from "node:http";
 import { readFileSync } from "node:fs";
-import { readFile } from "node:fs/promises";
+import { readFile, mkdtemp, rm } from "node:fs/promises";
+import { tmpdir } from "node:os";
 import { resolve, extname, sep } from "node:path";
 import assert from "node:assert/strict";
 import { chromium } from "playwright";
@@ -11,6 +12,7 @@ const mime = {
   ".css": "text/css",
   ".svg": "image/svg+xml",
   ".jpg": "image/jpeg",
+  ".png": "image/png",
   ".md": "text/plain; charset=utf-8",
   ".webmanifest": "application/manifest+json",
 };
@@ -32,12 +34,14 @@ const server = createServer(async (req, res) => {
   }
 });
 await new Promise((r) => server.listen(0, "127.0.0.1", r));
+const profile = await mkdtemp(resolve(tmpdir(), "gym-pwa-test-"));
 let browser;
 try {
-  browser = await chromium.launch({
+  browser = await chromium.launchPersistentContext(profile, {
+    locale: "ko-KR",
     executablePath: process.env.CHROMIUM_PATH || "/usr/bin/chromium",
   });
-  const context = await browser.newContext({ locale: "ko-KR" });
+  const context = browser;
   const page = await context.newPage();
   const errors = [];
   page.on("pageerror", (e) => errors.push(e.message));
@@ -60,10 +64,31 @@ try {
   await bench.locator("img").evaluateAll(async (images) => {
     for (const image of images) {
       await image.decode();
-      if (!image.naturalWidth || !new URL(image.src).pathname.startsWith("/gym_calender/exercise-media/"))
+      if (
+        !image.naturalWidth ||
+        !new URL(image.src).pathname.startsWith("/gym_calender/exercise-media/")
+      )
         throw new Error("Invalid Pages exercise image");
     }
   });
+  const cdp = await context.newCDPSession(page);
+  const manifest = await cdp.send("Page.getAppManifest");
+  assert.deepEqual(manifest.errors, []);
+  const config = JSON.parse(manifest.data);
+  assert.equal(config.display, "standalone");
+  assert.equal(
+    new URL(config.start_url, manifest.url).pathname,
+    "/gym_calender/",
+  );
+  for (const icon of config.icons) {
+    const response = await context.request.get(
+      new URL(icon.src, manifest.url).href,
+    );
+    assert.equal(response.status(), 200);
+    assert.match(response.headers()["content-type"], /image\/png/);
+  }
+  const installability = await cdp.send("Page.getInstallabilityErrors");
+  assert.deepEqual(installability.installabilityErrors, []);
   await context.setOffline(true);
   await page.reload();
   await page
@@ -76,7 +101,8 @@ try {
   await bench.locator("img").evaluateAll(async (images) => {
     for (const image of images) {
       await image.decode();
-      if (!image.naturalWidth) throw new Error("Viewed exercise image unavailable offline");
+      if (!image.naturalWidth)
+        throw new Error("Viewed exercise image unavailable offline");
     }
   });
   await page.locator('[data-tab="calendar"]').click();
@@ -103,9 +129,10 @@ try {
   );
   assert.deepEqual(errors, []);
   console.log(
-    "PASS: GitHub Pages subpath, self-hosted posture images and viewed-image offline cache, offline HEIC decoding, persistent recording and encrypted sharing.",
+    "PASS: PWA manifest, PNG icons, Chromium installability, GitHub Pages subpath, self-hosted posture images and viewed-image offline cache, offline HEIC decoding, persistent recording and encrypted sharing.",
   );
 } finally {
   await browser?.close();
+  await rm(profile, { recursive: true, force: true });
   await new Promise((r) => server.close(r));
 }
