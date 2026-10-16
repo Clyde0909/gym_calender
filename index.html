@@ -17,8 +17,40 @@
     <link rel="icon" href="./icon.svg" type="image/svg+xml" />
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <main
+        id="startup-screen"
+        style="
+          margin: 0 auto;
+          padding: 48px 24px;
+          max-width: 640px;
+          width: 100%;
+          font-family: system-ui, sans-serif;
+          color: #14251c;
+        "
+      >
+        <h1>GYM LOG</h1>
+        <p id="startup-status" role="status">Loading your workout journal…</p>
+        <button id="startup-retry" type="button" hidden>
+          Check for updates and retry
+        </button>
+        <details id="startup-details" hidden>
+          <summary id="startup-details-label">Error details</summary>
+          <pre
+            id="startup-error"
+            style="white-space: pre-wrap; overflow-wrap: anywhere"
+          ></pre>
+        </details>
+        <p>
+          <a id="startup-recovery" href="./recover.html" hidden
+            >Recover app files</a
+          >
+        </p>
+        <noscript>Enable JavaScript to use GYM LOG.</noscript>
+      </main>
+    </div>
     <div id="toast" role="status"></div>
+    <script src="/app-shell.js"></script>
     <script type="module" src="/src/app.js"></script>
   </body>
 </html>

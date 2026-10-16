@@ -1431,18 +1431,3 @@ async function extraAction(a, b, i, j) {
       `${tr("추정 1RM:")} ${fmt(Math.round(estimate1RM(weight, reps) * 10) / 10)} ${unit()}`;
   }
 }
-
-if (import.meta.env.PROD && "serviceWorker" in navigator) {
-  const register = () =>
-    navigator.serviceWorker
-      .register("./sw.js")
-      .catch(() =>
-        toast(
-          tr(
-            "오프라인 캐시를 준비하지 못했습니다. 온라인에서 계속 사용할 수 있습니다.",
-          ),
-        ),
-      );
-  if (document.readyState === "complete") register();
-  else window.addEventListener("load", register, { once: true });
-}

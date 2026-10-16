@@ -2,9 +2,15 @@
 export function createInstaller(host = window, onChange = () => {}) {
   let pending = null,
     installed = false;
-  const display = host.matchMedia("(display-mode: standalone)");
+  let display;
+  try {
+    display = host.matchMedia?.("(display-mode: standalone)");
+  } catch {}
+
   const isInstalled = () =>
-    installed || display.matches || host.navigator.standalone === true;
+    installed ||
+    Boolean(display?.matches) ||
+    host.navigator?.standalone === true;
   host.addEventListener("beforeinstallprompt", (event) => {
     event.preventDefault();
     pending = event;
@@ -15,7 +21,13 @@ export function createInstaller(host = window, onChange = () => {}) {
     pending = null;
     onChange();
   });
-  display.addEventListener?.("change", onChange);
+  // PWA detection is optional: older browsers may expose only addListener,
+  // or throw when registering a display-mode listener.
+  try {
+    if (typeof display?.addEventListener === "function")
+      display.addEventListener("change", onChange);
+    else display?.addListener?.(onChange);
+  } catch {}
   return {
     isInstalled,
     async install() {

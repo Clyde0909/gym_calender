@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#14251c" />
+    <title>GYM LOG · Recovery</title>
+  </head>
+  <body
+    style="
+      font-family: system-ui, sans-serif;
+      color: #14251c;
+      background: #f4f6f3;
+    "
+  >
+    <main style="max-width: 600px; margin: 48px auto; padding: 24px">
+      <h1>GYM LOG</h1>
+      <p id="message" role="status">
+        Reload app files while keeping your workout records.
+      </p>
+      <button id="recover" style="padding: 14px; font-size: 16px">
+        Reload app files
+      </button>
+      <p><a id="back" href="./">Back to app</a></p>
+      <pre
+        id="error"
+        style="white-space: pre-wrap; overflow-wrap: anywhere"
+      ></pre>
+    </main>
+    <script src="./recover.js"></script>
+  </body>
+</html>

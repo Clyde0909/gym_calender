@@ -47,3 +47,25 @@ test("dismissed and failed prompts can receive a fresh browser event", async () 
   await assert.rejects(installer.install());
   assert.equal(await installer.install(), "instructions");
 });
+
+test("optional PWA detection never prevents startup on missing or rejected media APIs", async () => {
+  for (const matchMedia of [
+    undefined,
+    () => {
+      throw Error("Unsupported display mode");
+    },
+    () => ({
+      matches: false,
+      addEventListener() {
+        throw Error("Not supported");
+      },
+    }),
+    () => ({ matches: false, addListener() {} }),
+  ]) {
+    const host = fake();
+    host.matchMedia = matchMedia;
+    const installer = createInstaller(host);
+    assert.equal(installer.isInstalled(), false);
+    assert.equal(await installer.install(), "instructions");
+  }
+});

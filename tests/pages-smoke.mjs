@@ -89,6 +89,34 @@ try {
   }
   const installability = await cdp.send("Page.getInstallabilityErrors");
   assert.deepEqual(installability.installabilityErrors, []);
+  const cacheName = await page.evaluate(async () =>
+    (await caches.keys()).find((name) => name.startsWith("gym-log-")),
+  );
+  // Reproduce an obsolete HTML shell kept by the old cache-first worker.
+  await page.evaluate(async (name) => {
+    const cache = await caches.open(name);
+    await cache.put(
+      new URL("./", location.href),
+      new Response("<h1>Obsolete cached shell</h1>", {
+        headers: { "Content-Type": "text/html" },
+      }),
+    );
+    const previous = await caches.open("gym-log-previous-test");
+    await previous.put(
+      new URL("./assets/previous-build.js", location.href),
+      new Response("previous build asset"),
+    );
+  }, cacheName);
+  await page.reload();
+  await page
+    .getByRole("heading", { name: "운동 캘린더", exact: true })
+    .waitFor();
+  assert.equal(
+    await page.evaluate(async () =>
+      (await fetch("./assets/previous-build.js")).text(),
+    ),
+    "previous build asset",
+  );
   await context.setOffline(true);
   await page.reload();
   await page
@@ -127,9 +155,34 @@ try {
   await page.waitForFunction(() =>
     document.querySelector("#export-output")?.value.startsWith("GW3.E."),
   );
+  // Recovery bypasses legacy cached HTML without clearing IndexedDB records.
+  await context.setOffline(false);
+  await page.goto(
+    `http://127.0.0.1:${server.address().port}/gym_calender/recover.html?lang=ko`,
+  );
+  await page.locator("#recover").click();
+  await page
+    .getByRole("heading", { name: "운동 캘린더", exact: true })
+    .waitFor();
+  await page.getByRole("heading", { name: "01오프라인 스쿼트" }).waitFor();
+  await page.locator(".photo-wrap img").waitFor();
   assert.deepEqual(errors, []);
+  await context.setOffline(false);
+  const failureContext = await browser.browser().newContext();
+  const failurePage = await failureContext.newPage();
+  await failurePage.route("**/assets/index-*.js", (route) => route.abort());
+  await failurePage.goto(
+    `http://127.0.0.1:${server.address().port}/gym_calender/?lang=ko`,
+  );
+  await failurePage.locator("#startup-retry").waitFor({ state: "visible" });
+  assert.match(
+    await failurePage.locator("#startup-status").textContent(),
+    /저장된 운동 기록은 유지됩니다/,
+  );
+  await failureContext.close();
+
   console.log(
-    "PASS: PWA manifest, PNG icons, Chromium installability, GitHub Pages subpath, self-hosted posture images and viewed-image offline cache, offline HEIC decoding, persistent recording and encrypted sharing.",
+    "PASS: startup recovery, obsolete HTML migration, previous asset fallback, PWA manifest, PNG icons, Chromium installability, GitHub Pages subpath, self-hosted posture images and viewed-image offline cache, offline HEIC decoding, persistent recording and encrypted sharing.",
   );
 } finally {
   await browser?.close();
